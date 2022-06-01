@@ -215,7 +215,7 @@ function myFunction() {
   position: absolute;
   z-index: 1;
   bottom: 125%;
-  
+
   margin-left: -160px;
 }
 
@@ -246,7 +246,7 @@ function myFunction() {
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
-}  
+}
 </style>
 
 
@@ -267,10 +267,9 @@ function myFunction() {
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="index.php" style="padding: 0px 20px;">HOME</a></li>
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="profile.php" style="padding: 0px 20px;">Account</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
-              <li class="u-nav-item"><div class="popup" onclick="myFunction()">Sign In
-  <span class="popuptext" id="myPopup"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Sign In</a> if you have an account or <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="rega.php" style="padding: 0px 20px;">Create an account</a></li>
+              <li class="u-nav-item"><div class="popup" onclick="myFunction()">Account
+  <span class="popuptext" id="myPopup"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="rega.php" style="padding: 0px 20px;">Registration</a></li>
 </span>
 </div>
 </ul>

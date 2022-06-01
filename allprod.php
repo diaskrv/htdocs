@@ -120,11 +120,11 @@
           <form method="post" action="allprod.php?action=add&id=<?php echo $row["id"];?>">
           <a href="prodPage/<?php echo $row["path"];?>"><img src="assets/<?php echo $row["image"];?>" style="width: 230px; height: 230px;">
           <h5><?php echo $row["name"];?></h5></a>
-          <input type="text" name="qty" value="1">
+          <input type="number" name="quantity" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
           <p>$<?php echo $row["price"];?></p>
           <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
           <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?>">
-          <input type="submit" name="add_to_cart" style="margin-top: 5px;" class="btn btn-success add_to_cart" value="Add to Cart">
+          <button class="button-57" role="button" type="submit" name="add_to_cart" style="margin-top: 5px;" class="btn" value="Add to Cart"><span class="text">Add to cart</span><span>Click</span></button>
         </form>
         </div>
       </div>

@@ -181,6 +181,70 @@
 
 
   <body class="u-body u-xl-mode">
+
+
+        <script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
+
+    <style type="text/css">
+    /* Popup container */
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+      visibility: hidden;
+      width: 250px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+
+      margin-left: -160px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s
+    }
+
+
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
+    </style>
+
     <header class="u-black u-clearfix u-header u-header" id="sec-adc2">
       <div class="u-clearfix u-sheet u-sheet-1">
 
@@ -199,7 +263,14 @@
             <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="index.php" style="padding: 0px 20px;">HOME</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="accountpage.php" style="padding: 0px 20px;">Account</a></li>
+              <li class="u-nav-item"><div class="popup" onclick="myFunction()">Account
+                <span class="popuptext" id="myPopup"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="rega.php" style="padding: 0px 20px;">Registration</a>
+                  <form action="deleteCookies.php" method="post">
+                  <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Logout</a>
+                </form>
+                </li>
+                </span>
+              </div>
             </ul>
           </div>
 
