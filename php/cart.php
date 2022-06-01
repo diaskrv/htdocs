@@ -13,7 +13,8 @@
                 $item_array = array(
                      'item_id'               =>     $_GET["id"],
                      'item_name'               =>     $_POST["hidden_name"],
-                     'item_qty'          =>     $_POST["qty"]
+                     'item_qty'          =>     $_POST["qty"],
+                      'item_price'          =>     $_POST["hidden_price"],
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
                 $sqlInsert = "INSERT INTO wishlist (w_id, name)
@@ -128,6 +129,7 @@
           <tr>
             <th width="40%" style="color: white;">Item name</th>
             <th width="10%" style="color: white;">Quantity</th>
+            <th width="10%" style="color: white;">Price</th>
             <th width="5%" style="color: white;">Action</th>
           </tr>
       <?php
@@ -138,6 +140,7 @@
           <tr>
             <td style="color: white;"><?php echo $values["item_name"]; ?></td>
             <td style="color: white;"><?php echo $values["item_qty"]; ?></td>
+            <td style="color: white;"><?php echo $values["item_price"]; ?></td>
             <td style="color: red;"><a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
             </tr>
       <?php
@@ -145,7 +148,7 @@
           }
       ?>
       <tr>
-          <td colspan="4" align="right">Total price: <br> $<?php echo $total; ?></td>
+          <td colspan="4" align="right" style="color: white;">Total price: <br> $<?php echo $total; ?></td>
       </tr>
 
       <?php

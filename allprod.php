@@ -22,7 +22,7 @@
                      'item_id'               =>     $_GET["id"],
                      'item_name'               =>     $_POST["hidden_name"],
                      'item_qty'          =>     $_POST["qty"],
-                     'item_price'          =>     $_POST["hidden_price"]
+                     'item_price'          =>     $_POST["hidden_price"],
 
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
