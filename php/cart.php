@@ -13,7 +13,7 @@
                 $item_array = array(
                      'item_id'               =>     $_GET["id"],
                      'item_name'               =>     $_POST["hidden_name"],
-                     'item_quantity'          =>     $_POST["quantity"]
+                     'item_qty'          =>     $_POST["qty"]
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
                 $sqlInsert = "INSERT INTO wishlist (w_id, name)
@@ -22,7 +22,7 @@
            else
            {
                 echo '<script>alert("Item Already Added")</script>';
-                echo '<script>window.location="allprod.php"</script>';
+                echo '<script>window.location="cart.php"</script>';
            }
       }
       else
@@ -44,8 +44,7 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
-                     echo '<script>alert("Item Removed")</script>';
-                     echo '<script>window.location="../allprod.php"</script>';
+                     echo '<script>window.location="../cart.php"</script>';
                 }
            }
       }
@@ -97,12 +96,10 @@
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../index.php" style="padding: 0px 20px;">HOME</a></li>
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../profile.php" style="padding: 0px 20px;">Account</a></li>
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../welcome.php" style="padding: 0px 20px;">HOME</a></li>
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../allprod.php" style="padding: 0px 20px;">Products</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../rega.php" style="padding: 0px 20px;">Sign Up</a></li>
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../login.php" style="padding: 0px 20px;">Sign In</a></li>
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="php/cart.php" style="padding: 0px 20px;">Wishlist</a></li>
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../profile.php" style="padding: 0px 20px;">Account</a></li>
             </ul>
           </div>
 
@@ -140,11 +137,11 @@
       ?>
           <tr>
             <td style="color: white;"><?php echo $values["item_name"]; ?></td>
-            <td style="color: white;"><?php echo $values["item_quantity"]; ?></td>
+            <td style="color: white;"><?php echo $values["item_qty"]; ?></td>
             <td style="color: red;"><a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
             </tr>
       <?php
-          $total = $total + ($values["item_quantity"] * $values["item_price"]);
+          $total = $total + ($values["item_qty"] * $values["item_price"]);
           }
       ?>
 
