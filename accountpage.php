@@ -25,7 +25,7 @@
             <img src="images/profilePic.jpg" class="rounded-circle" width="150">
             <div class="mt-3">
               <h3>Name Surname</h3>
-              <a href="index.php">Home</a>
+              <a href="welcome.php">Home</a>
               <a href="Contacts.html">Contacts</a>
               <a href="accedit.php">Edit</a>
             </div>

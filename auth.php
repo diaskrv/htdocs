@@ -27,6 +27,6 @@ setCookie('user', $user['username'], time() + 3600*24, "/");
 
 print_r($user);
 $mysql->close();
-header('Location: /index.php');
+header('Location: /welcome.php');
 exit();
 ?>

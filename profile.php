@@ -82,7 +82,9 @@ nav div ul li a{
 </style>
 <div class="main">
       <div class="topbar">
+        <form action="" method="post">
         <a href="index.php">Log out</a>
+      </form>
       </div>
     </div>
 

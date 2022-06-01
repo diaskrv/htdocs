@@ -1,4 +1,12 @@
 <?php
+ if($_COOKIE['user'] == ''):
+   header('Location: login.php')
+ ?>
+
+<?php else: ?>
+
+
+<?php
   session_start();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
 
@@ -94,7 +102,7 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="index.php">Home</a></li>
+						<li><a href="welcome.php">Home</a></li>
 						<li><a href="">Contacts</a></li>
             <li><p href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart-modal">Cart</p></li>
 					</ul>
@@ -120,7 +128,7 @@
           <form method="post" action="allprod.php?action=add&id=<?php echo $row["id"];?>">
           <a href="prodPage/<?php echo $row["path"];?>"><img src="assets/<?php echo $row["image"];?>" style="width: 230px; height: 230px;">
           <h5><?php echo $row["name"];?></h5></a>
-          <input type="number" name="quantity" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
+          <input type="number" name="qty" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
           <p>$<?php echo $row["price"];?></p>
           <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
           <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?>">
@@ -134,29 +142,6 @@
     }
   }
 ?>
-
-  <table class="table table-bordered">
-    <tr>
-      <th width="40%" style="color: white;">Item Name</th>
-      <th width="10%" style="color: white;">Quantity</th>
-      <th width="5%" style="color: white;">Action</th>
-    </tr>
-<?php
-  if(!empty($_SESSION["shopping_cart"])) {
-    $total = 0;
-    foreach($_SESSION["shopping_cart"] as $keys => $values) {
-?>
-    <tr>
-      <td style="color: white;"><?php echo $values["item_name"]; ?></td>
-      <td style="color: white;"><?php echo $values["item_qty"]; ?></td>
-      <td style="color: white;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
-    </tr>
-<?php
-    $total = $total + ($values["item_qty"] * $values["item_price"]);
-    }
-  }
-?>
-  </table>
 
   <div class="modal fade cart-modal" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
@@ -213,3 +198,5 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
+<?php endif; ?>

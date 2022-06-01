@@ -1,4 +1,4 @@
-<?php 
+<?php
 require("inc/db.php");
 $id = $_GET['id'] ? intval($_GET['id']) : 0;
 
@@ -6,7 +6,7 @@ try {
     $sql = "SELECT * FROM products WHERE id = :id LIMIT 1";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(":id", $id, PDO::PARAM_INT);
-    $stmt->execute();    
+    $stmt->execute();
 } catch (Exception $e) {
     echo "Error " . $e->getMessage();
     exit();
@@ -22,7 +22,7 @@ $product = $stmt->fetch();
 
 <?php include("inc/header.php") ?>
     <div class="container">
-        <a href="index.php" class="btn btn-light mb-3"><< Go Back</a>
+        <a href="welcome.php" class="btn btn-light mb-3"><< Go Back</a>
         <!-- Show  a Product -->
         <div class="card border-danger">
             <div class="card-header bg-danger text-white">
@@ -37,13 +37,13 @@ $product = $stmt->fetch();
                                 <td><?= $product['barcode'] ?></td>
                                 <th>Name</th>
                                 <td><?= $product['name'] ?></td>
-                            </tr>   
+                            </tr>
                             <tr>
                                 <th>Price</th>
                                 <td>$<?= number_format($product['price'], 2) ?></td>
                                 <th>Qty</th>
                                 <td><?= $product['qty'] ?></td>
-                            </tr>  
+                            </tr>
                             <tr>
                                 <th>Descriptoin</th>
                                 <td colspan="3"><?= $product['description'] ?></td>

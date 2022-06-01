@@ -18,6 +18,6 @@ $user =$result->fetch_assoc();
 setCookie('user', $user['username'], time() + 3600*24, "/");
 
 $mysql->close();
-header('Location: /index.php');
+header('Location: /welcome.php');
 
  ?>
