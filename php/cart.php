@@ -44,7 +44,7 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
-                     echo '<script>window.location="../cart.php"</script>';
+                     echo '<script>window.location="cart.php"</script>';
                 }
            }
       }
@@ -144,6 +144,9 @@
           $total = $total + ($values["item_qty"] * $values["item_price"]);
           }
       ?>
+      <tr>
+          <td colspan="4" align="right">Total price: <br> $<?php echo $total; ?></td>
+      </tr>
 
       <?php
         }
