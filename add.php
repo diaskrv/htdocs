@@ -7,11 +7,12 @@ if ($_POST) {
     $price   = (float) $_POST['price'];
     $qty     = (int) $_POST['qty'];
     $image   = trim($_POST['image']);
+    $path   = trim($_POST['path']);
     $description = trim($_POST['description']);
 
     try {
-        $sql = 'INSERT INTO products(barcode, name, price, qty, image, description)
-                VALUES(:barcode, :name, :price, :qty, :image, :description)';
+        $sql = 'INSERT INTO products(barcode, name, price, qty, image, path, description)
+                VALUES(:barcode, :name, :price, :qty, :image, :path, :description)';
 
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(":barcode", $barcode);
@@ -19,6 +20,7 @@ if ($_POST) {
         $stmt->bindParam(":price", $price);
         $stmt->bindParam(":qty", $qty);
         $stmt->bindParam(":image", $image);
+        $stmt->bindParam(":path", $path);
         $stmt->bindParam(":description", $description);
         $stmt->execute();
         if ($stmt->rowCount()) {

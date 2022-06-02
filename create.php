@@ -41,6 +41,10 @@
                             <label for="image" class="col-form-label">Image</label>
                             <input type="text" class="form-control" name="image" id="image" placeholder="Image URL">
                         </div>
+                        <div class="form-group col-md-4">
+                            <label for="image" class="col-form-label">Path</label>
+                            <input type="text" class="form-control" name="path" id="image" placeholder="Path url">
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="note" class="col-form-label">Description</label>
