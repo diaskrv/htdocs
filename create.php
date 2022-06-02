@@ -53,6 +53,10 @@
                             <label for="category" class="col-form-label">Category</label>
                             <input type="text" class="form-control" name="category" id="category" placeholder="Category">
                         </div>
+                        <div class="form-group col-md-4">
+                            <label for="category" class="col-form-label">ID</label>
+                            <input type="number" class="form-control" name="id" id="id" placeholder="ID">
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="note" class="col-form-label">Description</label>
