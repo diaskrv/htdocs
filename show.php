@@ -13,7 +13,7 @@ try {
 }
 
 if (!$stmt->rowCount()) {
-    header("Location: index.php");
+    header("Location: welcome.php");
     exit();
 }
 $product = $stmt->fetch();

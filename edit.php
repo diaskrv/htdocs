@@ -66,7 +66,7 @@ $product = $stmt->fetch();
                     </div>
                     <div class="form-group">
                         <label for="note" class="col-form-label">Description</label>
-                        <textarea name="description" id="" rows="5" class="form-control" placeholder="Description"><?= $product['description'] ?></textarea>
+                        <textarea name="description" id="" rows="5" class="form-control" placeholder="Description"></textarea>
                     </div>
                     <button type="submit" class="btn btn-success"><i class="fa fa-check-circle"></i> Save</button>
                 </form>
