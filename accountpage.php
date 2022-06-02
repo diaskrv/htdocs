@@ -1,3 +1,4 @@
+
 <?php
  if($_COOKIE['user'] == ''):
    header('Location: login.php')
@@ -5,162 +6,223 @@
 
 <?php else: ?>
 
+  <?php
+    session_start();
+  ?>
+
 <!DOCTYPE html>
-<head>
-  <link rel="stylesheet" type="text/css" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/profile.css">
-</head>
-<body>
-  <div class="container">
-    <div class="main">
-      <div class="topbar">
-        <a href="index.php">Log out</a>
-      </div>
-    </div>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>About Us</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="HOME.css" media="screen">
+    <link rel="stylesheet" href="style.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
-    <div class="row">
-      <div class="col-md-4 mt-1">
-        <div class="card text-center sidebar">
-          <div class="card-body">
-            <img src="images/profilePic.jpg" class="rounded-circle" width="150">
-            <div class="mt-3">
-              <h3>Name Surname</h3>
-              <a href="welcome.php">Home</a>
-              <a href="Contacts.html">Contacts</a>
-              <a href="accedit.php">Edit</a>
+    <script type="application/ld+json">{
+		    "@context": "http://schema.org",
+		    "@type": "Organization",
+		    "name": "",
+		    "logo": "images/ezgif.com-gif-maker.gif"
+        }
+    </script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="About Us">
+    <meta property="og:type" content="website">
+  </head>
+
+ <style type="text/css">
+   ::placeholder{
+     font-weight: 500px;
+   }
+
+   input{
+   }
+
+   label{
+    color: white;
+   }
+
+   p{
+    color: white;
+   }
+
+   li a{
+    color: white;
+   }
+
+   h5{
+    color: white;
+   }
+
+   .submittt{
+    color: black;
+    background-color: ;
+   }
+   .card.card-body{
+    background-color: #1a1452;
+   }
+
+   .title{
+    color: white;
+   }
+
+  .commentaryi{
+  border-radius: 5px;
+  background: #0c092b;
+  padding: 20px;
+}
+input[type=submit]:hover {
+  background-color: #000000;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #1a1452;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+nav div ul li a{
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+</style>
+
+
+
+
+<style type="text/css">
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+
+  margin-left: -160px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+
+  <body class="u-body u-xl-mode">
+    <header class="u-black u-clearfix u-header u-header" id="sec-adc2">
+      <div class="u-clearfix u-sheet u-sheet-1">
+      <form action="cabinet.php" method = "post">
+          <a href="index.php" class="u-image u-logo u-image-1" data-image-width="690" data-image-height="388">
+            <img src="assets/ezgif.com-gif-maker.gif" class="u-logo-image u-logo-image-1" style="width: 100%;">
+          </a>
+          <a href="HOME.php" data-page-id="333829213" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-1">
+            <br>
+          </a>
+
+          <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+            <div class="u-custom-menu u-nav-container">
+              <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
+                <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="index.php" style="padding: 0px 20px;">HOME</a></li>
+                <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
+              </span>
             </div>
+            </ul>
           </div>
-        </div>
+        </nav>
+      </div>
+    </header>
 
-        <div class="col-md-8 mt-1">
-          <div class="card mb-3 content">
-            <h1 class="m-3 pt-3">About</h1>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-3">
-                  <h5>
-
-<?php
+    <section class="u-backlink u-clearfix u-grey-80">
+      <?php
+      $conn = new mysqli('localhost','root','root','register');
+        $sqlSelect = "SELECT * FROM users WHERE username=$_COOKIE['user'] ORDER by  id ASC";
+        $result = mysqli_query($conn, $sqlSelect);
+        if(mysqli_num_rows($result) > 0)
+        {
+          while($row = mysqli_fetch_array($result))
+          {
+      ?>
+       <img src="assets/profilePic.jpg" class="rounded-circle" style="width: 15%; border-radius: 50%;">
+       <br>
+       <p style="font-size: 30px; text-align: center;">Username:
+        <?php
      if($_COOKIE['user'] == true):
      ?>
-     <div class = "greeting-container">
-       <p style = "font-size: 20px;">
          <?php echo $_COOKIE['user'];
          session_start();
-
-         $counter = $_COOKIE["counter"];
-         if (!isSet($counter))
-         $counter = date('Y-m-d H:i:s', strtotime("+6 hours"));
-         else
-         $counter = $counter;
-         ?>
-         <?php
-         echo $counter;
-
           ?>
-       </p>
-     </div>
     <?php endif; ?>
-
-                  </h5>
-                </div>
-              </div>
-
-              <hr>
-              <div class="row">
-                <div class="col-md-3">
-                  <h5>
-
-                  </h5>
-                </div>
-                <div class="col-md-9 text-secondary">
-
-<?php
-     if($_COOKIE['users'] == true):
-     ?>
-     <div class = "greeting-container">
-       <p style = "font-size: 20px;">
-         <?php echo $_COOKIE['mail'];
-
+       </p>
+        <br>
+       <p style="font-size: 30px; text-align: center;">e-mail:
+        <?php
+     $row['mail'];
          session_start();
-
-         $counter = $_COOKIE["counter"];
-         if (!isSet($counter))
-         $counter = date('Y-m-d H:i:s', strtotime("+6 hours"));
-         else
-         $counter = $counter;
-         ?>
-         <?php
-         echo $counter;
-
           ?>
-       </p>
-     </div>
     <?php endif; ?>
+       </p>
+       <?php
+           }
+         }
+       ?>
+    </section>
 
-                </div>
-              </div>
+  </body>
 
-              <hr>
-              <div class="row">
-                <div class="col-md-3">
-                  <h5>Phone</h5>
-                </div>
-                <div class="col-md-9 text-secondary">
-                   8 777 77 77
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-3">
-                  <h5>Address</h5>
-                </div>
-                <div class="col-md-9 text-secondary">
-                   Mangilik el Street
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-      <script type="text/javascript">
-      const selected = document.querySelector(".selected");
-      const optionsContainer = document.querySelector(".options-container");
-      const searchBox = document.querySelector(".search-box input");
-      const optionsList = document.querySelectorAll(".option");
-      selected.addEventListener("click", () => {
-      optionsContainer.classList.toggle("active");
-      searchBox.value = "";
-      filterList("");
-      if (optionsContainer.classList.contains("active")) {
-        searchBox.focus();
-      }
-    });
-      optionsList.forEach(o => {
-        o.addEventListener("click", () => {
-          selected.innerHTML = o.querySelector("label").innerHTML;
-          optionsContainer.classList.remove("active");
-        });
-      });
-      searchBox.addEventListener("keyup", function(e) {
-        filterList(e.target.value);
-        });
-        const filterList = searchTerm => {
-          searchTerm = searchTerm.toLowerCase();
-          optionsList.forEach(option => {
-          let label = option.firstElementChild.nextElementSibling.innerText.toLowerCase();
-            if (label.indexOf(searchTerm) != -1) {
-              option.style.display = "block";
-              } else {
-                option.style.display = "none";
-              }
-          });
-        };
-      </script>
-</body>
+</html>
 
 <?php endif; ?>

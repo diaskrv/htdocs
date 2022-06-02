@@ -1,9 +1,9 @@
 <?php
 // Update the details below with your MySQL details
 $DATABASE_HOST = 'eu-cdbr-west-02.cleardb.net';
-$DATABASE_USER = 'ba1e484af256c7';
-$DATABASE_PASS = '95dbbe5d';
-$DATABASE_NAME = 'heroku_ab7344589622e52';
+$DATABASE_USER = 'b9cfb5db07fee5';
+$DATABASE_PASS = '7b8866b1';
+$DATABASE_NAME = 'heroku_eb2b6d43207ebf8';
 try {
     $pdo = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
 } catch (PDOException $exception) {
