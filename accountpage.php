@@ -221,7 +221,7 @@ nav div ul li a{
     <?php endif; ?>
        </p>
         <br>
-       <p style="font-size: 50px; text-align: center;">e-mail:
+       <p style="font-size: 50px; text-align: center;">
         <?php
      if($_COOKIE['mail'] == true):
      ?>
