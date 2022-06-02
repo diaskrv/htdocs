@@ -11,7 +11,7 @@ if(isset($_POST['update_data']))
     $surname = $_POST['surname'];
     $phone = $_POST['phone'];
 
-    $query = "UPDATE users SET mail=$mail, name=$name,surname=$surname ,phone=$phone WHERE username=$username ";
+    $query = "UPDATE users SET mail='$mail', name='$name',surname='$surname' ,phone='$phone' WHERE username='$username' ";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
