@@ -2,10 +2,11 @@
 require("inc/db.php");
 
 if ($_POST) {
+    $id = int($_POST['barcode']);
     $barcode = trim($_POST['barcode']);
     $name    = trim($_POST['name']);
-    $price   = (float) $_POST['price'];
-    $qty     = (int) $_POST['qty'];
+    $price   = float($_POST['price']);
+    $qty     = int($_POST['qty']);
     $image   = trim($_POST['image']);
     $path   = trim($_POST['path']);
     $brand   = trim($_POST['brand']);

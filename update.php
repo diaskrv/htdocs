@@ -2,11 +2,11 @@
 require("inc/db.php");
 
 if ($_POST) {
-    $id      = (int) $_POST['id'];
+    $id      = int($_POST['id']);
     $barcode = trim($_POST['barcode']);
     $name    = trim($_POST['name']);
-    $price   = (float) $_POST['price'];
-    $qty     = (int) $_POST['qty'];
+    $price   = float($_POST['price']);
+    $qty     = int($_POST['qty']);
     $image   = trim($_POST['image']);
     $description = trim($_POST['description']);
 
