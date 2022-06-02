@@ -34,7 +34,7 @@
                             <input type="number" class="form-control" id="price" name="price" placeholder="Price" required>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="qty" class="col-form-label">Qty</label>
+                            <label for="qty" class="col-form-label">Quantity</label>
                             <input type="number" class="form-control" name="qty" id="qty" placeholder="Quantity" required>
                         </div>
                         <div class="form-group col-md-4">
