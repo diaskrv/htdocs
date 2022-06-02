@@ -158,7 +158,7 @@
                       <tr>
                           <th scope="col">Name</th>
                           <th scope="col">Price</th>
-                          <th scope="col">Qty</th>
+                          <th scope="col">Quantity</th>
                       </tr>
                       </thead>
                       <tbody>

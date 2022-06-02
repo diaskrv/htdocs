@@ -171,6 +171,11 @@
       margin-bottom: 500px;
       padding-bottom: 5000px;
      }
+
+     .u-image.u-logo.u-image-1{
+      width: 15%;
+
+     }
    </style>
 
     <meta property="og:title" content="HOME">
@@ -182,68 +187,68 @@
 
   <body class="u-body u-xl-mode">
 
+    <script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
 
-        <script>
-    // When the user clicks on <div>, open the popup
-    function myFunction() {
-      var popup = document.getElementById("myPopup");
-      popup.classList.toggle("show");
-    }
-    </script>
+<style type="text/css">
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
 
-    <style type="text/css">
-    /* Popup container */
-    .popup {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-    }
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
 
-    /* The actual popup (appears on top) */
-    .popup .popuptext {
-      visibility: hidden;
-      width: 250px;
-      background-color: #555;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 8px 0;
-      position: absolute;
-      z-index: 1;
-      bottom: 125%;
+  margin-left: -160px;
+}
 
-      margin-left: -160px;
-    }
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
 
-    /* Popup arrow */
-    .popup .popuptext::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: #555 transparent transparent transparent;
-    }
-
-    .popup .show {
-      visibility: visible;
-      -webkit-animation: fadeIn 1s;
-      animation: fadeIn 1s
-    }
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
 
 
-    @-webkit-keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity:1 ;}
-    }
-    </style>
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+
 
     <header class="u-black u-clearfix u-header u-header" id="sec-adc2">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -251,8 +256,8 @@
 
 
     <form action="cabinet.php" method = "post">
-        <a href="" class="u-image u-logo u-image-1" data-image-width="690" data-image-height="388">
-          <img src="assets/ezgif.com-gif-maker.gif" class="u-logo-image u-logo-image-1">
+        <a href="index.php" class="u-image u-logo u-image-1" data-image-width="690" data-image-height="388">
+          <img src="assets/ezgif.com-gif-maker.gif" class="u-logo-image u-logo-image-1" style="width: 200%;">
         </a>
         <a href="HOME.php" data-page-id="333829213" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-1">
           <br>
@@ -261,37 +266,23 @@
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcome.php" style="padding: 0px 20px;">HOME</a></li>
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="index.php" style="padding: 0px 20px;">HOME</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
               <li class="u-nav-item"><div class="popup" onclick="myFunction()">Account
-                <span class="popuptext" id="myPopup">
-                  <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="accountpage.php" style="padding: 0px 20px;">My profile</a>
-                  <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="rega.php" style="padding: 0px 20px;">Registration</a>
-                  <form action="deleteCookies.php" method="post">
-                  <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Logout</a>
-                </form>
-                </li>
-                </span>
-              </div>
-            </ul>
+  <span class="popuptext" id="myPopup">
+<a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="accountpage.php" style="padding: 0px 20px;">My profile</a>
+    <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="rega.php" style="padding: 0px 20px;">Registration</a>
+    <form action="deleteCookies.php" method="post">
+    <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Logout</a>
+  </form>
+  </li>
+</span>
+</div>
+</ul>
           </div>
 
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.php">HOME</a></li>
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contacts.html">Contacts</a></li>
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="profile.php">Account</a></li>
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="rega.php">Sign Up</a></li>
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="login.php">Sign In</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
           <ul id="Menuitems">
-    <div class="container">
+    <div class="container" style="padding-bottom: 0px; padding-left: 800px;">
       <div class="select-box">
         <div class="options-container">
           <div class="option">
@@ -338,6 +329,22 @@
             <input type="radio" class="radio" id="DefenderMasterCHAIR" name="category" />
             <a href="prodPage/defender.php"><label for="DefenderMaster">Defender Master</label></a>
           </div>
+
+           <div class="option">
+            <input type="radio" class="radio" id="SteelSeriesHeadset" name="category" />
+            <a href="prodPage/steelseries.php"><label for="SteelSeries">Steelseries Arctis</label></a>
+          </div>
+
+           <div class="option">
+            <input type="radio" class="radio" id="BloodyMouseA4Tech" name="category" />
+            <a href="prodPage/bloody.php"><label for="BloodyA4tech">A4Tech Bloody</label></a>
+          </div>
+
+           <div class="option">
+            <input type="radio" class="radio" id="RazerMousepadIlan" name="category" />
+            <a href="prodPage/iLan.php"><label for="RazerIlan">Razer iLan</label></a>
+          </div>
+
         </div>
 
         <div class="selected">
@@ -372,13 +379,13 @@
 			<h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="  margin: 0 auto 80px; text-align: center;">Categories</h2>
 			<div class="row">
 				<div class="col-3">
-					<a href="gamelap.html"><img src="assets/categ1.png" style="width: 350px; height: 250px;"></a>
+					<a href="gamelap.php"><img src="assets/categ1.jpg" style="width: 350px; height: 250px;" title="Gaming Laptops"></a>
 				</div>
 				<div class="col-3">
-					<a href="studylap.html"><img src="assets/categ2.png" style="width: 350px; height: 250px;"></a>
+					<a href="studylap.php"><img src="assets/categ2.jpg" style="width: 350px; height: 250px;" title="Studying Laptops"></a>
 				</div>
 				<div class="col-3">
-					<a href="periphery.html"><img src="assets/categ3.jpg" style="width: 350px; height: 250px;"></a>
+					<a href="periphery.php"><img src="assets/categ3.jpg" style="width: 350px; height: 250px;" title="Devices"></a>
 				</div>
 			</div>
 		</div>
@@ -613,7 +620,10 @@ padding-right: 500px;
 
     </style>
 
-
+    <!-- Start of txt.me widget code -->
+    <script src="https://v2.txt.me/livechat/js/wrapper/cf93366e68d54998a033909344bfd8de" async></script>
+    <noscript><a href="https://txt.me/reviews/cf93366e68d54998a033909344bfd8de" rel="nofollow">Rate First widget customer support</a>, powered by <a href="https://txt.me" rel="noopener nofollow" target="_blank">txt.me</a></noscript>
+    <!-- End of txt.me widget code -->
     <script>
     const cookieBox = document.querySelector(".wrapper"),
     acceptBtn = cookieBox.querySelector("button");

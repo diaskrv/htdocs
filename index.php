@@ -373,13 +373,13 @@ function myFunction() {
 			<h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="  margin: 0 auto 80px; text-align: center;">Categories</h2>
 			<div class="row">
 				<div class="col-3">
-					<a href="gamelap.html"><img src="assets/categ1.jpg" style="width: 350px; height: 250px;" title="Gaming Laptops"></a>
+					<a href="gamelap.php"><img src="assets/categ1.jpg" style="width: 350px; height: 250px;" title="Gaming Laptops"></a>
 				</div>
 				<div class="col-3">
-					<a href="studylap.html"><img src="assets/categ2.jpg" style="width: 350px; height: 250px;" title="Studying Laptops"></a>
+					<a href="studylap.php"><img src="assets/categ2.jpg" style="width: 350px; height: 250px;" title="Studying Laptops"></a>
 				</div>
 				<div class="col-3">
-					<a href="periphery.html"><img src="assets/categ3.jpg" style="width: 350px; height: 250px;" title="Devices"></a>
+					<a href="periphery.php"><img src="assets/categ3.jpg" style="width: 350px; height: 250px;" title="Devices"></a>
 				</div>
 			</div>
 		</div>
