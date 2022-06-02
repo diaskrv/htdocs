@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8')
+$con = mysqli_connect('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
 
 if(isset($_POST['update_data']))
 {
