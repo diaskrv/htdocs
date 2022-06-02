@@ -6,10 +6,6 @@
 
 <?php else: ?>
 
-  <?php
-    session_start();
-  ?>
-
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -44,6 +40,7 @@
    }
 
    input{
+
    }
 
    label{
@@ -163,22 +160,34 @@ nav div ul li a{
 </style>
 
   <body class="u-body u-xl-mode">
-    <header class="u-black u-clearfix u-header u-header" id="sec-adc2">
-      <div class="u-clearfix u-sheet u-sheet-1">
-      <form action="cabinet.php" method = "post">
-          <a href="index.php" class="u-image u-logo u-image-1" data-image-width="690" data-image-height="388">
-            <img src="assets/ezgif.com-gif-maker.gif" class="u-logo-image u-logo-image-1" style="width: 100%;">
-          </a>
-          <a href="HOME.php" data-page-id="333829213" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-1">
-            <br>
-          </a>
 
-          <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-            <div class="u-custom-menu u-nav-container">
-              <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
-                <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="index.php" style="padding: 0px 20px;">HOME</a></li>
-                <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
-              </span>
+
+
+
+
+
+
+
+<header class="u-black u-clearfix u-header u-header" id="sec-adc2">
+      <div class="u-clearfix u-sheet u-sheet-1">
+
+
+
+    <form action="cabinet.php" method = "post">
+        <a href="index.php" class="u-image u-logo u-image-1" data-image-width="690" data-image-height="388">
+          <img src="assets/ezgif.com-gif-maker.gif" class="u-logo-image u-logo-image-1" style="width: 100%;">
+        </a>
+        <a href="HOME.php" data-page-id="333829213" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-1">
+          <br>
+        </a>
+
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcome.php" style="padding: 0px 20px;">HOME</a></li>
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="accedit.php" style="padding: 0px 20px;">Edit</a></li>
+            </span>
             </div>
             </ul>
           </div>
@@ -186,19 +195,22 @@ nav div ul li a{
       </div>
     </header>
 
+
+
+
+
+
+
+
+
+
+
+
     <section class="u-backlink u-clearfix u-grey-80">
-      <?php
-      $conn = new mysqli('localhost','root','root','register');
-        $sqlSelect = "SELECT * FROM users WHERE username=$_COOKIE['user'] ORDER by  id ASC";
-        $result = mysqli_query($conn, $sqlSelect);
-        if(mysqli_num_rows($result) > 0)
-        {
-          while($row = mysqli_fetch_array($result))
-          {
-      ?>
+
        <img src="assets/profilePic.jpg" class="rounded-circle" style="width: 15%; border-radius: 50%;">
        <br>
-       <p style="font-size: 30px; text-align: center;">Username:
+       <p style="font-size: 50px; text-align: center;">Username:
         <?php
      if($_COOKIE['user'] == true):
      ?>
@@ -208,17 +220,16 @@ nav div ul li a{
     <?php endif; ?>
        </p>
         <br>
-       <p style="font-size: 30px; text-align: center;">e-mail:
+       <p style="font-size: 50px; text-align: center;">e-mail:
         <?php
-     $row['mail'];
+     if($_COOKIE['mail'] == true):
+     ?>
+         <?php echo $_COOKIE['mail'];
          session_start();
           ?>
     <?php endif; ?>
        </p>
-       <?php
-           }
-         }
-       ?>
+
     </section>
 
   </body>
