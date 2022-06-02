@@ -5,6 +5,65 @@
 
 <?php else: ?>
 
+  <?php
+    session_start();
+    $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
+
+    if(isset($_POST["add_to_cart"]))
+   {
+        if(isset($_SESSION["shopping_cart"]))
+        {
+             $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
+             if(!in_array($_GET["id"], $item_array_id))
+             {
+                  $count = count($_SESSION["shopping_cart"]);
+                  $item_array = array(
+                       'item_id'               =>     $_GET["id"],
+                       'item_name'               =>     $_POST["hidden_name"],
+                       'item_qty'          =>     $_POST["qty"],
+                       'item_price'          =>     $_POST["hidden_price"],
+
+                  );
+                  $_SESSION["shopping_cart"][$count] = $item_array;
+
+                  $sqlInsert = "INSERT INTO wishlist('w_id', 'name', 'price')
+                  VALUES('item_id','item_name', 'item_price')";
+
+                  $conn->commit();
+             }
+             else
+             {
+                  echo '<script>alert("Item Already Added")</script>';
+                  echo '<script>window.location="allprod.php"</script>';
+             }
+        }
+        else
+        {
+             $item_array = array(
+                  'item_id'               =>     $_GET["id"],
+                  'item_name'               =>     $_POST["hidden_name"],
+                  'item_quantity'          =>     $_POST["quantity"]
+             );
+             $_SESSION["shopping_cart"][0] = $item_array;
+        }
+   }
+   if(isset($_GET["action"]))
+   {
+        if($_GET["action"] == "delete")
+        {
+             foreach($_SESSION["shopping_cart"] as $keys => $values)
+             {
+                  if($values["item_id"] == $_GET["id"])
+                  {
+                       unset($_SESSION["shopping_cart"][$keys]);
+                       echo '<script>alert("Item Removed")</script>';
+                       echo '<script>window.location="allprod.php"</script>';
+                  }
+             }
+        }
+   }
+  ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -89,17 +148,17 @@ nav div ul li a{
 <div class="header">
   <div class="container">
     <div class = "navbar">
-      <div class="logo">
-        <img src="assets/logo1.png">
-      </div>
+      <a href="welcome.php">
+        <img src="../assets/logo1.png">
+      </a>
       <nav>
         <ul>
           <li><a href="welcome.php">Home</a></li>
-          <li><a href="">Contacts</a></li>
-          <li><p href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart-modal">Cart</p></li>
+          <li><a href="Contacts.html">Contacts</a></li>
+          <li><p href="" type="button" data-toggle="modal" data-target="#cart-modal" style="color: white">Cart</p></li>
         </ul>
       </nav>
-        <img src="assets/menu.png" class="menu-icon" style="width: 30px; height: 30px;" onclick="menutoggle">
+        <img src="assets/menu.png" class="menu-icon" style="width: 30px; height: 30px;">
     </div>
   </div>
 </div>

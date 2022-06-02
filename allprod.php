@@ -78,12 +78,16 @@
 </head>
 <body>
   <style type="text/css">
-
   body{
    background-image: linear-gradient(#000000, #06091e);
    font-family: Verdana, sans-serif;
 
   }
+  .container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 
     nav ul li a{
       color: white;
@@ -94,23 +98,24 @@
 
   </style>
 
-	<div class="header">
+  <div class="header">
 		<div class="container">
 			<div class = "navbar">
-				<div class="logo">
-					<img src="assets/logo1.png">
-				</div>
+				<a href="welcome.php">
+					<img src="../assets/logo1.png">
+				</a>
 				<nav>
 					<ul>
 						<li><a href="welcome.php">Home</a></li>
-						<li><a href="">Contacts</a></li>
-            <li><p href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart-modal">Cart</p></li>
+						<li><a href="Contacts.html">Contacts</a></li>
+            <li><p href="" type="button" data-toggle="modal" data-target="#cart-modal" style="color: white">Cart</p></li>
 					</ul>
 				</nav>
-					<img src="assets/menu.png" class="menu-icon" style="width: 30px; height: 30px;" onclick="menutoggle">
+					<img src="assets/menu.png" class="menu-icon" style="width: 30px; height: 30px;">
 			</div>
 		</div>
 	</div>
+
 
 <h2 class="title2">All Products</h2>
 <?php
