@@ -14,7 +14,7 @@ if ($_POST) {
 
     try {
         $sql = 'INSERT INTO products(barcode, name, price, qty, image, path, brand, category, description)
-                VALUES(:barcode, :name, :price, :qty, :image, :path, :barnd, :category :description)';
+                VALUES(:barcode, :name, :price, :qty, :image, :path, :brand, :category :description)';
 
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(":barcode", $barcode);
