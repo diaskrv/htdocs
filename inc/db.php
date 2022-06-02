@@ -1,9 +1,9 @@
 <?php
 
 // Define username and password
-const USERNAME = "ba1e484af256c7";
-const PASSWORD = "95dbbe5d";
-const DSN      = "mysql:host=eu-cdbr-west-02.cleardb.net;dbname=heroku_ab7344589622e52";
+const USERNAME = "b9cfb5db07fee5";
+const PASSWORD = "7b8866b1";
+const DSN      = "mysql:host=eu-cdbr-west-02.cleardb.net;dbname=heroku_eb2b6d43207ebf8";
 
 // Connect to database using PDO
 try {
