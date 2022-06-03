@@ -84,12 +84,12 @@ nav div ul li a{
 	<div class="header">
 		<div class="container">
 			<div class = "navbar">
-				<a href="../index.php">
+				<a href="../welcome.php">
 					<img src="../assets/logo1.png">
 				</a>
 				<nav>
 					<ul>
-						<li><a href="../index.php">Home</a></li>
+						<li><a href="../welcome.php">Home</a></li>
 						<li><a href="../Contacts.html">Contacts</a></li>
 					</ul>
 				</nav>

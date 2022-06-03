@@ -81,12 +81,12 @@ input[type=submit] {
  <div class="header">
   <div class="container">
    <div class = "navbar">
-    <a href="../index.php" class="logo">
+    <a href="../welcome.php" class="logo">
      <img src="../assets/logo1.png">
     </a>
     <nav>
      <ul>
-      <li><a href="../index.php">Home</a></li>
+      <li><a href="../welcome.php">Home</a></li>
       <li><a href="../Contacts.html">Contacts</a></li>
      </ul>
     </nav>
