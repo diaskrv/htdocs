@@ -1,7 +1,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-          <span class="text-muted">&copy; by HelloWorldApp 2017</span>
+          <span class="text-muted">&copy; </span>
         </div>
     </footer>
     <!-- End Footer -->

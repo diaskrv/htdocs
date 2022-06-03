@@ -191,7 +191,8 @@
               </div>
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Order</button>
+                  <a href="php/cart.php"><button type="button" class="btn btn-secondary" data-dismiss="modal">Go to cart</button></a>
+                  <a href="payment.php"><button type="button" class="btn btn-primary">Order</button></a>
               </div>
           </div>
       </div>

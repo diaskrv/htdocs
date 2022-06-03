@@ -41,7 +41,7 @@ $product = $stmt->fetch();
                             <tr>
                                 <th>Price</th>
                                 <td>$<?= number_format($product['price'], 2) ?></td>
-                                <th>Qty</th>
+                                <th>Quantity</th>
                                 <td><?= $product['qty'] ?></td>
                             </tr>
                             <tr>

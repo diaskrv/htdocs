@@ -56,7 +56,7 @@ $product = $stmt->fetch();
                             <input type="number" class="form-control" id="price" name="price" placeholder="Price" required value="<?= $product['price'] ?>" >
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="qty" class="col-form-label">Qty</label>
+                            <label for="qty" class="col-form-label">Quantity</label>
                             <input type="number" class="form-control" name="qty" id="qty" placeholder="Qty" required value="<?= $product['qty'] ?>">
                         </div>
                         <div class="form-group col-md-4">
