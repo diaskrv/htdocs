@@ -97,9 +97,6 @@
   <div class="header">
 		<div class="container">
 			<div class = "navbar">
-				<a href="welcome.php">
-					<img src="../assets/logo1.png">
-				</a>
 				<nav>
 					<ul>
 						<li><a href="welcome.php">Home</a></li>
@@ -191,9 +188,9 @@
                   </table>
               </div>
               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <a href="php/cart.php"><button type="button" class="btn btn-secondary">Go to cart</button></a>
-                  <a href="payment.php"><button type="button" class="btn btn-primary">Order</button></a>
+                  <button type="button" class="button-57" style="margin-top: 5px;" class="btn" data-dismiss="modal">Close</button>
+                  <a href="php/cart.php"><button type="button" class="button-57" style="margin-top: 5px;" class="btn">Go to cart</button></a>
+                  <a href="payment.php"><button type="button" class="button-57" style="margin-top: 5px;" class="btn">Order</button></a>
               </div>
           </div>
       </div>
