@@ -144,11 +144,9 @@
             }
           }
         ?>
-
       </div>
     </div>
   </div>
-
   <div class="modal fade cart-modal" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
           <div class="modal-content">
@@ -165,6 +163,7 @@
                           <th scope="col">Name</th>
                           <th scope="col">Price</th>
                           <th scope="col">Quantity</th>
+                          <th scope="col">Action</th>
                       </tr>
                       </thead>
                       <tbody>
@@ -177,6 +176,7 @@
                           <td><a href="product.html"><?php echo $values["item_name"]; ?></a></td>
                           <td><?php echo $values["item_price"];?></td>
                           <td><?php echo $values["item_qty"]; ?></td>
+                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                       </tr>
                       <?php
                           $total = $total + ($values["item_qty"] * $values["item_price"]);
