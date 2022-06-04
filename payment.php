@@ -91,7 +91,7 @@
                                 <div class="buttons">
                                   <span>Amount: <?php echo $values["item_qty"]; ?></span>
                                 </div>
-                                <a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>">Delete From Cart</a>
+                                <a href="payment.php?action=delete&id=<?php echo $values["item_id"]; ?>">Delete From Cart</a>
                             </div>
                         </div>
                         <div class="price">
