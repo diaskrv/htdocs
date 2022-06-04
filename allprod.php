@@ -23,7 +23,8 @@
                      'item_name'               =>     $_POST["hidden_name"],
                      'item_qty'          =>     $_POST["qty"],
                      'item_price'          =>     $_POST["hidden_price"],
-
+                     'item_path'          =>     $_POST["hidden_path"],
+                     'item_brand'          =>     $_POST["hidden_brand"],
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
 
@@ -135,6 +136,8 @@
           <input type="number" name="qty" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
           <p>$<?php echo $row["price"];?></p>
           <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
+          <input type="hidden" name="hidden_path" value="<?php echo $row["path"];?>">
+          <input type="hidden" name="hidden_brand" value="<?php echo $row["brand"];?>">
           <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?>">
           <button class="button-57" role="button" type="submit" name="add_to_cart" style="margin-top: 5px;" class="btn" value="Add to Cart"><span class="text">Add to cart</span><span>Click</span></button>
         </form>
@@ -146,6 +149,7 @@
       </div>
     </div>
   </div>
+
   <div class="modal fade cart-modal" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
           <div class="modal-content">
@@ -172,7 +176,7 @@
                           foreach($_SESSION["shopping_cart"] as $keys => $values) {
                       ?>
                       <tr>
-                          <td><a href="product.html"><?php echo $values["item_name"]; ?></a></td>
+                          <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
                           <td><?php echo $values["item_price"];?></td>
                           <td><?php echo $values["item_qty"]; ?></td>
                           <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
