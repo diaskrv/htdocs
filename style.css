@@ -280,7 +280,7 @@ p{
 @media only screen and (max-width: 800px){
   nav ul{
     position: absolute;
-    top: 70px;
+    top: 30px;
     left: 0;
     width: 100px;
     background: #333;
