@@ -188,8 +188,8 @@
                   </table>
               </div>
               <div class="modal-footer">
-                  <a href="php/cart.php"><button type="button" class="button-57" style="margin-top: 5px;" class="btn"><span class="text">Go to cart</span><span>Go to cart</span></button></a>
-                  <a href="payment.php"><button type="button" class="button-57" style="margin-top: 5px;" class="btn"><span class="text">Order</span><span>Order</span></button></a>
+                  <a href="php/cart.php"><button type="button" class="button-57" style="margin-top: 5px;" class="btn"><span class="text">Go to cart</span><span class="text">Go to cart</span></button></a>
+                  <a href="payment.php"><button type="button" class="button-57" style="margin-top: 5px;" class="btn"><span class="text">Order</span><span class="text">Order</span></button></a>
               </div>
           </div>
       </div>
