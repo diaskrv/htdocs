@@ -326,6 +326,58 @@ function myFunction() {
             </div>
             </nav>
       </div>
+
+      <div class="modal fade cart-modal" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel" href="php/cart.php">Shopping cart</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">Price</th>
+                              <th scope="col">Quantity</th>
+                              <th scope="col">Action</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <?php
+                            if(!empty($_SESSION["shopping_cart"])) {
+                              $total = 0;
+                              foreach($_SESSION["shopping_cart"] as $keys => $values) {
+                          ?>
+                          <tr>
+                              <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
+                              <td><?php echo $values["item_price"];?></td>
+                              <td><?php echo $values["item_qty"]; ?></td>
+                              <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+                          </tr>
+                          <?php
+                              $total = $total + ($values["item_qty"] * $values["item_price"]);
+                              }
+                            }
+                          ?>
+                          <tr>
+                              <td colspan="4" align="right">Total price: <br> $<?php echo $total; ?></td>
+                          </tr>
+                          </tbody>
+
+                      </table>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <a href="php/cart.php"><button type="button" class="btn btn-secondary">Go to cart</button></a>
+                      <a href="payment.php"><button type="button" class="btn btn-primary">Order</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
     </header>
 
 
@@ -362,58 +414,6 @@ function myFunction() {
         ?>
       </div>
     </div>
-  </div>
-
-  <div class="modal fade cart-modal" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel" href="php/cart.php">Shopping cart</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <table class="table">
-                      <thead>
-                      <tr>
-                          <th scope="col">Name</th>
-                          <th scope="col">Price</th>
-                          <th scope="col">Quantity</th>
-                          <th scope="col">Action</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <?php
-                        if(!empty($_SESSION["shopping_cart"])) {
-                          $total = 0;
-                          foreach($_SESSION["shopping_cart"] as $keys => $values) {
-                      ?>
-                      <tr>
-                          <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
-                          <td><?php echo $values["item_price"];?></td>
-                          <td><?php echo $values["item_qty"]; ?></td>
-                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
-                      </tr>
-                      <?php
-                          $total = $total + ($values["item_qty"] * $values["item_price"]);
-                          }
-                        }
-                      ?>
-                      <tr>
-                          <td colspan="4" align="right">Total price: <br> $<?php echo $total; ?></td>
-                      </tr>
-                      </tbody>
-
-                  </table>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <a href="php/cart.php"><button type="button" class="btn btn-secondary">Go to cart</button></a>
-                  <a href="payment.php"><button type="button" class="btn btn-primary">Order</button></a>
-              </div>
-          </div>
-      </div>
   </div>
 
   <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
