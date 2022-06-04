@@ -106,6 +106,7 @@
                 <?php
                   if(!empty($_SESSION["shopping_cart"])) {
                     $total = 0;
+                    $items_amount = 0;
                     foreach($_SESSION["shopping_cart"] as $keys => $values) {
                 ?>
                 <?php $values["item_name"]; ?>
@@ -114,6 +115,7 @@
 
                 <?php
                     $total = $total + ($values["item_qty"] * $values["item_price"]);
+                    $items_amount = $items_amount + $values["item_qty"];
                     }
                 ?>
                 <div class="col-2">
@@ -121,18 +123,14 @@
                         <h3>Price Details</h3>
                         <ul>
                             <li class="flex justify-content-between">
-                                <label for="price">Products ( 3 items ) : </label>
-                                <span>$399</span>
+                                <label for="price">Products amount: <?php echo $items_amount; ?></label>
+                                <span>Total price: <?php echo $total; ?></span>
                             </li>
                             <li class="flex justify-content-between">
                                 <label for="price">Delivery Charges : </label>
                                 <span>Free</span>
                             </li>
                             <hr>
-                            <li class="flex justify-content-between">
-                                <label for="price">Amout Payble : </label>
-                                <span class="text-red font-title">$$<?php echo $total; ?></span>
-                            </li>
                         </ul>
                         <div id="paypal-payment-button">
                         </div>
