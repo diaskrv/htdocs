@@ -330,6 +330,7 @@ function myFunction() {
                 </li>
                   </span>
                 </div>
+                  <li><p type="button" data-toggle="modal" data-target="#cart-modal" style="color: white">Cart</p></li>
               </ul>
             </div>
             </nav>
