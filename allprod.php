@@ -8,12 +8,12 @@
 
 <?php
   session_start();
+     **fastcgi_finish_request();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
 
   if(isset($_POST["add_to_cart"]))
  {
-      if(isset($_SESSION["shopping_cart"]))
-      {
+      if(isset($_SESSION["shopping_cart"])){
            $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
            if(!in_array($_GET["id"], $item_array_id))
            {
@@ -170,7 +170,7 @@
                           foreach($_SESSION["shopping_cart"] as $keys => $values) {
                       ?>
                       <tr>
-                          <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_price"]; ?></a></td>
+                          <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
                           <td><?php echo $values["item_price"];?></td>
                           <td><?php echo $values["item_qty"]; ?></td>
                           <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
@@ -184,7 +184,7 @@
                           <td colspan="4" align="right">Total price: <br> $<?php echo $total; ?></td>
                       </tr>
                       </tbody>
-aa
+
                   </table>
               </div>
               <div class="modal-footer">
