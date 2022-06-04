@@ -118,17 +118,17 @@
 
 
 <h2 class="title2">All Products</h2>
-<?php
-  $sqlSelect = "SELECT * FROM products ORDER by  id ASC";
-  $result = mysqli_query($conn, $sqlSelect);
-  if(mysqli_num_rows($result) > 0)
-  {
-    while($row = mysqli_fetch_array($result))
-    {
-?>
   <div class="categories1">
     <div class="small-container">
       <div class="row">
+        <?php
+          $sqlSelect = "SELECT * FROM products ORDER by  id ASC";
+          $result = mysqli_query($conn, $sqlSelect);
+          if(mysqli_num_rows($result) > 0)
+          {
+            while($row = mysqli_fetch_array($result))
+            {
+        ?>
         <div class="col-4">
           <form method="post" action="allprod.php?action=add&id=<?php echo $row["id"];?>">
           <a href="prodPage/<?php echo $row["path"];?>"><img src="assets/<?php echo $row["image"];?>" style="width: 230px; height: 230px;">
@@ -140,13 +140,14 @@
           <button class="button-57" role="button" type="submit" name="add_to_cart" style="margin-top: 5px;" class="btn" value="Add to Cart"><span class="text">Add to cart</span><span>Click</span></button>
         </form>
         </div>
+        <?php
+            }
+          }
+        ?>
+
       </div>
     </div>
   </div>
-<?php
-    }
-  }
-?>
 
   <div class="modal fade cart-modal" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
