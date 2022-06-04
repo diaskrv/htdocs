@@ -8,7 +8,6 @@
 
 <?php
   session_start();
-     **fastcgi_finish_request();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
 
   if(isset($_POST["add_to_cart"]))
