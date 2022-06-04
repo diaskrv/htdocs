@@ -86,7 +86,7 @@
                             </div>
                             <div class="title">
                                 <h3><?php echo $values["item_name"]; ?></h3>
-                                <span><?php echo $values["item_brand"]; ?></span>
+                                <span><?php echo $values["item_brand"]; ?> - <?php echo $values["item_category"]; ?></span>
                                 <div class="buttons">
                                   <span>Amount: <?php echo $values["item_qty"]; ?></span>
                                 </div>
@@ -120,15 +120,14 @@
                 ?>
                 <div class="col-2">
                     <div class="subtotal text-center">
-                        <h3>Price Details</h3>
+                        <h3>Purchase Details</h3>
                         <ul>
                             <li class="flex justify-content-between">
-                                <label for="price">Products amount: <?php echo $items_amount; ?></label>
-                                <span>Total price: <?php echo $total; ?></span>
+                                <label for="price">Products amount: <?php echo $items_amount; ?> items</label>
+                                <span>Total price: $<?php echo $total; ?></span>
                             </li>
                             <li class="flex justify-content-between">
-                                <label for="price">Delivery Charges : </label>
-                                <span>Free</span>
+                                <label for="price">Delivery Charges : Free</label>
                             </li>
                             <hr>
                         </ul>
