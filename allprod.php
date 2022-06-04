@@ -57,7 +57,6 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
-                     echo '<script>alert("Item Removed")</script>';
                      echo '<script>window.location="allprod.php"</script>';
                 }
            }
