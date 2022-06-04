@@ -14,7 +14,10 @@
                      'item_id'               =>     $_GET["id"],
                      'item_name'               =>     $_POST["hidden_name"],
                      'item_qty'          =>     $_POST["qty"],
-                      'item_price'          =>     $_POST["hidden_price"],
+                     'item_price'          =>     $_POST["hidden_price"],
+                     'item_path'          =>     $_POST["hidden_path"],
+                     'item_brand'          =>     $_POST["hidden_brand"],
+                     'item_category'          =>     $_POST["hidden_category"],
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
                 $sqlInsert = "INSERT INTO wishlist (w_id, name)

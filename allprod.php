@@ -25,6 +25,7 @@
                      'item_price'          =>     $_POST["hidden_price"],
                      'item_path'          =>     $_POST["hidden_path"],
                      'item_brand'          =>     $_POST["hidden_brand"],
+                     'item_category'          =>     $_POST["hidden_category"],
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
 
@@ -139,6 +140,7 @@
           <input type="hidden" name="hidden_path" value="<?php echo $row["path"];?>">
           <input type="hidden" name="hidden_brand" value="<?php echo $row["brand"];?>">
           <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?>">
+          <input type="hidden" name="hidden_category" value="<?php echo $row["category"];?>">
           <button class="button-57" role="button" type="submit" name="add_to_cart" style="margin-top: 5px;" class="btn" value="Add to Cart"><span class="text">Add to cart</span><span>Click</span></button>
         </form>
         </div>

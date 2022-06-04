@@ -17,6 +17,7 @@
                      'item_price'          =>     $_POST["hidden_price"],
                      'item_path'          =>     $_POST["hidden_path"],
                      'item_brand'          =>     $_POST["hidden_brand"],
+                     'item_category'          =>     $_POST["hidden_category"],
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
 
@@ -94,7 +95,7 @@
                             </div>
                         </div>
                         <div class="price">
-                            <h4 class="text-red">$<?php echo $values["item_price"]; ?></h4>
+                            <h4 class="text-red">$<?php echo $values["item_price"]*$values["item_qty"]; ?></h4>
                         </div>
                     </div>
                     <?php
