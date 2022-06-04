@@ -321,22 +321,10 @@ function myFunction() {
                 <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
                   <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcome.php" style="padding: 0px 20px;">HOME</a></li>
                   <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
-                  <li class="u-nav-item"><div class="popup" onclick="myFunction()">Account
-                  <span class="popuptext" id="myPopup">
-                <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="accountpage.php" style="padding: 0px 20px;">My profile</a>
-                <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="rega.php" style="padding: 0px 20px;">Registration</a>
-                <form action="deleteCookies.php" method="post">
-                  <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Logout</a>
-                </form>
-                </li>
-                  </span>
-                </div>
                   <li><p type="button" data-toggle="modal" data-target="#cart-modal" style="color: white">Cart</p></li>
               </ul>
             </div>
             </nav>
-
-          
       </div>
     </header>
 
