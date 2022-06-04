@@ -335,6 +335,7 @@ function myFunction() {
 </div>
 </ul>
           </div>
+                  </nav>
 
           <ul id="Menuitems">
     <div class="container" style="padding-bottom: 0px; padding-left: 800px;">
@@ -413,7 +414,6 @@ function myFunction() {
     </div>
           </a>
           </ul>
-        </nav>
       </div>
     </header>
 
