@@ -100,10 +100,9 @@
 					<ul>
 						<li><a href="welcome.php" style="font-size: 20px;">Home</a></li>
 						<li><a href="Contacts.html" style="font-size: 20px;">Contacts</a></li>
-            <li><p href="" type="button" data-toggle="modal" data-target="#cart-modal" style="color: white; font-size: 20px;">Cart</p></li>
+            <li><p type="button" data-toggle="modal" data-target="#cart-modal" style="color: white; font-size: 20px;">Cart</p></li>
 					</ul>
 				</nav>
-					<img src="assets/menu.png" class="menu-icon" style="width: 30px; height: 30px;">
 			</div>
 		</div>
 	</div>
