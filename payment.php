@@ -71,13 +71,13 @@
         <div class="site-title text-center">
             <h1 class="font-title">Shopping Cart</h1>
         </div>
-        <?php
-          if(!empty($_SESSION["shopping_cart"])) {
-            $total = 0;
-            foreach($_SESSION["shopping_cart"] as $keys => $values) {
-        ?>
         <div class="container">
             <div class="grid">
+              <?php
+                if(!empty($_SESSION["shopping_cart"])) {
+                  $total = 0;
+                  foreach($_SESSION["shopping_cart"] as $keys => $values) {
+              ?>
                 <div class="col-1">
                     <div class="flex item justify-content-between">
                         <div class="flex">
@@ -88,11 +88,9 @@
                                 <h3><?php echo $values["item_name"]; ?></h3>
                                 <span><?php echo $values["item_brand"]; ?></span>
                                 <div class="buttons">
-                                    <button type="submit"><i class="fas fa-chevron-up"></i> </button>
-                                    <button type="submit"><i class="fas fa-chevron-down"></i> </button>
+                                  <span>Amount: <?php echo $values["item_qty"]; ?></span>
                                 </div>
-                                <span><?php echo $values["item_qty"]; ?></span>
-                                <a href="#">Delete From Cart</a>
+                                <a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>">Delete From Cart</a>
                             </div>
                         </div>
                         <div class="price">
