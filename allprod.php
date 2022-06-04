@@ -99,9 +99,9 @@
 			<div class = "navbar">
 				<nav>
 					<ul>
-						<li><a href="welcome.php">Home</a></li>
-						<li><a href="Contacts.html">Contacts</a></li>
-            <li><p href="" type="button" data-toggle="modal" data-target="#cart-modal" style="color: white">Cart</p></li>
+						<li><a href="welcome.php" style="font-size: 30px;">Home</a></li>
+						<li><a href="Contacts.html" style="font-size: 30px;">Contacts</a></li>
+            <li><p href="" type="button" data-toggle="modal" data-target="#cart-modal" style="color: white; font-size: 30px;">Cart</p></li>
 					</ul>
 				</nav>
 					<img src="assets/menu.png" class="menu-icon" style="width: 30px; height: 30px;">
@@ -149,7 +149,7 @@
           <div class="modal-content">
               <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel" href="php/cart.php">Shopping cart</h5>
-                  <button type="button" class="close" data-dismiss="modal">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                   </button>
               </div>
@@ -188,9 +188,8 @@
                   </table>
               </div>
               <div class="modal-footer">
-                  <button type="button" class="button-57" style="margin-top: 5px;" class="btn" data-dismiss="modal"><span class="text">Add to cart</span><span>Close</span></button>
-                  <a href="php/cart.php"><button type="button" class="button-57" style="margin-top: 5px;" class="btn"><span class="text">Add to cart</span><span>Go to cart</span></button></a>
-                  <a href="payment.php"><button type="button" class="button-57" style="margin-top: 5px;" class="btn"><span class="text">Add to cart</span><span>Order</span></button></a>
+                  <a href="php/cart.php"><button type="button" class="button-57" style="margin-top: 5px;" class="btn"><span class="text">Go to cart</span><span>Click</span></button></a>
+                  <a href="payment.php"><button type="button" class="button-57" style="margin-top: 5px;" class="btn"><span class="text">Order</span><span>Click</span></button></a>
               </div>
           </div>
       </div>
