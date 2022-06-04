@@ -73,12 +73,12 @@
         </div>
         <div class="container">
             <div class="grid">
-              <?php
-                if(!empty($_SESSION["shopping_cart"])) {
-                  $total = 0;
-                  foreach($_SESSION["shopping_cart"] as $keys => $values) {
-              ?>
                 <div class="col-1">
+                  <?php
+                    if(!empty($_SESSION["shopping_cart"])) {
+                      $total = 0;
+                      foreach($_SESSION["shopping_cart"] as $keys => $values) {
+                  ?>
                     <div class="flex item justify-content-between">
                         <div class="flex">
                             <div class="img text-center">
@@ -97,11 +97,11 @@
                             <h4 class="text-red">$<?php echo $values["item_price"]; ?></h4>
                         </div>
                     </div>
+                    <?php
+                          }
+                        }
+                    ?>
                 </div>
-                <?php
-                      }
-                    }
-                ?>
 
                 <?php
                   if(!empty($_SESSION["shopping_cart"])) {
