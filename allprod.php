@@ -160,7 +160,6 @@
                           <th scope="col">Name</th>
                           <th scope="col">Price</th>
                           <th scope="col">Quantity</th>
-                          <th scope="col">Path</th>
                           <th scope="col">Action</th>
                       </tr>
                       </thead>
@@ -171,10 +170,9 @@
                           foreach($_SESSION["shopping_cart"] as $keys => $values) {
                       ?>
                       <tr>
-                          <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
+                          <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_price"]; ?></a></td>
                           <td><?php echo $values["item_price"];?></td>
                           <td><?php echo $values["item_qty"]; ?></td>
-                          <td><?php echo $values["item_path"]; ?></td>
                           <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                       </tr>
                       <?php
