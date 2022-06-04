@@ -124,17 +124,17 @@
         ?>
         <div class="col-4">
           <form method="post" action="allprod.php?action=add&id=<?php echo $row["id"];?>">
-          <a href="prodPage/<?php echo $row["path"];?>"><img src="assets/<?php echo $row["image"];?>" style="width: 230px; height: 230px;">
-          <h5><?php echo $row["name"];?></h5></a>
-          <input type="number" name="qty" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
-          <p>$<?php echo $row["price"];?></p>
-          <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
-          <input type="hidden" name="hidden_path" value="<?php echo $row["path"];?>">
-          <input type="hidden" name="hidden_brand" value="<?php echo $row["brand"];?>">
-          <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?>">
-          <input type="hidden" name="hidden_category" value="<?php echo $row["category"];?>">
-          <button class="button-57" role="button" type="submit" name="add_to_cart" style="margin-top: 5px;" class="btn" value="Add to Cart"><span class="text">Add to cart</span><span>Click</span></button>
-        </form>
+            <a href="prodPage/<?php echo $row["path"];?>"><img src="assets/<?php echo $row["image"];?>" style="width: 230px; height: 230px;">
+            <h5><?php echo $row["name"];?></h5></a>
+            <input type="number" name="qty" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
+            <p>$<?php echo $row["price"];?></p>
+            <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
+            <input type="hidden" name="hidden_path" value="<?php echo $row["path"];?>">
+            <input type="hidden" name="hidden_brand" value="<?php echo $row["brand"];?>">
+            <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?>">
+            <input type="hidden" name="hidden_category" value="<?php echo $row["category"];?>">
+            <button class="button-57" role="button" type="submit" name="add_to_cart" style="margin-top: 5px;" class="btn" value="Add to Cart"><span class="text">Add to cart</span><span>Click</span></button>
+          </form>
         </div>
         <?php
             }
@@ -160,7 +160,7 @@
                           <th scope="col">Name</th>
                           <th scope="col">Price</th>
                           <th scope="col">Quantity</th>
-                          <th scope="col">Brand</th>
+                          <th scope="col">Path</th>
                           <th scope="col">Action</th>
                       </tr>
                       </thead>
@@ -174,7 +174,7 @@
                           <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
                           <td><?php echo $values["item_price"];?></td>
                           <td><?php echo $values["item_qty"]; ?></td>
-                          <td><?php echo $values["item_brand"]; ?></td>
+                          <td><?php echo $values["item_path"]; ?></td>
                           <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                       </tr>
                       <?php
