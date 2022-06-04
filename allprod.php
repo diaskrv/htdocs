@@ -10,6 +10,24 @@
   session_start();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
 
+  if($_POST['select']) {
+    $select=$_POST['select'];
+    switch ($select) {
+      case "a_z":
+        $sql = "SELECT * FROM products ORDER BY brand";
+        break;
+      case "z_a":
+        $sql = "SELECT * FROM products ORDER BY brand DESC";
+        break;
+      case "priceMax":
+        $sql = "SELECT * FROM products ORDER BY price";
+        break;
+      case "priceMin":
+        $sql = "SELECT * FROM `product` ORDER BY price DESC ";
+        break;
+      }
+  }
+
   if(isset($_POST["add_to_cart"]))
  {
       if(isset($_SESSION["shopping_cart"])){
@@ -70,6 +88,12 @@
        <link rel="stylesheet" type="text/css" href="style.css">
 			 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
        <link rel="stylesheet" href="assets/css/main.css">
+
+       <script src="jquery.js"></script>
+       <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+       <script src="js/main.js"></script>
 </head>
 <body>
   <style type="text/css">
@@ -107,8 +131,20 @@
 		</div>
 	</div>
 
+<br>
 
 <h2 class="title2">All Products</h2>
+
+<form action='allprod.php' method='post'>
+<select name='select'>
+               <option value='a_z'>по имени (A-Z)</option>
+               <option value='z_a'>по имени (Z-A)</option>
+               <option value='priceMax'>по цене (дороже)</option>
+               <option value='priceMin'>по цене (дешевле)</option>
+           </select>
+           <input type='submit' name='submit' value='отсортировать'>
+</form>
+
   <div class="categories1">
     <div class="small-container">
       <div class="row">
@@ -192,11 +228,6 @@
           </div>
       </div>
   </div>
-
-  <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>
 
