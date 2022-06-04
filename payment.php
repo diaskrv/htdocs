@@ -89,9 +89,9 @@
                                 <span><?php echo $values["item_brand"]; ?></span>
                                 <div class="buttons">
                                     <button type="submit"><i class="fas fa-chevron-up"></i> </button>
-                                    <input type="text" class="font-title" value="1">
                                     <button type="submit"><i class="fas fa-chevron-down"></i> </button>
                                 </div>
+                                <span><?php echo $values["item_qty"]; ?></span>
                                 <a href="#">Delete From Cart</a>
                             </div>
                         </div>
@@ -100,6 +100,20 @@
                         </div>
                     </div>
                 </div>
+                <?php
+                      }
+                    }
+                ?>
+
+                <?php
+                  if(!empty($_SESSION["shopping_cart"])) {
+                    $total = 0;
+                    foreach($_SESSION["shopping_cart"] as $keys => $values) {
+                ?>
+                <?php $values["item_name"]; ?>
+                <?php $values["item_qty"]; ?>
+                <?php $values["item_price"]; ?>
+
                 <?php
                     $total = $total + ($values["item_qty"] * $values["item_price"]);
                     }
@@ -126,11 +140,11 @@
                         </div>
                     </div>
                 </div>
+                      <?php
+                        }
+                      ?>
             </div>
         </div>
-        <?php
-          }
-        ?>
     </main>
     <script src="https://www.paypal.com/sdk/js?client-id=Ae1x7uKLtzsWsiC7GCSxqQlHOkB5vKuAfqpLf2-8SYxBcJcHADhmw4T_P3NMA7Lgfx-uGSI5AX7Vpx_b"></script>
     <script src="index1234.js"></script>
