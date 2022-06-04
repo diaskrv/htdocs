@@ -61,56 +61,362 @@
  }
 ?>
 <!DOCTYPE html>
-<html>
-<head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>All products | Laptops advertisement webpage</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-       <link rel="stylesheet" type="text/css" href="style.css">
-			 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-       <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-  <style type="text/css">
-  body{
-   background-image: linear-gradient(#000000, #06091e);
-   font-family: Verdana, sans-serif;
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="TRUST US YOUR PREFERENCES!">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
 
-  }
-  .container {
-  display: flex;
-  align-items: center;
-  justify-content: center
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="HOME.css" media="screen">
+    <link rel="stylesheet" href="style.css" media="screen">
+
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900">
+
+    <meta property="og:title" content="HOME">
+    <meta property="og:type" content="website">
+
+    <title>Laptops advertisement website</title>
+
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+
+    <style>
+     #map {
+       height: 500px;
+       width: 900px;
+       margin-right: 200px;
+       margin-top: 30px;
+       margin-left: 250px;
+       margin-bottom: 100px;
+       border: 3px;
+       border-radius: 25px;
+       box-shadow: 10px 15px 5px #7FFFD4;
+     }
+
+     .container8 {
+       margin-top: 100px;
+       padding: 32px;
+     }
+
+     .select-box {
+       position: relative;
+       display: flex;
+       width: 400px;
+       flex-direction: column;
+     }
+
+     .select-box .options-container {
+       background: #2f3640;
+       color: #f5f6fa;
+       max-height: 0;
+       width: 100%;
+       opacity: 0;
+       transition: all 0.4s;
+       border-radius: 8px;
+       overflow: hidden;
+
+       order: 1;
+     }
+
+     .selected {
+       background: #2f3640;
+       border-radius: 8px;
+       margin-bottom: 8px;
+       color: #f5f6fa;
+       position: relative;
+
+       order: 0;
+     }
+
+     .selected::after {
+       content: "";
+       background: url("assets/arrow-down.svg");
+       background-size: contain;
+       background-repeat: no-repeat;
+
+       position: absolute;
+       height: 100%;
+       width: 32px;
+       right: 10px;
+       top: 5px;
+
+       transition: all 0.4s;
+     }
+
+     .select-box .options-container.active {
+       max-height: 240px;
+       opacity: 1;
+       overflow-y: scroll;
+       margin-top: 54px;
+     }
+
+     .select-box .options-container.active + .selected::after {
+       transform: rotateX(180deg);
+       top: -6px;
+     }
+
+     .select-box .options-container::-webkit-scrollbar {
+       width: 8px;
+       background: #0d141f;
+       border-radius: 0 8px 8px 0;
+     }
+
+     .select-box .options-container::-webkit-scrollbar-thumb {
+       background: #525861;
+       border-radius: 0 8px 8px 0;
+     }
+
+     .select-box .option,
+     .selected {
+       padding: 12px 24px;
+       cursor: pointer;
+     }
+
+     .select-box .option:hover {
+       background: #414b57;
+     }
+
+     .select-box label {
+       cursor: pointer;
+     }
+
+     .select-box .option .radio {
+       display: none;
+     }
+
+     /* Searchbox */
+
+     .search-box input {
+       width: 100%;
+       padding: 12px 16px;
+       font-family: "Roboto", sans-serif;
+       font-size: 16px;
+       position: absolute;
+       border-radius: 8px 8px 0 0;
+       z-index: 100;
+       border: 8px solid #2f3640;
+
+       opacity: 0;
+       pointer-events: none;
+       transition: all 0.4s;
+     }
+
+     .search-box input:focus {
+       outline: none;
+     }
+
+     .select-box .options-container.active ~ .search-box input {
+       opacity: 1;
+       pointer-events: auto;
+     }
+     .u-clearfix.u-image.u-section-1 {
+      background-image: url("assets/background.png");
+     }
+     h5{
+      color: white;
+     }
+     .categories1.small-container.row{
+      margin-bottom: 500px;
+      padding-bottom: 5000px;
+     }
+
+     .u-image.u-logo.u-image-1{
+      width: 15%;
+
+     }
+   </style>
+
+    <meta property="og:title" content="HOME">
+    <meta property="og:type" content="website">
+  </head>
+
+
+
+
+  <body class="u-body u-xl-mode">
+
+    <script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+<style type="text/css">
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
-    nav ul li a{
-      color: white;
-    }
-    div div div a h5{
-      color: white;
-    }
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
 
-  </style>
+  margin-left: -160px;
+}
 
-  <div class="header">
-		<div class="container">
-			<div class = "navbar">
-				<a href="welcome.php">
-					<img src="../assets/logo1.png">
-				</a>
-				<nav>
-					<ul>
-						<li><a href="welcome.php">Home</a></li>
-						<li><a href="Contacts.html">Contacts</a></li>
-            <li><p href="" type="button" data-toggle="modal" data-target="#cart-modal" style="color: white">Cart</p></li>
-					</ul>
-				</nav>
-					<img src="assets/menu.png" class="menu-icon" style="width: 30px; height: 30px;">
-			</div>
-		</div>
-	</div>
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+
+
+    <header class="u-black u-clearfix u-header u-header" id="sec-adc2">
+      <div class="u-clearfix u-sheet u-sheet-1">
+
+
+
+    <form action="cabinet.php" method = "post">
+        <a href="index.php" class="u-image u-logo u-image-1" data-image-width="690" data-image-height="388">
+          <img src="assets/ezgif.com-gif-maker.gif" class="u-logo-image u-logo-image-1" style="width: 200%;">
+        </a>
+        <a href="HOME.php" data-page-id="333829213" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-1">
+          <br>
+        </a>
+
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcome.php" style="padding: 0px 20px;">HOME</a></li>
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
+              <li class="u-nav-item"><div class="popup" onclick="myFunction()">Account
+  <span class="popuptext" id="myPopup">
+<a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="accountpage.php" style="padding: 0px 20px;">My profile</a>
+    <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="rega.php" style="padding: 0px 20px;">Registration</a>
+    <form action="deleteCookies.php" method="post">
+    <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Logout</a>
+  </form>
+  </li>
+</span>
+</div>
+</ul>
+          </div>
+
+          <ul id="Menuitems">
+    <div class="container" style="padding-bottom: 0px; padding-left: 800px;">
+      <div class="select-box">
+        <div class="options-container">
+          <div class="option">
+            <input type="radio" class="radio" id="applemacbookprom1" name="category"/>
+            <a href="prodPage/applemac.php"><label for="apple">Apple MacBook Pro M1 13</label></a>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="asusrogstrixg15" name="category" />
+            <a href="prodPage/asus.php"><label for="asusrog">Asus Rog Strix G15 G513IH</label></a>
+          </div>
+
+          <div class="option">
+            <input src="predator.html" type="radio" class="radio" id="AcerPredator" name="category" />
+            <a href="prodPage/predator.php"><label for="Acer">Acer Predator Triton 300SE</label></a>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Lenovo" name="category" />
+            <a href="prodPage/ideapad.php"><label for="LenovoIdeapad">Lenovo Ideapad 3 15ALC6</label></a>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Razer" name="category" />
+            <a href="prodPage/blackshark.php"><label for="RazerBlackshark">Razer Blackshark V2 X</label></a>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="LogitechG102" name="category" />
+            <a href="prodPage/log.php"><label for="logitech">Logitech G102</label></a>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="BeyerdynamicDT" name="category" />
+            <a href="prodPage/beyer.php"><label for="Beyerdynamic">Beyerdymanic DT 240 PRO</label></a>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Victus" name="category" />
+            <a href="prodPage/victus.php"><label for="HPVictus">HP Victus 16-e0010ur</label></a>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="DefenderMasterCHAIR" name="category" />
+            <a href="prodPage/defender.php"><label for="DefenderMaster">Defender Master</label></a>
+          </div>
+
+           <div class="option">
+            <input type="radio" class="radio" id="SteelSeriesHeadset" name="category" />
+            <a href="prodPage/steelseries.php"><label for="SteelSeries">Steelseries Arctis</label></a>
+          </div>
+
+           <div class="option">
+            <input type="radio" class="radio" id="BloodyMouseA4Tech" name="category" />
+            <a href="prodPage/bloody.php"><label for="BloodyA4tech">A4Tech Bloody</label></a>
+          </div>
+
+           <div class="option">
+            <input type="radio" class="radio" id="RazerMousepadIlan" name="category" />
+            <a href="prodPage/iLan.php"><label for="RazerIlan">Razer iLan</label></a>
+          </div>
+
+        </div>
+
+        <div class="selected">
+          Select the product
+        </div>
+
+        <div class="search-box">
+          <input style="color: #000000;" type="text" placeholder="Type the name of the product..." />
+        </div>
+      </div>
+    </div>
+          </a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
 
 
 <h2 class="title2">All Products</h2>
