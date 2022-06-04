@@ -136,7 +136,7 @@
 
 <h2 class="title2">All Products</h2>
 
-<form action='allprod.php' method='post'>
+<form action='' method='post'>
 <select name='select'>
                <option value='a_z'>по имени (A-Z)</option>
                <option value='z_a'>по имени (Z-A)</option>
