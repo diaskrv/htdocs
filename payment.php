@@ -28,7 +28,6 @@
                                     <input type="text" class="font-title" value="1">
                                     <button type="submit"><i class="fas fa-chevron-down"></i> </button>
                                 </div>
-                                <a href="#">Save for later</a> |
                                 <a href="#">Delete From Cart</a>
                             </div>
                         </div>
