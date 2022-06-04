@@ -20,11 +20,6 @@
                      'item_category'          =>     $_POST["hidden_category"],
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
-
-                $sqlInsert = "INSERT INTO wishlist('w_id', 'name', 'price')
-                VALUES('item_id','item_name', 'item_price')";
-
-                $conn->commit();
            }
            else
            {
@@ -51,7 +46,7 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
-                     echo '<script>window.location="allprod.php"</script>';
+                     echo '<script>window.location="payment.php"</script>';
                 }
            }
       }

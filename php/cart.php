@@ -20,8 +20,6 @@
                      'item_category'          =>     $_POST["hidden_category"],
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
-                $sqlInsert = "INSERT INTO wishlist (w_id, name)
-                VALUES('item_id','item_name')";
            }
            else
            {
