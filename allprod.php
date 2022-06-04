@@ -184,7 +184,7 @@
                           <td colspan="4" align="right">Total price: <br> $<?php echo $total; ?></td>
                       </tr>
                       </tbody>
-
+aa
                   </table>
               </div>
               <div class="modal-footer">
