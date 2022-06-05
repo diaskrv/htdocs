@@ -60,7 +60,6 @@
                      $item_Qty=$_POST['qty'];
                      $item_ID=$_POST['hidden_id'];
                      mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
-                     echo '<script>window.location="allprod.php"</script>';
                 }
            }
       }
