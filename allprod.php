@@ -9,7 +9,7 @@
 <?php
   session_start();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
-
+  $sqlSelect = "SELECT * FROM products ORDER by id ASC";
 
   if($_POST['select']) {
     $select=$_POST['select'];
@@ -137,15 +137,14 @@
 
 <h2 class="title2">All Products</h2>
 
-<form action='allprod.php?sort=add&id=<?php echo $row["id"];?>' method='post'>
+  <div class="sort">
 <select name='select'>
-               <option value='a_z'>по имени (A-Z)</option>
-               <option value='z_a'>по имени (Z-A)</option>
-               <option value='priceMax'>по цене (дороже)</option>
-               <option value='priceMin'>по цене (дешевле)</option>
+               <span value='a_z'>по имени (A-Z)</span>
+               <span value='z_a'>по имени (Z-A)</span>
+               <span value='priceMax'>по цене (дороже)</span>
+               <span value='priceMin'>по цене (дешевле)</span>
            </select>
-           <input type='submit' name='select' value='отсортировать'>
-</form>
+  </div>
 
   <div class="categories1">
     <div class="small-container">
