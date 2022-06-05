@@ -139,6 +139,7 @@
 
   <div class="sort">
 <select name='select'>
+  Sort by
                <span value='a_z'>по имени (A-Z)</span>
                <span value='z_a'>по имени (Z-A)</span>
                <span value='priceMax'>по цене (дороже)</span>
