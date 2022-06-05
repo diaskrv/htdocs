@@ -114,8 +114,6 @@
                     $items_amount = $items_amount + $values["item_qty"];
                     }
                 ?>
-
-
                 <div class="col-2">
                     <div class="subtotal text-center">
                         <h3>Purchase Details</h3>

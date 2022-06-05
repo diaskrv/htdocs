@@ -57,6 +57,7 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
+                     echo '<script>window.location="allprod.php"</script>';
                 }
            }
       }
@@ -147,7 +148,6 @@
             <h5><?php echo $row["name"];?></h5></a>
             <input type="number" name="qty" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
             <p>$<?php echo $row["price"];?></p>
-            <input type="hidden" name="hidden_id" value="<?php echo $row["id"];?>">
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
             <input type="hidden" name="hidden_path" value="<?php echo $row["path"];?>">
             <input type="hidden" name="hidden_brand" value="<?php echo $row["brand"];?>">
@@ -190,9 +190,9 @@
                           foreach($_SESSION["shopping_cart"] as $keys => $values) {
                       ?>
                       <tr>
-                          <td name="naming"><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
+                          <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
                           <td><?php echo $values["item_price"];?></td>
-                          <td name="quantity"><?php echo $values["item_qty"]; ?></td>
+                          <td><?php echo $values["item_qty"]; ?></td>
                           <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                       </tr>
                       <?php
