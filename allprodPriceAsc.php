@@ -9,7 +9,7 @@
 <?php
   session_start();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
-  $sqlSelect = "SELECT * FROM products ORDER by id ASC";
+  $sqlSelect = "SELECT * FROM products ORDER by price ASC";
 
   if(isset($_POST["add_to_cart"]))
  {
@@ -32,7 +32,7 @@
            else
            {
                 echo '<script>alert("Item Already Added")</script>';
-                echo '<script>window.location="allprod.php"</script>';
+                echo '<script>window.location="allProdPriceAsc.php"</script>';
            }
       }
       else
@@ -54,7 +54,7 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
-                     echo '<script>window.location="allprod.php"</script>';
+                     echo '<script>window.location="allProdPriceAsc.php"</script>';
                 }
            }
       }

@@ -9,7 +9,7 @@
 <?php
   session_start();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
-  $sqlSelect = "SELECT * FROM products ORDER by id ASC";
+  $sqlSelect = "SELECT * FROM products ORDER by brand ASC";
 
   if(isset($_POST["add_to_cart"]))
  {
@@ -32,7 +32,7 @@
            else
            {
                 echo '<script>alert("Item Already Added")</script>';
-                echo '<script>window.location="allprod.php"</script>';
+                echo '<script>window.location="allprodBrand.php"</script>';
            }
       }
       else
@@ -54,7 +54,7 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
-                     echo '<script>window.location="allprod.php"</script>';
+                     echo '<script>window.location="allprodBrand.php"</script>';
                 }
            }
       }
@@ -118,12 +118,12 @@
 
 <h2 class="title2">All Products</h2>
 
-<select class="sort">Sort by
-             <a href="allprod.php"><button>By default</button></a>
-             <a href="allprodBrand.php"><button>By brand</button></a>
-             <a href="allProdPriceAsc.php"><button>Price<(Ascending)</button></a>
-             <a href="allProdPriceDesc.php"><button>Price(Descending)</button></a>
-</select>
+  <select class="sort">Sort by
+               <a href="allprod.php"><button>By default</button></a>
+               <a href="allprodBrand.php"><button>By brand</button></a>
+               <a href="allprodPriceAsc.php"><button>Price<(Ascending)</button></a>
+               <a href="allprodPriceDesc.php"><button>Price(Descending)</button></a>
+  </select>
 
   <div class="categories1">
     <div class="small-container">
