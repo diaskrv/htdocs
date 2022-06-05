@@ -188,7 +188,8 @@ nav div ul li a{
        <br>
        <?php
        $mysql = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
-       $resultt = $mysql->query("SELECT * from `users` WHERE `username`=$_COOKIE['user']");
+       $useer = $_COOKIE['user'];
+       $resultt = $mysql->query("SELECT * from `users` WHERE `username`='$useer'");
        if(mysqli_num_rows($resultt) > 0)
        {
          while($rowUser = mysqli_fetch_array($resultt))
