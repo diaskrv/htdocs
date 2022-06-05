@@ -25,14 +25,14 @@
                      'item_price'          =>     $_POST["hidden_price"],
                      'item_path'          =>     $_POST["hidden_path"],
                      'item_brand'          =>     $_POST["hidden_brand"],
-                     'item_category'          =>     $_POST["hidden_category"],
+                     'item_category'          =>     $_POST["hidden_category"]
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
            }
            else
            {
                 echo '<script>alert("Item Already Added")</script>';
-                echo '<script>window.location="allProdPriceAsc.php"</script>';
+                echo '<script>window.location="allprodPriceAsc.php"</script>';
            }
       }
       else
@@ -44,6 +44,9 @@
            );
            $_SESSION["shopping_cart"][0] = $item_array;
       }
+      $itemQty=$_POST['qty'];
+      $itemID=$_POST['hidden_id'];
+      mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
  }
  if(isset($_GET["action"]))
  {
@@ -54,7 +57,6 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
-                     echo '<script>window.location="allProdPriceAsc.php"</script>';
                 }
            }
       }
@@ -82,7 +84,7 @@
 <body>
   <style type="text/css">
   body{
-   background-image: linear-gradient(#000000, #06091e);
+   background-image: black;
    font-family: Verdana, sans-serif;
 
   }
@@ -124,7 +126,7 @@
       Sort by
                <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprod.php"><button>By default</button></a>
                <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodBrand.php"><button>By brand</button></a>
-               <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodPriceAsc.php"><button>Price<(Ascending)</button></a>
+               <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodPriceAsc.php"><button>Price(Ascending)</button></a>
                <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodPriceDesc.php"><button>Price(Descending)</button></a>
     </span>
   </div>
@@ -146,6 +148,7 @@
             <input type="number" name="qty" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
             <p>$<?php echo $row["price"];?></p>
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
+            <input type="hidden" name="hidden_id" value="<?php echo $row["id"];?>">
             <input type="hidden" name="hidden_path" value="<?php echo $row["path"];?>">
             <input type="hidden" name="hidden_brand" value="<?php echo $row["brand"];?>">
             <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?>">
