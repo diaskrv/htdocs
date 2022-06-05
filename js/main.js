@@ -1,19 +1,19 @@
-$(function() {
-  $('.add_to_cart').on('click', function() {
-    e.preventDefault();
-    let id = $(this).data('id');
-
-    $.ajax({
-      url: 'cart.php',
-      type: 'GET',
-      data: {cart: 'add', id: id},
-      dataType: 'json',
-      success: function(res) {
-        console.log(res);
-      },
-      error: function() {
-        alert("Error");
-      }
-    })
-  })
-})
+function init() {
+    if (page === 'catalog') {
+        catalog.init();
+        cart.init(optionsCatalog);
+    }
+    // --- Новый код
+    if (page === 'catalogDB') {
+        catalogDB.init();
+        cart.init(optionsCatalog);
+    }
+    // --- Новый код
+    if (page === 'cart') {
+        cart.init(optionsCart);
+    }
+    if (page === 'order') {
+        order.init();
+        cart.init(optionsOrder);
+    }
+}

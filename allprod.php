@@ -29,6 +29,59 @@
       }
   }
 
+        // Получение данных из массива _GET
+    function getOptions() {
+        // Категория и цены
+        $categoryId = (isset($_GET['category'])) ? (int)$_GET['category'] : 0;
+        $minPrice = (isset($_GET['min_price'])) ? (int)$_GET['min_price'] : 0;
+        $maxPrice = (isset($_GET['max_price'])) ? (int)$_GET['max_price'] : 1000000;
+
+        // Бренды
+        $brands = (isset($_GET['brands'])) ? implode($_GET['brands'], ',') : null;
+
+        // Сортировка
+        $sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'price_asc';
+        $sort = explode('_', $sort);
+        $sortBy = $sort[0];
+        $sortDir = $sort[1];
+
+        return array(
+            'brands' => $brands,
+            'category_id' => $categoryId,
+            'min_price' => $minPrice,
+            'max_price' => $maxPrice,
+            'sort_by' => $sortBy,
+            'sort_dir' => $sortDir
+        );
+    }
+
+        // Получение товаров
+    function getGoods($options, $conn) {
+        // Обязательные параметры
+        $minPrice = $options['min_price'];
+        $maxPrice = $options['max_price'];
+        $sortBy = $options['sort_by'];
+        $sortDir = $options['sort_dir'];
+
+        // Необязательные параметры
+        $categoryId = $options['category_id'];
+        $categoryWhere =
+            ($categoryId !== 0)
+                ? " g.category_id = $categoryId and "
+                : '';
+
+        $brands = $options['brands'];
+        $brandsWhere =
+            ($brands !== null)
+                ? " g.brand_id in ($brands) and "
+                : '';
+
+        $query = "SELECT * FROM products ORDER BY $sortBy $sortDir";
+
+        $data = $conn->query($query);
+        return $data->fetch_all(MYSQLI_ASSOC);
+    }
+
   if(isset($_POST["add_to_cart"]))
  {
       if(isset($_SESSION["shopping_cart"])){
@@ -77,6 +130,23 @@
            }
       }
  }
+
+       // Подключаемся к базе данных
+      $conn = connectDB();
+
+      // Получаем данные от клиента
+      $options = getOptions();
+
+      // Получаем товары
+      $goods = getGoods($options, $conn);
+
+      // Возвращаем клиенту успешный ответ
+      echo json_encode(array(
+      'code' => 'success',
+      'options' => $options,
+      'goods' => $goods
+      ));
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -94,6 +164,7 @@
        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+       <script src="js/catatlogDB.js" type="text/javascript"></script>
        <script src="js/main.js"></script>
 </head>
 <body>
@@ -136,14 +207,29 @@
 
 <h2 class="title2">All Products</h2>
 
-<form action='' method='post'>
-<select name='select'>
-               <option value='a_z'>по имени (A-Z)</option>
-               <option value='z_a'>по имени (Z-A)</option>
-               <option value='priceMax'>по цене (дороже)</option>
-               <option value='priceMin'>по цене (дешевле)</option>
-           </select>
-           <input type='submit' name='submit' value='отсортировать'>
+<div id="filters"> Filters </div>
+
+<form id="filters-form" role="form">
+    <div class="col-md-4">
+        <h4>Бренды</h4>
+        <div id="brands">
+            <div class="checkbox"><label><input type="checkbox" name="brands[]" value="1"> Apple</label></div>
+            <div class="checkbox"><label><input type="checkbox" name="brands[]" value="2"> Samsung</label></div>
+            <div class="checkbox"><label><input type="checkbox" name="brands[]" value="3"> Lenovo</label></div>
+            <div class="checkbox"><label><input type="checkbox" name="brands[]" value="4"> Что-то еще</label></div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h4>Сортировка</h4>
+        <br>
+        <select id="sort" name="sort" class="form-control">
+            <option value="price_asc">По цене, сначала дешевые</option>
+            <option value="price_desc">По цене, сначала дорогие</option>
+            <option value="rating_desc">По популярности</option>
+            <option value="good_asc">По названию, A-Z</option>
+            <option value="good_desc">По названию, Z-A</option>
+        </select>
+    </div>
 </form>
 
   <div class="categories1">
