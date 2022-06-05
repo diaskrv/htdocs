@@ -186,16 +186,6 @@ nav div ul li a{
 
        <img src="assets/profilePic.jpg" class="rounded-circle" style="width: 15%; border-radius: 50%;">
        <br>
-       <?php
-       $mysql = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
-       $useer = $_COOKIE['user'];
-       $sqlish="SELECT * FROM users WHERE username='$useer'";
-       $resultt = mysqli_query($mysql, $sqlish);
-       if(mysqli_num_rows($resultt) > 0)
-       {
-         while($rowUser = mysqli_fetch_array($resultt))
-         {
-       ?>
        <p style="font-size: 50px; text-align: center;">Username:
         <?php
          if($_COOKIE['user'] == true):
@@ -206,19 +196,6 @@ nav div ul li a{
         <?php endif; ?>
        </p>
         <br>
-       <p style="font-size: 30px; text-align: center;">Email:
-        <?php $rowUser['mail']; ?>
-       </p>
-       <p style="font-size: 30px; text-align: center;">Name:
-        <?php $rowUser['name']; ?>
-       </p>
-       <p style="font-size: 30px; text-align: center;">Surname:
-        <?php $rowUser['surname']; ?>
-       </p>
-       <?php
-          }
-        }
-       ?>
     </section>
 
   </body>
