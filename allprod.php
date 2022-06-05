@@ -193,11 +193,7 @@
                           <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
                           <td><?php echo $values["item_price"];?></td>
                           <td><?php echo $values["item_qty"]; ?></td>
-                          <form action="deletion.php" method="post">
-                            <input type="hidden" name="hide_id" value="<?php echo $values["item_id"];?>">
-                            <input type="hidden" name="hide_qty" value="<?php echo $values["item_qty"];?>">
-                            <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
-                          </form>
+                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                       </tr>
                       <?php
                           $total = $total + ($values["item_qty"] * $values["item_price"]);
