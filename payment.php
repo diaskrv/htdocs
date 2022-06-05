@@ -114,9 +114,7 @@
                     $items_amount = $items_amount + $values["item_qty"];
                     }
                 ?>
-                <script type="text/javascript" src="index1234.js">
-                let total = "<?php echo $total; ?>";
-                </script>
+
 
                 <div class="col-2">
                     <div class="subtotal text-center">
