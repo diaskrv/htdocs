@@ -137,14 +137,14 @@
 
 <h2 class="title2">All Products</h2>
 
-<form action='' method='post'>
+<form action='allprod.php?sort=add&id=<?php echo $row["id"];?>' method='post'>
 <select name='select'>
                <option value='a_z'>по имени (A-Z)</option>
                <option value='z_a'>по имени (Z-A)</option>
                <option value='priceMax'>по цене (дороже)</option>
                <option value='priceMin'>по цене (дешевле)</option>
            </select>
-           <input type='submit' name='submit' value='отсортировать'>
+           <input type='submit' name='select' value='отсортировать'>
 </form>
 
   <div class="categories1">
