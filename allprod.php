@@ -82,7 +82,7 @@
 <body>
   <style type="text/css">
   body{
-   background-image: linear-gradient(#000000, #06091e);
+   background-image: black;
    font-family: Verdana, sans-serif;
 
   }
@@ -117,20 +117,19 @@
 
 <br>
 
+  <h2 class="title2">All Products</h2>
 
+  <div class="popup" onclick="myFunction()">
+    <span class="popuptext" id="myPopup">
+      Sort by
+               <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprod.php"><button>By default</button></a>
+               <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodBrand.php"><button>By brand</button></a>
+               <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodPriceAsc.php"><button>Price<(Ascending)</button></a>
+               <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodPriceDesc.php"><button>Price(Descending)</button></a>
+    </span>
+  </div>
 
   <div class="categories1">
-    <h2 class="title2">All Products</h2>
-
-    <div class="popup" onclick="myFunction()">
-      <span class="popuptext" id="myPopup">
-        Sort by
-                 <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprod.php"><button>By default</button></a>
-                 <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodBrand.php"><button>By brand</button></a>
-                 <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodPriceAsc.php"><button>Price<(Ascending)</button></a>
-                 <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodPriceDesc.php"><button>Price(Descending)</button></a>
-      </span>
-    </div>
     <div class="small-container">
       <div class="row">
         <?php
