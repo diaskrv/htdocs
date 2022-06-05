@@ -160,20 +160,9 @@ nav div ul li a{
 </style>
 
   <body class="u-body u-xl-mode">
-
-
-
-
-
-
-
-
-<header class="u-black u-clearfix u-header u-header" id="sec-adc2">
+  <header class="u-black u-clearfix u-header u-header" id="sec-adc2">
       <div class="u-clearfix u-sheet u-sheet-1">
-
-
-
-    <form action="cabinet.php" method = "post">
+        <form action="cabinet.php" method = "post">
         <a href="index.php" class="u-image u-logo u-image-1" data-image-width="690" data-image-height="388">
           <img src="assets/ezgif.com-gif-maker.gif" class="u-logo-image u-logo-image-1" style="width: 100%;">
         </a>
@@ -187,8 +176,21 @@ nav div ul li a{
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcome.php" style="padding: 0px 20px;">HOME</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="accedit.php" style="padding: 0px 20px;">Edit</a></li>
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="adminProd.php" style="padding: 0px 20px;">Add device</a></li>
-            </span>
+              <?php
+                $sqlSelect = "SELECT * FROM users ORDER by id ASC";
+                $result = mysqli_query($conn, $sqlSelect);
+                $row = mysqli_fetch_array($result);
+                  if($row['username'] != 'neznaakomec'){
+              ?>
+                <style type="text/text/css">
+                  .admin{
+                    visibility: hidden;
+                  }
+                </style>
+              <?php
+                }
+              ?>
+              <div class="admin"><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="adminProd.php" style="padding: 0px 20px;">Add device</a></li></div>
             </div>
             </ul>
           </div>
