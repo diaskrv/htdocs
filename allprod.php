@@ -139,10 +139,10 @@
 
   <div class="sort">
   Sort by
-               <span value='a_z' id="namea">по имени (A-Z)</span>
-               <span value='z_a' id="named">по имени (Z-A)</span>
-               <span value='priceMax' id="pricea">по цене (дороже)</span>
-               <span value='priceMin' id="priced">по цене (дешевле)</span>
+               <span id="namea">по имени (A-Z)</span>
+               <span id="named">по имени (Z-A)</span>
+               <span id="pricea">по цене (дороже)</span>
+               <span id="priced">по цене (дешевле)</span>
   </div>
 
   <div class="categories1">
