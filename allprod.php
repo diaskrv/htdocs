@@ -9,7 +9,7 @@
 <?php
   session_start();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
-  $sqlSelect = "SELECT * FROM products ORDER by id ASC";
+
 
   if($_POST['select']) {
     $select=$_POST['select'];
