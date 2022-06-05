@@ -56,11 +56,15 @@
            {
                 if($values["item_id"] == $_GET["id"])
                 {
+                    $itemQty=$_POST['qty'];
+                    $itemID=$_POST['hidden_id'];
+                    mysqli_query($conn, "UPDATE products SET qty=qty+'$itemQty' WHERE id='$itemID'");
                      unset($_SESSION["shopping_cart"][$keys]);
                      echo '<script>window.location="allprod.php"</script>';
                 }
            }
       }
+
  }
 ?>
 <!DOCTYPE html>
