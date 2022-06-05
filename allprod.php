@@ -57,7 +57,6 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
-                     echo '<script>window.location="allprod.php"</script>';
                 }
            }
       }
@@ -144,12 +143,12 @@
         ?>
         <div class="col-4">
           <form method="post" action="allprod.php?action=add&id=<?php echo $row["id"];?>">
-            <a href="prodPage/<?php echo $row["productPath"];?>"><img src="assets/<?php echo $row["image"];?>" style="width: 230px; height: 230px;">
+            <a href="prodPage/<?php echo $row["path"];?>"><img src="assets/<?php echo $row["image"];?>" style="width: 230px; height: 230px;">
             <h5><?php echo $row["name"];?></h5></a>
             <input type="number" name="qty" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
             <p>$<?php echo $row["price"];?></p>
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
-            <input type="hidden" name="hidden_path" value="<?php echo $row["productPath"];?>">
+            <input type="hidden" name="hidden_path" value="<?php echo $row["path"];?>">
             <input type="hidden" name="hidden_brand" value="<?php echo $row["brand"];?>">
             <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?>">
             <input type="hidden" name="hidden_category" value="<?php echo $row["category"];?>">
@@ -168,7 +167,7 @@
       <div class="modal-dialog modal-xl">
           <div class="modal-content">
               <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel" href="php/cart.php">Shopping cart</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Shopping cart</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                   </button>
