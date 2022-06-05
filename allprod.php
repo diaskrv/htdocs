@@ -28,7 +28,7 @@
                      'item_category'          =>     $_POST["hidden_category"],
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
-                $sqlUpdate='UPDATE products SET qty=qty-$_POST["qty"] WHERE id="item_id"';
+                $sqlUpdate='UPDATE products SET qty=qty-"item_qty" WHERE id="item_id"';
                 $resultish=mysqli_query($conn, $sqlUpdate);
            }
            else
