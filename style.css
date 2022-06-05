@@ -31,8 +31,14 @@ a{
 p{
   color: #555;
 }
-
-
+.sort{
+  margin: 20px 0 0 20px;
+}
+.sort span{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 
 

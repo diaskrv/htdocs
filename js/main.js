@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.select span').on('click', function() {
+  $(".select span").click(function() {
     let id = $(this).attr('id');
     alert(id);
   })
