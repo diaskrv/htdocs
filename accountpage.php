@@ -196,17 +196,6 @@ nav div ul li a{
       </div>
     </header>
 
-
-
-
-
-
-
-
-
-
-
-
     <section class="u-backlink u-clearfix u-grey-80">
 
        <img src="assets/profilePic.jpg" class="rounded-circle" style="width: 15%; border-radius: 50%;">
