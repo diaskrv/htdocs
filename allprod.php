@@ -40,11 +40,7 @@
            $item_array = array(
                 'item_id'               =>     $_GET["id"],
                 'item_name'               =>     $_POST["hidden_name"],
-                'item_qty'          =>     $_POST["qty"]
-                'item_price'          =>     $_POST["hidden_price"],
-                'item_path'          =>     $_POST["hidden_path"],
-                'item_brand'          =>     $_POST["hidden_brand"],
-                'item_category'          =>     $_POST["hidden_category"],
+                'item_quantity'          =>     $_POST["quantity"]
            );
            $_SESSION["shopping_cart"][0] = $item_array;
       }
@@ -52,7 +48,7 @@
       $itemID=$_POST['hidden_id'];
       mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
  }
- if(isset($_POST["delete_from_cart"]))
+ if(isset($_GET["action"]))
  {
       if($_GET["action"] == "delete")
       {
@@ -61,12 +57,11 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
+
                 }
            }
       }
-      $item_Qty=$_POST['qty'];
-      $item_ID=$_POST['hidden_id'];
-      mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
+
  }
 ?>
 <!DOCTYPE html>
@@ -196,12 +191,11 @@
                           $total = 0;
                           foreach($_SESSION["shopping_cart"] as $keys => $values) {
                       ?>
-                      <form method="post" action="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>">
                       <tr>
                           <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
                           <td><?php echo $values["item_price"];?></td>
                           <td><?php echo $values["item_qty"]; ?></td>
-                          <td style="color: red;"><button role="button" type="submit" name="delete_from_cart"><span class="text-danger">Remove</span></a></td>
+                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                       </tr>
                       <?php
                           $total = $total + ($values["item_qty"] * $values["item_price"]);
@@ -211,7 +205,6 @@
                       <tr>
                           <td colspan="4" align="right">Total price: <br> $<?php echo $total; ?></td>
                       </tr>
-                      </form>
                       </tbody>
 
                   </table>
