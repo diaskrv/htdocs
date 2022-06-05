@@ -26,7 +26,7 @@
       case "priceMin":
         $sql = "SELECT * FROM `product` ORDER BY price DESC ";
         break;
-      echo '<script>window.location="allprod.php"</script>';
+        echo '<script>window.location="allprod.php"</script>';
       }
   }
 
@@ -95,7 +95,6 @@
        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-       <script src="js/catatlogDB.js" type="text/javascript"></script>
        <script src="js/main.js"></script>
 </head>
 <body>
@@ -138,29 +137,14 @@
 
 <h2 class="title2">All Products</h2>
 
-<div id="filters"> Filters </div>
-
-<form action="select" method="POST">
-    <div class="col-md-4">
-        <h4>Бренды</h4>
-        <div id="brands">
-            <div class="checkbox"><label><input type="checkbox" name="brands[]" value="1"> Apple</label></div>
-            <div class="checkbox"><label><input type="checkbox" name="brands[]" value="2"> Samsung</label></div>
-            <div class="checkbox"><label><input type="checkbox" name="brands[]" value="3"> Lenovo</label></div>
-            <div class="checkbox"><label><input type="checkbox" name="brands[]" value="4"> Что-то еще</label></div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <h4>Сортировка</h4>
-        <br>
-        <select id="sort" name="sort" class="form-control">
-            <option value="price_asc">По цене, сначала дешевые</option>
-            <option value="price_desc">По цене, сначала дорогие</option>
-            <option value="rating_desc">По популярности</option>
-            <option value="good_asc">По названию, A-Z</option>
-            <option value="good_desc">По названию, Z-A</option>
-        </select>
-    </div>
+<form action='' method='post'>
+<select name='select'>
+               <option value='a_z'>по имени (A-Z)</option>
+               <option value='z_a'>по имени (Z-A)</option>
+               <option value='priceMax'>по цене (дороже)</option>
+               <option value='priceMin'>по цене (дешевле)</option>
+           </select>
+           <input type='submit' name='submit' value='отсортировать'>
 </form>
 
   <div class="categories1">
