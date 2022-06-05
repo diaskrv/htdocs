@@ -26,7 +26,7 @@
       case "priceMin":
         $sql = "SELECT * FROM `product` ORDER BY price DESC ";
         break;
-      echo '<script>window.location="allprod.php"</script>';  
+      echo '<script>window.location="allprod.php"</script>';
       }
   }
 
@@ -140,7 +140,7 @@
 
 <div id="filters"> Filters </div>
 
-<form id="filters-form" role="form">
+<form action="select" method="POST">
     <div class="col-md-4">
         <h4>Бренды</h4>
         <div id="brands">
