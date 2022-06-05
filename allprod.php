@@ -25,7 +25,7 @@
                      'item_price'          =>     $_POST["hidden_price"],
                      'item_path'          =>     $_POST["hidden_path"],
                      'item_brand'          =>     $_POST["hidden_brand"],
-                     'item_category'          =>     $_POST["hidden_category"],
+                     'item_category'          =>     $_POST["hidden_category"]
                 );
                 $_SESSION["shopping_cart"][$count] = $item_array;
            }
@@ -148,6 +148,7 @@
             <input type="number" name="qty" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
             <p>$<?php echo $row["price"];?></p>
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
+            <input type="hidden" name="hidden_id" value="<?php echo $row["id"];?>">
             <input type="hidden" name="hidden_path" value="<?php echo $row["path"];?>">
             <input type="hidden" name="hidden_brand" value="<?php echo $row["brand"];?>">
             <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?>">
