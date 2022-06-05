@@ -40,7 +40,11 @@
            $item_array = array(
                 'item_id'               =>     $_GET["id"],
                 'item_name'               =>     $_POST["hidden_name"],
-                'item_quantity'          =>     $_POST["quantity"]
+                'item_qty'          =>     $_POST["qty"]
+                'item_price'          =>     $_POST["hidden_price"],
+                'item_path'          =>     $_POST["hidden_path"],
+                'item_brand'          =>     $_POST["hidden_brand"],
+                'item_category'          =>     $_POST["hidden_category"],
            );
            $_SESSION["shopping_cart"][0] = $item_array;
       }
@@ -57,13 +61,12 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                      unset($_SESSION["shopping_cart"][$keys]);
-                     $item_Qty=$_POST['qty'];
-                     $item_ID=$_POST['hidden_id'];
-                     mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
                 }
            }
       }
-
+      $item_Qty=$_POST['qty'];
+      $item_ID=$_POST['hidden_id'];
+      mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
  }
 ?>
 <!DOCTYPE html>
@@ -198,7 +201,7 @@
                           <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
                           <td><?php echo $values["item_price"];?></td>
                           <td><?php echo $values["item_qty"]; ?></td>
-                          <td style="color: red;"><button class="button-57" role="button" type="submit" name="delete_from_cart"><span class="text-danger">Remove</span></a></td>
+                          <td style="color: red;"><button role="button" type="submit" name="delete_from_cart"><span class="text-danger">Remove</span></a></td>
                       </tr>
                       <?php
                           $total = $total + ($values["item_qty"] * $values["item_price"]);
