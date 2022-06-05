@@ -1,41 +1,32 @@
 <?php
-require("inc/db.php");
+$id = filter_var(trim($_POST['id']),
+FILTER_SANITIZE_STRING);
+$barcode = filter_var(trim($_POST['barcode']),
+FILTER_SANITIZE_STRING);
+$name = filter_var(trim($_POST['name']),
+FILTER_SANITIZE_STRING);
+$price = filter_var(trim($_POST['price']),
+FILTER_SANITIZE_STRING);
+$qty = filter_var(trim($_POST['qty']),
+FILTER_SANITIZE_STRING);
+$image = filter_var(trim($_POST['image']),
+FILTER_SANITIZE_STRING);
+$path = filter_var(trim($_POST['path']),
+FILTER_SANITIZE_STRING);
+$brand = filter_var(trim($_POST['brand']),
+FILTER_SANITIZE_STRING);
+$category = filter_var(trim($_POST['category']),
+FILTER_SANITIZE_STRING);
+$description = filter_var(trim($_POST['description']),
+FILTER_SANITIZE_STRING);
 
-if ($_POST) {
-    $id      = int($_POST['id']);
-    $barcode = trim($_POST['barcode']);
-    $name    = trim($_POST['name']);
-    $price   = float($_POST['price']);
-    $qty     = int($_POST['qty']);
-    $image   = trim($_POST['image']);
-    $description = trim($_POST['description']);
+$mysql = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
+$user = $mysql->query("UPDATE products SET barcode='$barcode', name='$name', price='$price', qty='$qty', image='$image', productPath='$path', brand='$brand', category='$category', description='$description' WHERE id='$id'");
+$mysql->commit();
+$result = $mysql->query("SELECT * from `products` WHERE `id` =
+'$id' AND `name` = '$name'");
+$user =$result->fetch_assoc();
 
-    try {
-        $sql = 'UPDATE products
-                    SET barcode = :barcode, name = :name, price = :price, qty = :qty, image = :image, description = :description
-                WHERE id = :id';
-
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(":barcode", $barcode);
-        $stmt->bindParam(":name", $name);
-        $stmt->bindParam(":price", $price);
-        $stmt->bindParam(":qty", $qty);
-        $stmt->bindParam(":image", $image);
-        $stmt->bindParam(":description", $description);
-        $stmt->bindParam(":id", $id);
-        $stmt->execute();
-        if ($stmt->rowCount()) {
-            header("Location: edit.php?id=".$id."&status=updated");
-            exit();
-        }
-        header("Location: edit.php?id=".$id."&status=fail_update");
-        exit();
-    } catch (Exception $e) {
-        echo "Error " . $e->getMessage();
-        exit();
-    }
-} else {
-    header("Location: edit.php?id=".$id."&status=fail_update");
-    exit();
-}
+$mysql->close();
+header('Location: /adminProd.php');
 ?>

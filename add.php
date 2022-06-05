@@ -21,7 +21,7 @@ $description = filter_var(trim($_POST['description']),
 FILTER_SANITIZE_STRING);
 
 $mysql = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
-$user = $mysql->query("INSERT INTO `products` (`id`, `barcode`, `name`, `description`, `price`, `image`, `qty`, `path`, `brand`, `category`)
+$user = $mysql->query("INSERT INTO `products` (`id`, `barcode`, `name`, `description`, `price`, `image`, `qty`, `productPath`, `brand`, `category`)
 VALUES('$id','$barcode','$name', '$description', '$price','$image','$qty', '$path','$brand','$category')");
 $mysql->commit();
 $result = $mysql->query("SELECT * from `products` WHERE `id` =

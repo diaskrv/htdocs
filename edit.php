@@ -35,35 +35,49 @@ $product = $stmt->fetch();
         <!-- Create Form -->
         <div class="card border-danger">
             <div class="card-header bg-danger text-white">
-                <strong><i class="fa fa-edit"></i> Edit Product</strong>
+                <strong><i class="fa fa-plus"></i> Edit Product</strong>
             </div>
             <div class="card-body">
                 <form action="update.php" method="post">
-                    <input type="hidden" name="id" value="<?= $product['id'] ?>">
+                  <div class="form-group col-md-4">
+                      <input type="hidden" name="id" value="<?= $product['id'] ?>">
+                  </div>
+              </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="barcode" class="col-form-label">Barcode</label>
-                            <input type="text" class="form-control" id="barcode" name="barcode" placeholder="Barcode" required value="<?= $product['barcode'] ?>">
+                            <input type="text" class="form-control" id="barcode" name="barcode" placeholder="Barcode" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="name" class="col-form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required value="<?= $product['name'] ?>">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="price" class="col-form-label">Price</label>
-                            <input type="number" class="form-control" id="price" name="price" placeholder="Price" required value="<?= $product['price'] ?>" >
+                            <input type="number" class="form-control" id="price" name="price" placeholder="Price" required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="qty" class="col-form-label">Quantity</label>
-                            <input type="number" class="form-control" name="qty" id="qty" placeholder="Qty" required value="<?= $product['qty'] ?>">
+                            <input type="number" class="form-control" name="qty" id="qty" placeholder="Quantity" required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="image" class="col-form-label">Image</label>
-                            <input type="text" class="form-control" name="image" id="image" placeholder="Image URL" value="<?= $product['image'] ?>">
+                            <input type="text" class="form-control" name="image" id="image" placeholder="Image URL">
                         </div>
-                    </div>
+                        <div class="form-group col-md-4">
+                            <label for="path" class="col-form-label">Path</label>
+                            <input type="text" class="form-control" name="path" id="path" placeholder="Path url">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="brand" class="col-form-label">Brand</label>
+                            <input type="text" class="form-control" name="brand" id="brand" placeholder="Brand">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="category" class="col-form-label">Category</label>
+                            <input type="text" class="form-control" name="category" id="category" placeholder="Category">
+                        </div>
                     <div class="form-group">
                         <label for="note" class="col-form-label">Description</label>
                         <textarea name="description" id="" rows="5" class="form-control" placeholder="Description"></textarea>
