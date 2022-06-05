@@ -26,7 +26,11 @@ setCookie('user', $user['username'], time() + 3600*24, "/");
 
 
 print_r($user);
+if($user['username'] == 'neznaakomec'){
+  header('Location: /welcomeAdmin.php');
+}else{
+  header('Location: /welcome.php');
+}
 $mysql->close();
-header('Location: /welcome.php');
 exit();
 ?>
