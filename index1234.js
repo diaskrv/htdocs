@@ -15,10 +15,10 @@ paypal.Buttons({
     onApprove: function (data, actions) {
         return actions.order.capture().then(function (details) {
             console.log(details)
-            window.location.replace("http://localhost:81/success.php")
+            window.location.replace("https://herokuwebkai.herokuapp.com/success.php")
         })
     },
     onCancel: function (data) {
-        window.location.replace("http://localhost:81/Oncancel.php")
+        window.location.replace("https://herokuwebkai.herokuapp.com/Oncancel.php")
     }
 }).render('#paypal-payment-button');
