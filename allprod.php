@@ -48,10 +48,8 @@
       $itemID=$_POST['hidden_id'];
       mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
  }
- if(isset($_GET["action"]))
+ if(isset($_POST["delete_cart"]))
  {
-      if($_GET["action"] == "delete")
-      {
            foreach($_SESSION["shopping_cart"] as $keys => $values)
            {
                 if($values["item_id"] == $_GET["id"])
@@ -60,8 +58,9 @@
 
                 }
            }
-      }
-
+           $item_Qty=$_POST['quantity'];
+           $item_ID=$_POST['hidden_id'];
+           mysqli_query($conn, "UPDATE products SET qty=qty+'$itemQty' WHERE id='$itemID'");
  }
 ?>
 <!DOCTYPE html>
@@ -191,11 +190,14 @@
                           $total = 0;
                           foreach($_SESSION["shopping_cart"] as $keys => $values) {
                       ?>
+                      <form action="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>" method="post">
                       <tr>
-                          <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
+                        <input type="hidden" name="hidden_id" value="<?php echo $values["item_id"];?>">
+                        <input type="hidden" name="quantity" value="<?php echo $values["item_qty"];?>">
+                          <td name="naming"><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
                           <td><?php echo $values["item_price"];?></td>
                           <td><?php echo $values["item_qty"]; ?></td>
-                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+                          <td style="color: red;"><input name="delete_cart" type="submit"><span class="text-danger">Remove</span></input></td>
                       </tr>
                       <?php
                           $total = $total + ($values["item_qty"] * $values["item_price"]);
@@ -205,6 +207,7 @@
                       <tr>
                           <td colspan="4" align="right">Total price: <br> $<?php echo $total; ?></td>
                       </tr>
+                    </form>
                       </tbody>
 
                   </table>
