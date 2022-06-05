@@ -197,12 +197,12 @@ nav div ul li a{
        ?>
        <p style="font-size: 50px; text-align: center;">Username:
         <?php
-     if($_COOKIE['user'] == true):
-     ?>
-         <?php echo $_COOKIE['user'];
-         session_start();
-          ?>
-    <?php endif; ?>
+         if($_COOKIE['user'] == true):
+         ?>
+             <?php echo $_COOKIE['user'];
+             session_start();
+              ?>
+        <?php endif; ?>
        </p>
         <br>
        <p style="font-size: 50px; text-align: center;">Email:
