@@ -55,14 +55,13 @@
            foreach($_SESSION["shopping_cart"] as $keys => $values)
            {
                 if($values["item_id"] == $_GET["id"])
-                {
+                {    
                      unset($_SESSION["shopping_cart"][$keys]);
+                     echo '<script>window.location="allprod.php"</script>';
                 }
            }
       }
-      $itemQty=$_POST['qty'];
-      $itemID=$_POST['hidden_id'];
-      mysqli_query($conn, "UPDATE products SET qty=qty+'$itemQty' WHERE id='$itemID'");
+
  }
 ?>
 <!DOCTYPE html>
