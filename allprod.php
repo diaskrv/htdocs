@@ -138,13 +138,11 @@
 <h2 class="title2">All Products</h2>
 
   <div class="sort">
-<select name='select'>
   Sort by
-               <span value='a_z'>по имени (A-Z)</span>
-               <span value='z_a'>по имени (Z-A)</span>
-               <span value='priceMax'>по цене (дороже)</span>
-               <span value='priceMin'>по цене (дешевле)</span>
-           </select>
+               <span value='a_z' id="namea">по имени (A-Z)</span>
+               <span value='z_a' id="named">по имени (Z-A)</span>
+               <span value='priceMax' id="pricea">по цене (дороже)</span>
+               <span value='priceMin' id="priced">по цене (дешевле)</span>
   </div>
 
   <div class="categories1">
