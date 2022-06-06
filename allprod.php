@@ -10,6 +10,7 @@
   session_start();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
   $sqlSelect = "SELECT * FROM products ORDER by id ASC";
+  $sqlBasket= "SELECT * FROM products ORDER by name ASC"
 
   if(isset($_POST["add_to_cart"]))
  {
@@ -49,7 +50,7 @@
       $itemPrice=$_POST['hidden_price'];
       $itemID=$_POST['hidden_id'];
       mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
-      mysqli_query($conn, "INSERT INTO basket (name, qty, price) VALUES ('$itemName', '$itemQty', '$itemPrice')");
+      mysqli_query($conn, "INSERT INTO basket (id, name, qty, price) VALUES ('$itemID', '$itemName', '$itemQty', '$itemPrice')");
  }
  if(isset($_GET["action"]))
  {
@@ -190,16 +191,20 @@
                       <?php
                         if(!empty($_SESSION["shopping_cart"])) {
                           $total = 0;
-                          foreach($_SESSION["shopping_cart"] as $keys => $values) {
+                          $resultBasket = mysqli_query($conn, $sqlBasket);
+                          if(mysqli_num_rows($result) > 0)
+                          {
+                            while($rowBasket = mysqli_fetch_array($resultBasket)) {
                       ?>
                       <tr>
-                          <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
-                          <td><?php echo $values["item_price"];?></td>
-                          <td><?php echo $values["item_qty"]; ?></td>
-                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+                          <td><?php echo $rowBasket["name"]; ?></td>
+                          <td><?php echo $rowBasket["price"];?></td>
+                          <td><?php echo $rowBasket["qty"]; ?></td>
+                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $rowBasket["id"]; ?>"><span class="text-danger">Remove</span></a></td>
                       </tr>
                       <?php
                           $total = $total + ($values["item_qty"] * $values["item_price"]);
+                        }
                           }
                         }
                       ?>
