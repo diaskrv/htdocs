@@ -80,22 +80,18 @@ nav div ul li a{
 
 </style>
 
- <div class="header">
+<div class="header">
   <div class="container">
-   <div class = "navbar">
-
-     <a href="../welcome.php"><img src="../assets/logo1.png"></a>
-
-    <nav>
-     <ul>
-      <li><a href="../welcome.php">Home</a></li>
-      <li><a href="../Contacts.html">Contacts</a></li>
-     </ul>
-    </nav>
-
-   </div>
+    <div class = "navbar">
+      <nav>
+        <ul>
+          <li><a href="welcome.php" style="font-size: 20px;">Home</a></li>
+          <li><a href="Contacts.html" style="font-size: 20px;">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
- </div>
+</div>
 
   <div class="row1">
     <div class="col-2">

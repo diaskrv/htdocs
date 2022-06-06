@@ -39,32 +39,26 @@ $product = $stmt->fetch();
             </div>
             <div class="card-body">
                 <form action="update.php" method="post">
-                  <div class="form-group col-md-4">
-                      <input type="hidden" name="id" required value="<?= $product['id'] ?>">
-                  </div>
               </div>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
+                      <input type="hidden" name="id" required value="<?= $product['id'] ?>">
+                        <div class="form-group col-md-3">
                             <label for="barcode" class="col-form-label">Barcode</label>
-                            <input type="text" class="form-control" id="barcode" name="barcode" placeholder="Barcode" required value="<?= $product['barcode'] ?>">
+                            <input type="number" class="form-control" id="barcode" name="barcode" placeholder="Barcode" required value="<?= $product['barcode'] ?>">
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-9">
                             <label for="name" class="col-form-label">Name</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Name" required value="<?= $product['name'] ?>">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="price" class="col-form-label">Price</label>
                             <input type="number" class="form-control" id="price" name="price" placeholder="Price" required value="<?= $product['price'] ?>">
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="qty" class="col-form-label">Quantity</label>
                             <input type="number" class="form-control" name="qty" id="qty" placeholder="Quantity" required value="<?= $product['qty'] ?>">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="image" class="col-form-label">Image</label>
-                            <input type="text" class="form-control" name="image" id="image" placeholder="Image URL" required value="<?= $product['image'] ?>">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="brand" class="col-form-label">Brand</label>
@@ -74,11 +68,15 @@ $product = $stmt->fetch();
                             <label for="category" class="col-form-label">Category</label>
                             <input type="text" class="form-control" name="category" id="category" placeholder="Category" required value="<?= $product['category'] ?>">
                         </div>
-                    <div class="form-group">
+                        <div class="form-group col-md-4">
+                            <label for="image" class="col-form-label">Image</label>
+                            <input type="text" class="form-control" name="image" id="image" placeholder="Image URL" required value="<?= $product['image'] ?>">
+                        </div>
+                    <div class="form-group col-md-12">
                         <label for="note" class="col-form-label">Description</label>
-                        <textarea name="description" id="" rows="5" class="form-control" placeholder="Description" required value="<?= $product['description'] ?>"></textarea>
+                        <textarea name="description" id="" rows="3" class="form-control" placeholder="Description" required value="<?= $product['description'] ?>"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-success"><i class="fa fa-check-circle"></i> Save</button>
+                    <button type="submit" class="btn btn-success" style="margin-left: 1020px; padding: 6px 20px 6px 20px;"><i class="fa fa-check-circle"></i> Save</button>
                 </form>
             </div>
         </div>

@@ -35,14 +35,26 @@ $product = $stmt->fetch();
                             <tr>
                                 <th>Barcode</th>
                                 <td><?= $product['barcode'] ?></td>
+                            </tr>
+                            <tr>
                                 <th>Name</th>
                                 <td><?= $product['name'] ?></td>
                             </tr>
                             <tr>
                                 <th>Price</th>
                                 <td>$<?= number_format($product['price'], 2) ?></td>
+                            </tr>
+                            <tr>
                                 <th>Quantity</th>
                                 <td><?= $product['qty'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Brand</th>
+                                <td><?= $product['brand'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Category</th>
+                                <td><?= $product['category'] ?></td>
                             </tr>
                             <tr>
                                 <th>Descriptoin</th>
