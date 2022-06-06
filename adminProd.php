@@ -17,12 +17,12 @@ try {
     <div class="container">
       <a href="accountpageAdmin.php" class="btn btn-light mb-3"><< Go Back</a>
         <?php if (isset($_GET['status']) && $_GET['status'] == "deleted") : ?>
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-dark" role="alert">
             <strong>Deleted</strong>
         </div>
         <?php endif ?>
         <?php if (isset($_GET['status']) && $_GET['status'] == "fail_delete") : ?>
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-dark" role="alert">
             <strong>Fail Delete</strong>
         </div>
         <?php endif ?>
