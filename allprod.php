@@ -10,7 +10,7 @@
   session_start();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
   $sqlSelect = "SELECT * FROM products ORDER by id ASC";
-  $sqlBasket= "SELECT * FROM products ORDER by name ASC"
+  $sqlBasket= "SELECT * FROM basket ORDER by name ASC";
 
   if(isset($_POST["add_to_cart"]))
  {
@@ -191,19 +191,20 @@
                       <?php
                         if(!empty($_SESSION["shopping_cart"])) {
                           $total = 0;
-                          $resultBasket = mysqli_query($conn, $sqlBasket);
-                          if(mysqli_num_rows($result) > 0)
+                          $resultB = mysqli_query($conn, $sqlSelect);
+                          if(mysqli_num_rows($resultB) > 0)
                           {
-                            while($rowBasket = mysqli_fetch_array($resultBasket)) {
-                      ?>
+                            while($rowB = mysqli_fetch_array($resultB))
+                            {
+                        ?>
                       <tr>
-                          <td><?php echo $rowBasket["name"]; ?></td>
-                          <td><?php echo $rowBasket["price"];?></td>
-                          <td><?php echo $rowBasket["qty"]; ?></td>
-                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $rowBasket["id"]; ?>"><span class="text-danger">Remove</span></a></td>
+                          <td><?php echo $rowB["name"]; ?></td>
+                          <td><?php echo $rowB["price"];?></td>
+                          <td><?php echo $rowB["qty"]; ?></td>
+                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $rowB["id"]; ?>"><span class="text-danger">Remove</span></a></td>
                       </tr>
                       <?php
-                          $total = $total + ($values["item_qty"] * $values["item_price"]);
+                          $total = $total + ($rowB["qty"] * $rowB["price"]);
                         }
                           }
                         }
