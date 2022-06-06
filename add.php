@@ -11,6 +11,8 @@ $qty = filter_var(trim($_POST['qty']),
 FILTER_SANITIZE_STRING);
 $image = filter_var(trim($_POST['image']),
 FILTER_SANITIZE_STRING);
+$path = filter_var(trim($_POST['path']),
+FILTER_SANITIZE_STRING);
 $brand = filter_var(trim($_POST['brand']),
 FILTER_SANITIZE_STRING);
 $category = filter_var(trim($_POST['category']),
@@ -19,8 +21,8 @@ $description = filter_var(trim($_POST['description']),
 FILTER_SANITIZE_STRING);
 
 $mysql = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
-$user = $mysql->query("INSERT INTO `products` (`id` ,`barcode`, `name`, `description`, `price`, `image`, `qty`, `brand`, `category`)
-VALUES('$id', '$barcode', '$name', '$description', '$price','$image','$qty','$brand','$category')");
+$user = $mysql->query("INSERT INTO `products` (`id` ,`barcode`, `name`, `description`, `price`, `image`, `qty`, `path`, `brand`, `category`)
+VALUES('$id', '$barcode', '$name', '$description', '$price','$image','$qty', '$path','$brand','$category')");
 $mysql->commit();
 $result = $mysql->query("SELECT * from `products` WHERE `id` =
 '$id' AND `name` = '$name'");

@@ -47,6 +47,10 @@
                             <input type="text" class="form-control" name="image" id="image" placeholder="Image URL">
                         </div>
                         <div class="form-group col-md-4">
+                            <label for="path" class="col-form-label">Path</label>
+                            <input type="text" class="form-control" name="path" id="path" placeholder="Path url">
+                        </div>
+                        <div class="form-group col-md-4">
                             <label for="brand" class="col-form-label">Brand</label>
                             <input type="text" class="form-control" name="brand" id="brand" placeholder="Brand">
                         </div>
