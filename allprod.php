@@ -61,7 +61,9 @@
                 if($values["item_id"] == $_GET["id"])
                 {
                     $idshnik=$_GET["id"];
+                    $qtyqty=$_GET["qty"];
                     $sqlDeleteFromBasket = "DELETE FROM basket WHERE id ='$idshnik'";
+                    $sqlRefund = "UPDATE products SET qty=qty+'$qtyqty' WHERE id='$idshnik'";
                     mysqli_query($conn, $sqlDeleteFromBasket);
                     unset($_SESSION["shopping_cart"][$keys]);
                 }
