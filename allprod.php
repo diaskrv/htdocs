@@ -60,6 +60,9 @@
            {
                 if($values["item_id"] == $_GET["id"])
                 {
+                    $idshnik=$_GET["id"];
+                    $sqlDeleteFromBasket = "DELETE FROM basket WHERE id ='$idshnik'";
+                    mysqli_query($conn, $sqlDeleteFromBasket);
                     unset($_SESSION["shopping_cart"][$keys]);
                 }
            }
