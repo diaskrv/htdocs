@@ -45,8 +45,11 @@
            $_SESSION["shopping_cart"][0] = $item_array;
       }
       $itemQty=$_POST['qty'];
+      $itemName=$_POST['hidden_name'];
+      $itemPrice=$_POST['hidden_price'];
       $itemID=$_POST['hidden_id'];
       mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
+      mysqli_query($conn, "INSERT INTO basket (id, name, qty, price) VALUES ('$itemID', '$itemName', '$itemQty', '$itemPrice')");
  }
  if(isset($_GET["action"]))
  {
@@ -56,7 +59,10 @@
            {
                 if($values["item_id"] == $_GET["id"])
                 {
-                     unset($_SESSION["shopping_cart"][$keys]);
+                    $qtyqty=$values["item_qty"];
+                    $idid=$values["item_id"];
+                    mysqli_query($conn, "UPDATE products SET qty=qty+'$qtyqty' WHERE id='$idid");
+                    unset($_SESSION["shopping_cart"][$keys]);
                 }
            }
       }
