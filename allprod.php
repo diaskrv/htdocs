@@ -10,7 +10,6 @@
   session_start();
   $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
   $sqlSelect = "SELECT * FROM products ORDER by id ASC";
-  $sqlBasket= "SELECT * FROM basket ORDER by name ASC";
 
   if(isset($_POST["add_to_cart"]))
  {
@@ -46,11 +45,8 @@
            $_SESSION["shopping_cart"][0] = $item_array;
       }
       $itemQty=$_POST['qty'];
-      $itemName=$_POST['hidden_name'];
-      $itemPrice=$_POST['hidden_price'];
       $itemID=$_POST['hidden_id'];
       mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
-      mysqli_query($conn, "INSERT INTO basket (id, name, qty, price) VALUES ('$itemID', '$itemName', '$itemQty', '$itemPrice')");
  }
  if(isset($_GET["action"]))
  {
@@ -60,12 +56,7 @@
            {
                 if($values["item_id"] == $_GET["id"])
                 {
-                    $idshnik=$_GET["id"];
-                    $qtyqty=$_GET["qty"];
-                    $sqlDeleteFromBasket = "DELETE FROM basket WHERE id ='$idshnik'";
-                    $sqlRefund = "UPDATE products SET qty=qty+'$qtyqty' WHERE id='$idshnik'";
-                    mysqli_query($conn, $sqlDeleteFromBasket);
-                    unset($_SESSION["shopping_cart"][$keys]);
+                     unset($_SESSION["shopping_cart"][$keys]);
                 }
            }
       }
@@ -196,21 +187,16 @@
                       <?php
                         if(!empty($_SESSION["shopping_cart"])) {
                           $total = 0;
-                          $resultB = mysqli_query($conn, $sqlBasket);
-                          if(mysqli_num_rows($resultB) > 0)
-                          {
-                            while($rowB = mysqli_fetch_array($resultB))
-                            {
-                        ?>
+                          foreach($_SESSION["shopping_cart"] as $keys => $values) {
+                      ?>
                       <tr>
-                          <td><?php echo $rowB["name"]; ?></td>
-                          <td><?php echo $rowB["price"];?></td>
-                          <td><?php echo $rowB["qty"]; ?></td>
-                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $rowB["id"]; ?>"><span class="text-danger">Remove</span></a></td>
+                          <td><a href=<?php $values["item_path"]; ?>><?php echo $values["item_name"]; ?></a></td>
+                          <td><?php echo $values["item_price"];?></td>
+                          <td><?php echo $values["item_qty"]; ?></td>
+                          <td style="color: red;"><a href="allprod.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                       </tr>
                       <?php
-                          $total = $total + ($rowB["qty"] * $rowB["price"]);
-                        }
+                          $total = $total + ($values["item_qty"] * $values["item_price"]);
                           }
                         }
                       ?>
