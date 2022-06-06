@@ -191,7 +191,7 @@
                       <?php
                         if(!empty($_SESSION["shopping_cart"])) {
                           $total = 0;
-                          $resultB = mysqli_query($conn, $sqlSelect);
+                          $resultB = mysqli_query($conn, $sqlBasket);
                           if(mysqli_num_rows($resultB) > 0)
                           {
                             while($rowB = mysqli_fetch_array($resultB))
