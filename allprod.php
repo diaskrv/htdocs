@@ -56,7 +56,10 @@
            {
                 if($values["item_id"] == $_GET["id"])
                 {
-                     unset($_SESSION["shopping_cart"][$keys]);
+                    $qtyqty=$values["item_qty"];
+                    $idshnik=$_GET["id"];
+                    mysqli_query($conn, "UPDATE products SET qty=qty+'$qtyqty' WHERE id='$idshnik'");
+                    unset($_SESSION["shopping_cart"][$keys]);
                 }
            }
       }
