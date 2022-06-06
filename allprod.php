@@ -49,7 +49,7 @@
       $itemPrice=$_POST['hidden_price'];
       $itemID=$_POST['hidden_id'];
       mysqli_query($conn, "UPDATE products SET qty=qty-'$itemQty' WHERE id='$itemID'");
-      mysqli_query($conn, "INSERT INTO basket (id, name, qty, price) VALUES ('$itemID', '$itemName', '$itemQty', '$itemPrice')");
+      mysqli_query($conn, "INSERT INTO basket (name, qty, price) VALUES ('$itemName', '$itemQty', '$itemPrice')");
  }
  if(isset($_GET["action"]))
  {
