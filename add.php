@@ -1,4 +1,5 @@
 <?php
+
 $barcode = filter_var(trim($_POST['barcode']),
 FILTER_SANITIZE_STRING);
 $name = filter_var(trim($_POST['name']),
@@ -22,6 +23,9 @@ $mysql = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','h
 $user = $mysql->query("INSERT INTO `products` (`barcode`, `name`, `description`, `price`, `image`, `qty`, `productPath`, `brand`, `category`)
 VALUES('$barcode','$name', '$description', '$price','$image','$qty', '$path','$brand','$category')");
 $mysql->commit();
+$result = $mysql->query("SELECT * from `products` WHERE `barcode` =
+'$barcode' AND `name` = '$name'");
+$user =$result->fetch_assoc();
 
 $mysql->close();
 header('Location: /adminProd.php');

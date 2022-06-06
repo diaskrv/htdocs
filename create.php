@@ -18,6 +18,7 @@
             </div>
             <div class="card-body">
                 <form action="add.php" method="post">
+
               </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
