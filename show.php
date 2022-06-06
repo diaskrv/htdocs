@@ -22,10 +22,10 @@ $product = $stmt->fetch();
 
 <?php include("inc/header.php") ?>
     <div class="container">
-        <a href="welcome.php" class="btn btn-light mb-3"><< Go Back</a>
+        <a href="adminProd.php" class="btn btn-light mb-3"><< Go Back</a>
         <!-- Show  a Product -->
-        <div class="card border-danger">
-            <div class="card-header bg-danger text-white">
+        <div class="card border-dark">
+            <div class="card-header bg-dark text-white">
                 <strong><i class="fa fa-database"></i> Show Product</strong>
             </div>
             <div class="card-body">
@@ -49,9 +49,6 @@ $product = $stmt->fetch();
                                 <td colspan="3"><?= $product['description'] ?></td>
                             </tr>
                         </table>
-                    </div>
-                    <div class="col-3">
-                        <img src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>" class="img-fluid img-thumbnail">
                     </div>
                 </div>
             </div>

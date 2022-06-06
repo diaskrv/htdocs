@@ -28,13 +28,13 @@ $product = $stmt->fetch();
         </div>
         <?php endif ?>
         <?php if (isset($_GET['status']) && $_GET['status'] == "fail_update") : ?>
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-dark" role="alert">
             <strong>Fail Update</strong>
         </div>
         <?php endif ?>
         <!-- Create Form -->
-        <div class="card border-danger">
-            <div class="card-header bg-danger text-white">
+        <div class="card border-dark">
+            <div class="card-header bg-dark text-white">
                 <strong><i class="fa fa-plus"></i> Edit Product</strong>
             </div>
             <div class="card-body">

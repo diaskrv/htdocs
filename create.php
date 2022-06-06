@@ -12,16 +12,12 @@
         </div>
         <?php endif ?>
         <!-- Create Form -->
-        <div class="card border-danger">
-            <div class="card-header bg-danger text-white">
+        <div class="card border-dark">
+            <div class="card-header bg-dark text-white">
                 <strong><i class="fa fa-plus"></i> Add New Product</strong>
             </div>
             <div class="card-body">
                 <form action="add.php" method="post">
-                  <div class="form-group col-md-4">
-                      <label for="category" class="col-form-label">ID</label>
-                      <input type="number" class="form-control" name="id" id="id" placeholder="ID">
-                  </div>
               </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">

@@ -15,6 +15,7 @@ try {
 ?>
 <?php include("inc/header.php") ?>
     <div class="container">
+      <a href="accountpageAdmin.php" class="btn btn-light mb-3"><< Go Back</a>
         <?php if (isset($_GET['status']) && $_GET['status'] == "deleted") : ?>
         <div class="alert alert-success" role="alert">
             <strong>Deleted</strong>
@@ -26,15 +27,15 @@ try {
         </div>
         <?php endif ?>
         <!-- Table Product -->
-        <div class="card border-danger">
-            <div class="card-header bg-danger text-white">
+        <div class="card border-dark">
+            <div class="card-header bg-dark text-white">
             <strong><i class="fa fa-database"></i> Products</strong>
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
                     <h5 class="card-title float-left">Table Products</h5>
-                    <a href="create.php" class="btn btn-success float-right mb-3"><i class="fa fa-plus"></i> Add New</a>
+                    <a href="create.php" class="btn btn-dark float-right mb-3"><i class="fa fa-plus"></i> Add New</a>
                 </div>
             </div>
             <table class="table table-bordered table-striped">
