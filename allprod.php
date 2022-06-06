@@ -14,7 +14,7 @@
   if(isset($_POST["add_to_cart"]))
  {
       if(isset($_SESSION["shopping_cart"])){
-           $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
+           $item_array_id = array_column($_SESSION["shopping_cart"], $_POST["hidden_id"]);
            if(!in_array($_GET["id"], $item_array_id))
            {
                 $count = count($_SESSION["shopping_cart"]);
