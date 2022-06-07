@@ -6,7 +6,7 @@
  {
       if(isset($_SESSION["shopping_cart"]))
       {
-           $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
+           $item_array_id = array_column($_SESSION["shopping_cart"], $_POST["hidden_id"]);
            if(!in_array($_GET["id"], $item_array_id))
            {
                 $count = count($_SESSION["shopping_cart"]);
@@ -45,8 +45,10 @@
            {
                 if($values["item_id"] == $_GET["id"])
                 {
-                     unset($_SESSION["shopping_cart"][$keys]);
-                     echo '<script>window.location="cart.php"</script>';
+                  $qtyqty=$values["item_qty"];
+                  $idshnik=$_GET["id"];
+                  mysqli_query($conn, "UPDATE products SET qty=qty+'$qtyqty' WHERE id='$idshnik'");
+                  unset($_SESSION["shopping_cart"][$keys]);
                 }
            }
       }
