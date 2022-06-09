@@ -11,7 +11,7 @@
 <body>
 
     <div class="login-box">
-     <link rel="stylesheet" type="text/css" href="style14.css">
+     <link rel="stylesheet" type="text/css" href="css/style14.css">
       <h2>Registration</h2>
       <form action="check.php" method="post">
         <div class="user-box">
