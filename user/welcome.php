@@ -1,6 +1,6 @@
 <?php
  if($_COOKIE['user'] == ''):
-   header('Location: login.php')
+   header('Location: ../login.php')
  ?>
 
 <?php else: ?>
@@ -14,12 +14,12 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
 
-    <link rel="stylesheet" href="css/nicepage.css" media="screen">
-    <link rel="stylesheet" href="css/HOME.css" media="screen">
-    <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="stylesheet" href="../css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../css/HOME.css" media="screen">
+    <link rel="stylesheet" href="../css/style.css" media="screen">
 
-    <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
 
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900">
@@ -28,6 +28,7 @@
     <meta property="og:type" content="website">
 
     <title>WYW | Online advertisement-shopping center of el. devices</title>
+
     <style>
      #map {
        height: 500px;
@@ -78,7 +79,7 @@
 
      .selected::after {
        content: "";
-       background: url("assets/arrow-down.svg");
+       background: url("../assets/arrow-down.svg");
        background-size: contain;
        background-repeat: no-repeat;
 
@@ -158,7 +159,7 @@
        pointer-events: auto;
      }
      .u-clearfix.u-image.u-section-1 {
-      background-image: url("assets/background.png");
+      background-image: url("../assets/background.png");
      }
      h5{
       color: white;
@@ -173,9 +174,6 @@
 
      }
    </style>
-
-    <meta property="og:title" content="HOME">
-    <meta property="og:type" content="website">
   </head>
 
 
@@ -248,12 +246,8 @@ function myFunction() {
 
     <header class="u-black u-clearfix u-header u-header" id="sec-adc2">
       <div class="u-clearfix u-sheet u-sheet-1">
-
-
-
-    <form action="cabinet.php" method = "post">
-        <a href="index.php" class="u-image u-logo u-image-1" data-image-width="690" data-image-height="388">
-          <img src="assets/ezgif.com-gif-maker.gif" class="u-logo-image u-logo-image-1" style="width: 200%;">
+        <a href="welcome.php" class="u-image u-logo u-image-1" data-image-width="690" data-image-height="388">
+          <img src="../assets/ezgif.com-gif-maker.gif" class="u-logo-image u-logo-image-1" style="width: 200%;">
         </a>
         <a href="HOME.php" data-page-id="333829213" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-1">
           <br>
@@ -262,10 +256,14 @@ function myFunction() {
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="index.php" style="padding: 0px 20px;">HOME</a></li>
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcome.php" style="padding: 0px 20px;">Home</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
-              <li class="u-nav-item"><div class="popup" onclick="myFunction()">Sign Up/Sign In
-  <span class="popuptext" id="myPopup"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="rega.php" style="padding: 0px 20px;">Registration</a></li>
+              <li class="u-nav-item"><div class="popup" onclick="myFunction()">Account
+  <span class="popuptext" id="myPopup">
+    <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="accountpage.php" style="padding: 0px 20px;">My profile</a>
+    <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../rega.php" style="padding: 0px 20px;">Registration</a>
+    <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../login.php" style="padding: 0px 20px;">Logout</a>
+  </li>
 </span>
 </div>
 </ul>
@@ -369,13 +367,13 @@ function myFunction() {
 			<h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="  margin: 0 auto 80px; text-align: center;">Categories</h2>
 			<div class="row">
 				<div class="col-3">
-					<a href="gamelap.php"><img src="assets/categ1.jpg" style="width: 350px; height: 250px;" title="Gaming Laptops"></a>
+					<a href="gamelap.php"><img src="../assets/categ1.jpg" style="width: 350px; height: 250px;" title="Gaming Laptops"></a>
 				</div>
 				<div class="col-3">
-					<a href="studylap.php"><img src="assets/categ2.jpg" style="width: 350px; height: 250px;" title="Studying Laptops"></a>
+					<a href="studylap.php"><img src="../assets/categ2.jpg" style="width: 350px; height: 250px;" title="Studying Laptops"></a>
 				</div>
 				<div class="col-3">
-					<a href="periphery.php"><img src="assets/categ3.jpg" style="width: 350px; height: 250px;" title="Devices"></a>
+					<a href="periphery.php"><img src="../assets/categ3.jpg" style="width: 350px; height: 250px;" title="Devices"></a>
 				</div>
 			</div>
 		</div>
@@ -387,25 +385,25 @@ function myFunction() {
 			<div class="row">
 				<div class="col-4">
 					<a href="prodPage/applemac.php">
-					<img src="assets/f_apple.png" style="width: 230px; height: 230px;">
+					<img src="../assets/f_apple.png" style="width: 230px; height: 230px;">
 					<h5>Apple MacBook Pro M1 13</h5>
 					</a>
 				</div>
 				<div class="col-4">
 					<a href="prodPage/asus.php">
-					<img src="assets/f_asus.png" style="width: 230px; height: 230px;">
+					<img src="../assets/f_asus.png" style="width: 230px; height: 230px;">
 					<h5>ASUS ROG STRIX G15</h5>
 				</a>
 				</div>
 				<div class="col-4">
 					<a href="prodPage/log.php">
-					<img src="assets/f_log.png" style="width: 230px; height: 230px;">
+					<img src="../assets/f_log.png" style="width: 230px; height: 230px;">
 					<h5>Logitech G102</h5>
 				</a>
 				</div>
 				<div class="col-4">
           <a href="prodPage/beyer.php">
-					<img src="assets/f_beyer.png" style="width: 230px; height: 230px;">
+					<img src="../assets/f_beyer.png" style="width: 230px; height: 230px;">
 					<h5>Beyerdinamic DT 240 Pro</h5>
           </a>
 				</div>
@@ -476,8 +474,6 @@ function myFunction() {
     </div>
   </section>
 
-  </form>
-
  <?php
      if($_COOKIE['user'] == true):
      ?>
@@ -486,7 +482,7 @@ function myFunction() {
 
  <div class="container">
       <div class="image">
-       <img src="assets/cookies.png" alt="">
+       <img src="../assets/cookies.png">
       </div>
       <div class="text">
         <header style="color: white;">Cookies</header>
@@ -517,97 +513,87 @@ function myFunction() {
 
   <?php endif; ?>
 
+  <style type="text/css">
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
 
+    img {
+      max-width: 100%
+    }
 
+    .image {
+      flex-basis: 40%;
+      padding-left: 460px;
+    }
 
+    .text {
+      font-size: 40px;
+    padding-right: 500px;
+    }
+    .wrapper{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+      background: #000;
+    opacity: 0.9;
 
-
-    <style type="text/css">
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center
-}
-
-img {
-  max-width: 100%
-}
-
-.image {
-  flex-basis: 40%;
-  padding-left: 460px;
-}
-
-.text {
-  font-size: 40px;
-padding-right: 500px;
-}
-
-
-
-      .wrapper{
-  position: fixed;
- bottom: 0px;
-  width: 100%;
-    background: #000;
-  opacity: 0.9;
-
-  box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
-  text-align: center;
-  z-index: 1;
-}
-.wrapper.hide{
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0.8);
-  transition: all 0.3s ease;
-}
-::selection{
-  color: #fff;
-  background: #FCBA7F;
-}
-.wrapper img{
-  max-width: 90px;
-}
-.content header{
-  font-size: 25px;
-  font-weight: 600;
-}
-.content{
-  margin-top: 10px;
-}
-.content p{
-  color: #858585;
-  margin: 5px 0 20px 0;
-}
-.content .buttons{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.buttons button{
-  padding: 10px 20px;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 5px;
-  background: #FCBA7F;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.buttons button:hover{
-  transform: scale(0.97);
-}
-.buttons .item{
-  margin: 0 10px;
-}
-.buttons a{
-  color: #FCBA7F;
-}
-
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+    text-align: center;
+    z-index: 1;
+    }
+    .wrapper.hide{
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    }
+    ::selection{
+      color: #fff;
+      background: #FCBA7F;
+    }
+    .wrapper img{
+      max-width: 90px;
+    }
+    .content header{
+      font-size: 25px;
+      font-weight: 600;
+    }
+    .content{
+      margin-top: 10px;
+    }
+    .content p{
+      color: #858585;
+      margin: 5px 0 20px 0;
+    }
+    .content .buttons{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .buttons button{
+      padding: 10px 20px;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 5px;
+      background: #FCBA7F;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .buttons button:hover{
+      transform: scale(0.97);
+    }
+    .buttons .item{
+      margin: 0 10px;
+    }
+    .buttons a{
+      color: #FCBA7F;
+    }
     </style>
 
     <!-- Start of txt.me widget code -->
