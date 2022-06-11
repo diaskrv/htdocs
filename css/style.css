@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body{
-   font-family: Verdana, sans-serif;
-     background-image: linear-gradient(#000000, #06091e);
+  font-family: Verdana, sans-serif;
+  background-image: linear-gradient(#000000, #06091e);
 }
 .navbar{
   display: flex;
