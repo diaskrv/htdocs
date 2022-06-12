@@ -167,21 +167,58 @@
     </header>
 
     <section class="u-backlink u-clearfix u-grey-80">
-
        <img src="../assets/profilePic.jpg" class="rounded-circle" style="width: 15%; border-radius: 50%;">
        <br>
-       <p style="font-size: 50px; text-align: center;">Username:
+       <?php
+        $conn = new mysqli('eu-cdbr-west-02.cleardb.net','b9cfb5db07fee5','7b8866b1','heroku_eb2b6d43207ebf8');
+        $userUsername=$_COOKIE['user'];
+        $result = mysqli_query($conn, "SELECT * FROM users WHERE username='$userUsername'");
+        while($row = mysqli_fetch_array($result)) {
+       ?>
+
+       <p style="font-size: 30px; text-align: center;">Username:
         <?php
-         if($_COOKIE['user'] == true):
-         ?>
-             <?php echo $_COOKIE['user'];
-             session_start();
-              ?>
+          if($_COOKIE['user'] == true):
+        ?>
+        <?php echo $_COOKIE['user'];
+         session_start();
+        ?>
         <?php endif; ?>
        </p>
         <br>
+       <p style="font-size: 30px; text-align: center;"> Email: <?php echo $row['mail']; ?>
+       </p>
+       <br>
+       <p style="font-size: 30px; text-align: center;"> First name: <?php
+        if(is_null($row['name'])){
+          ?> <a href="accedit.php" class="hrefs">Click here to add information.</a>
+        <?php
+        }else{
+          echo $row['name'];
+        }?>
+       </p>
+       <br>
+       <p style="font-size: 30px; text-align: center;"> Last name: <?php
+        if(is_null($row['surname'])){
+          ?> <a href="accedit.php" class="hrefs">Click here to add information.</a>
+        <?php
+        }else{
+          echo $row['surname'];
+        }?>
+       </p>
+       <br>
+       <p style="font-size: 30px; text-align: center;"> Phone number: <?php
+        if(is_null($row['phone'])){
+          ?> <a href="accedit.php" class="hrefs">Click here to add information.</a>
+        <?php
+        }else{
+          echo $row['phone'];
+        }?>
+       </p>
+       <?php
+        }
+       ?>
     </section>
-
   </body>
 
 </html>
