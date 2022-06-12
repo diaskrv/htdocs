@@ -23,6 +23,8 @@
 
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <meta property="og:title" content="HOME">
     <meta property="og:type" content="website">
@@ -379,37 +381,60 @@ function myFunction() {
 		</div>
 	</div>
 
-	<div class="categories1">
-		<div class="small-container">
-			<h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="  margin: 0 auto 80px; text-align: center;">Featured Products</h2>
-			<div class="row">
-				<div class="col-4">
-					<a href="prodPage/applemac.php">
-					<img src="../assets/f_apple.png" style="width: 230px; height: 230px;">
-					<h5>Apple MacBook Pro M1 13</h5>
-					</a>
-				</div>
-				<div class="col-4">
-					<a href="prodPage/asus.php">
-					<img src="../assets/f_asus.png" style="width: 230px; height: 230px;">
-					<h5>ASUS ROG STRIX G15</h5>
-				</a>
-				</div>
-				<div class="col-4">
-					<a href="prodPage/log.php">
-					<img src="../assets/f_log.png" style="width: 230px; height: 230px;">
-					<h5>Logitech G102</h5>
-				</a>
-				</div>
-				<div class="col-4">
-          <a href="prodPage/beyer.php">
-					<img src="../assets/f_beyer.png" style="width: 230px; height: 230px;">
-					<h5>Beyerdinamic DT 240 Pro</h5>
+  <header class="u-black u-clearfix u-header u-header" id="sec-adc2" style="width: 100%;">
+  <br>
+  <h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="margin: 0 auto 80px; text-align: center; font-size: 60px;">Featured Products</h2>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="prodPage/applemac.php">
+            <img src="../assets/appleFeatProd.jpg" style="width: 1230px; height: 630px;">
           </a>
-				</div>
-			</div>
-		</div>
-	</div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size: 30px; color: #C0C0C0;">Apple MacBook Pro M1 13</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="prodPage/asus.php">
+            <img src="../assets/asusFeatProd.jpg" style="width: 1230px; height: 630px;">
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size: 30px; color: #FFFFFF;">Asus ROG Strix G15</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="prodPage/log.php">
+            <img src="../assets/logitechFeatProd.jpg" style="width: 1230px; height: 630px;">
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size: 30px; color: #C0C0C0;">Logitech G102</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="prodPage/beyer.php">
+            <img src="../assets/beyerdynamicFeatProd.jpg" style="width: 1230px; height: 630px;">
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size: 30px; color: #C0C0C0;">Beyerdinamic DT 240 Pro</h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
 
   <h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="  margin: 0 auto 80px; text-align: center;">List of electronic devices store</h2>
     <div class = "row">

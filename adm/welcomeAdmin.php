@@ -381,61 +381,59 @@
       	</div>
 
 
-            <header class="u-black u-clearfix u-header u-header" id="sec-adc2" style="width: 100%;">
-              <br>
-
+        <header class="u-black u-clearfix u-header u-header" id="sec-adc2" style="width: 100%;">
+        <br>
         <h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="margin: 0 auto 80px; text-align: center; font-size: 60px;">Featured Products</h2>
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <a href="prodPage/applemac.php">
-              <img src="../assets/appleFeatProd.jpg" style="width: 1230px; height: 630px;">
-            </a>
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="font-size: 30px; color: #C0C0C0;">Apple MacBook Pro M1 13</h5>
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
-          </div>
-          <div class="carousel-item">
-            <a href="prodPage/asus.php">
-              <img src="../assets/asusFeatProd.jpg" style="width: 1230px; height: 630px;">
-            </a>
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="font-size: 30px; color: #FFFFFF;">Asus ROG Strix G15</h5>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="prodPage/applemac.php">
+                  <img src="../assets/appleFeatProd.jpg" style="width: 1230px; height: 630px;">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="font-size: 30px; color: #C0C0C0;">Apple MacBook Pro M1 13</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="prodPage/asus.php">
+                  <img src="../assets/asusFeatProd.jpg" style="width: 1230px; height: 630px;">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="font-size: 30px; color: #FFFFFF;">Asus ROG Strix G15</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="prodPage/log.php">
+                  <img src="../assets/logitechFeatProd.jpg" style="width: 1230px; height: 630px;">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="font-size: 30px; color: #C0C0C0;">Logitech G102</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="prodPage/beyer.php">
+                  <img src="../assets/beyerdynamicFeatProd.jpg" style="width: 1230px; height: 630px;">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="font-size: 30px; color: #C0C0C0;">Beyerdinamic DT 240 Pro</h5>
+                </div>
+              </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <div class="carousel-item">
-            <a href="prodPage/log.php">
-              <img src="../assets/logitechFeatProd.jpg" style="width: 1230px; height: 630px;">
-            </a>
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="font-size: 30px; color: #C0C0C0;">Logitech G102</h5>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <a href="prodPage/beyer.php">
-              <img src="../assets/beyerdynamicFeatProd.jpg" style="width: 1230px; height: 630px;">
-            </a>
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="font-size: 30px; color: #C0C0C0;">Beyerdinamic DT 240 Pro</h5>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
     </header>
 
   <h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="  margin: 0 auto 80px; text-align: center;">List of electronic devices store</h2>
