@@ -207,27 +207,30 @@ nav div ul li a{
        <p style="font-size: 30px; text-align: center;"> Email: <?php echo $row['mail']; ?>
        </p>
        <br>
-       <p style="font-size: 30px; text-align: center;"> First name: <?php
+       <p style="font-size: 30px; text-align: center;"> First name:
+        <?php
         if(is_null($row['name'])){
-          ?> <a href="accedit.php" class="hrefs">Click here to add information.</a>
+          ?><a href="accedit.php" class="hrefs">Click here to add information.</a>
         <?php
         }else{
           echo $row['name'];
         }?>
        </p>
        <br>
-       <p style="font-size: 30px; text-align: center;"> Last name: <?php
+       <p style="font-size: 30px; text-align: center;"> Last name:
+        <?php
         if(is_null($row['surname'])){
-          ?> <a href="accedit.php" class="hrefs">Click here to add information.</a>
+          ?><a href="accedit.php" class="hrefs">Click here to add information.</a>
         <?php
         }else{
           echo $row['surname'];
         }?>
        </p>
        <br>
-       <p style="font-size: 30px; text-align: center;"> Phone number: <?php
+       <p style="font-size: 30px; text-align: center;"> Phone number:
+        <?php
         if(is_null($row['phone'])){
-          ?> <a href="accedit.php" class="hrefs">Click here to add information.</a>
+          ?><a href="accedit.php" class="hrefs">Click here to add information.</a>
         <?php
         }else{
           echo $row['phone'];
