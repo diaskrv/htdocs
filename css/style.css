@@ -205,8 +205,8 @@ p{
 .small-container{
   max-width: 1080px;
   margin: auto;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .categories1{
   margin: 70px 0;
@@ -339,4 +339,8 @@ p{
   width: calc(100% 4px);
   height: calc(100% 4px);
   z-index: 500px;
+}
+
+.black{
+  background-image: black;
 }
