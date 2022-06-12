@@ -399,7 +399,7 @@
                   <img src="../assets/beyerdynamicFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 230px;">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5 style="font-size: 30px; color: #C0C0C0;">Beyerdinamic DT 240 Pro</h5>
+                  <h5 style="font-size: 30px; color: #C0C0C0;">Beyerdinamic DT 240 PRO</h5>
                 </div>
               </div>
             </div>

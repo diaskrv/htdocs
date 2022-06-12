@@ -374,7 +374,7 @@ function myFunction() {
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <a href="prodPage/applemac.php">
-                  <img src="../assets/appleFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
+                  <img src="../assets/appleFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 230px;">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="font-size: 30px; color: #C0C0C0;">Apple MacBook Pro M1 13</h5>
@@ -382,7 +382,7 @@ function myFunction() {
               </div>
               <div class="carousel-item">
                 <a href="prodPage/asus.php">
-                  <img src="../assets/asusFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
+                  <img src="../assets/asusFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 230px;">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="font-size: 30px; color: #FFFFFF;">Asus ROG Strix G15</h5>
@@ -390,7 +390,7 @@ function myFunction() {
               </div>
               <div class="carousel-item">
                 <a href="prodPage/log.php">
-                  <img src="../assets/logitechFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
+                  <img src="../assets/logitechFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 230px;">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="font-size: 30px; color: #C0C0C0;">Logitech G102</h5>
@@ -398,10 +398,10 @@ function myFunction() {
               </div>
               <div class="carousel-item">
                 <a href="prodPage/beyer.php">
-                  <img src="../assets/beyerdynamicFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
+                  <img src="../assets/beyerdynamicFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 230px;">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5 style="font-size: 30px; color: #C0C0C0;">Beyerdinamic DT 240 Pro</h5>
+                  <h5 style="font-size: 30px; color: #C0C0C0;">Beyerdinamic DT 240 PRO</h5>
                 </div>
               </div>
             </div>
