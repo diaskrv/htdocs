@@ -27,5 +27,5 @@ $result = $mysql->query("SELECT * from `products` WHERE `id` =
 $user =$result->fetch_assoc();
 
 $mysql->close();
-header('Location: /adminProd.php');
+header('Location: adminProd.php');
 ?>
