@@ -122,14 +122,19 @@
 
   <h2 class="title2">All Products</h2>
 
-  <div class="popup" onclick="myFunction()">
-    <span class="popuptext" id="myPopup">
-      Sort by
-               <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprod.php"><button>By default</button></a>
-               <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodBrand.php"><button>By brand</button></a>
-               <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodPriceAsc.php"><button>Price(Ascending)</button></a>
-               <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="allprodPriceDesc.php"><button>Price(Descending)</button></a>
-    </span>
+  <div class="btn-group">
+    <button type="button" class="button-57" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 1347px; padding: 20px 60px 20px 55px;">
+      <span class="text">Sort by</span><span>Click</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="allprod.php">Default</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="allprodBrand.php">Brand</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="allprodPriceAsc.php">Asc. order price</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="allprodPriceDesc.php">Desc. order price</a></li>
+    </ul>
   </div>
 
   <div class="categories1">
