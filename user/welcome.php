@@ -192,6 +192,9 @@ function myFunction() {
 </script>
 
 <style type="text/css">
+a{
+  text-decoration: none;
+}
 /* Popup container */
 .popup {
   position: relative;
@@ -260,15 +263,22 @@ function myFunction() {
             <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcome.php" style="padding: 0px 20px;">Home</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
-              <li class="u-nav-item"><div class="popup" onclick="myFunction()">Account
-  <span class="popuptext" id="myPopup">
-    <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="accountpage.php" style="padding: 0px 20px;">My profile</a>
-    <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../rega.php" style="padding: 0px 20px;">Registration</a>
-    <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../login.php" style="padding: 0px 20px;">Logout</a>
-  </li>
-</span>
-</div>
-</ul>
+              <li class="u-nav-item">
+                <div class="dropdown">
+                  <a class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                    Action
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="accountpage.php">My profile</a></li>
+                    <li><a class="dropdown-item" href="../login.php">Login</a></li>
+                    <li><a class="dropdown-item" href="../rega.php">Registration</a></li>
+                    <li><a class="dropdown-item" href="../login.php">Logout</a></li>
+                  </ul>
+                </div>
+              </li>
+            </span>
+            </div>
+            </ul>
           </div>
 
           <ul id="Menuitems">
@@ -361,60 +371,60 @@ function myFunction() {
 
 
     <section class="u-clearfix u-gradient u-section-2" id="sec-5ba8">
-        <header class="u-black u-clearfix u-header u-header" id="sec-adc2" style="width: 100%; margin-bottom: 40px;">
-        <br>
-        <h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="margin: 0 auto 80px; text-align: center; font-size: 60px;">Featured Products</h2>
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" style="margin-bottom: 100px;">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <a href="prodPage/applemac.php">
-                  <img src="../assets/appleFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
-                </a>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5 style="font-size: 30px; color: #C0C0C0;">Apple MacBook Pro M1 13</h5>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <a href="prodPage/asus.php">
-                  <img src="../assets/asusFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
-                </a>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5 style="font-size: 30px; color: #FFFFFF;">Asus ROG Strix G15</h5>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <a href="prodPage/log.php">
-                  <img src="../assets/logitechFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
-                </a>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5 style="font-size: 30px; color: #C0C0C0;">Logitech G102</h5>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <a href="prodPage/beyer.php">
-                  <img src="../assets/beyerdynamicFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
-                </a>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5 style="font-size: 30px; color: #C0C0C0;">Beyerdinamic DT 240 PRO</h5>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+      <header class="u-black u-clearfix u-header u-header" id="sec-adc2" style="width: 100%;">
+      <br>
+      <h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="margin: 0 auto 80px; text-align: center; font-size: 60px;">Featured Products</h2>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
           </div>
-    </header>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="prodPage/applemac.php">
+                <img src="../assets/appleFeatProd.jpg" style="width: 100%; height: 730px; margin-left: 130px;">
+              </a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="font-size: 30px; color: #C0C0C0;">Apple MacBook Pro M1 13</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="prodPage/asus.php">
+                <img src="../assets/asusFeatProd.jpg" style="width: 100%; height: 730px;">
+              </a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="font-size: 30px; color: #FFFFFF;">Asus ROG Strix G15</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="prodPage/log.php">
+                <img src="../assets/logitechFeatProd.jpg" style="width: 100%; height: 730px;">
+              </a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="font-size: 30px; color: #C0C0C0;">Logitech G102</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="prodPage/beyer.php">
+                <img src="../assets/beyerdynamicFeatProd.jpg" style="width: 100%; height: 730px;">
+              </a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="font-size: 30px; color: #C0C0C0;">Beyerdinamic DT 240 PRO</h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+  </header>
     <br>
 
   <h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="  margin: 0 auto 80px; text-align: center;">List of electronic devices store</h2>

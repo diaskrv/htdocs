@@ -191,6 +191,9 @@
     </script>
 
 <style type="text/css">
+a{
+  text-decoration: none;
+}
 /* Popup container */
 .popup {
   position: relative;
@@ -254,99 +257,26 @@
           <br>
         </a>
 
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" style="margin-left: 1000px;">
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcomeAdmin.php" style="padding: 0px 20px;">HOME</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
-              <li class="u-nav-item"><div class="popup" onclick="myFunction()">Account
-              <span class="popuptext" id="myPopup">
-            <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="accountpageAdmin.php" style="padding: 0px 20px;">My profile</a>
-                <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../rega.php" style="padding: 0px 20px;">Registration</a>
-                <a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="../login.php" style="padding: 0px 20px;">Logout</a>
+              <li class="u-nav-item">
+                <div class="dropdown">
+                  <a class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                    Action
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="accountpageAdmin.php">My profile</a></li>
+                    <li><a class="dropdown-item" href="../login.php">Login</a></li>
+                    <li><a class="dropdown-item" href="../rega.php">Registration</a></li>
+                    <li><a class="dropdown-item" href="../login.php">Logout</a></li>
+                  </ul>
+                </div>
               </li>
-            </span>
-            </div>
             </ul>
           </div>
-
-        <ul id="Menuitems">
-          <div class="container" style="padding-bottom: 0px; padding-left: 800px;">
-            <div class="select-box">
-              <div class="options-container">
-                <div class="option">
-                  <input type="radio" class="radio" id="applemacbookprom1" name="category"/>
-                  <a href="prodPage/applemac.php"><label for="apple">Apple MacBook Pro M1 13</label></a>
-                </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="asusrogstrixg15" name="category" />
-            <a href="prodPage/asus.php"><label for="asusrog">Asus Rog Strix G15 G513IH</label></a>
-          </div>
-
-          <div class="option">
-            <input src="predator.html" type="radio" class="radio" id="AcerPredator" name="category" />
-            <a href="prodPage/predator.php"><label for="Acer">Acer Predator Triton 300SE</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Lenovo" name="category" />
-            <a href="prodPage/ideapad.php"><label for="LenovoIdeapad">Lenovo Ideapad 3 15ALC6</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Razer" name="category" />
-            <a href="prodPage/blackshark.php"><label for="RazerBlackshark">Razer Blackshark V2 X</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="LogitechG102" name="category" />
-            <a href="prodPage/log.php"><label for="logitech">Logitech G102</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="BeyerdynamicDT" name="category" />
-            <a href="prodPage/beyer.php"><label for="Beyerdynamic">Beyerdymanic DT 240 PRO</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Victus" name="category" />
-            <a href="prodPage/victus.php"><label for="HPVictus">HP Victus 16-e0010ur</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="DefenderMasterCHAIR" name="category" />
-            <a href="prodPage/defender.php"><label for="DefenderMaster">Defender Master</label></a>
-          </div>
-
-           <div class="option">
-            <input type="radio" class="radio" id="SteelSeriesHeadset" name="category" />
-            <a href="prodPage/steelseries.php"><label for="SteelSeries">Steelseries Arctis</label></a>
-          </div>
-
-           <div class="option">
-            <input type="radio" class="radio" id="BloodyMouseA4Tech" name="category" />
-            <a href="prodPage/bloody.php"><label for="BloodyA4tech">A4Tech Bloody</label></a>
-          </div>
-
-           <div class="option">
-            <input type="radio" class="radio" id="RazerMousepadIlan" name="category" />
-            <a href="prodPage/iLan.php"><label for="RazerIlan">Razer iLan</label></a>
-          </div>
-
-        </div>
-
-        <div class="selected">
-          Select the product
-        </div>
-
-        <div class="search-box">
-          <input style="color: #000000;" type="text" placeholder="Type the name of the product..." />
-        </div>
-      </div>
-    </div>
-          </a>
-          </ul>
         </nav>
       </div>
     </header>
@@ -359,10 +289,10 @@
     </section>
 
     <section class="u-clearfix u-gradient u-section-2" id="sec-5ba8">
-        <header class="u-black u-clearfix u-header u-header" id="sec-adc2" style="width: 100%; margin-bottom: 40px;">
+        <header class="u-black u-clearfix u-header u-header" id="sec-adc2" style="width: 100%;">
         <br>
         <h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="margin: 0 auto 80px; text-align: center; font-size: 60px;">Featured Products</h2>
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" style="margin-bottom: 100px;">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -372,7 +302,7 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <a href="prodPage/applemac.php">
-                  <img src="../assets/appleFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
+                  <img src="../assets/appleFeatProd.jpg" style="width: 100%; height: 730px; margin-left: 130px;">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="font-size: 30px; color: #C0C0C0;">Apple MacBook Pro M1 13</h5>
@@ -380,7 +310,7 @@
               </div>
               <div class="carousel-item">
                 <a href="prodPage/asus.php">
-                  <img src="../assets/asusFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
+                  <img src="../assets/asusFeatProd.jpg" style="width: 100%; height: 730px;">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="font-size: 30px; color: #FFFFFF;">Asus ROG Strix G15</h5>
@@ -388,7 +318,7 @@
               </div>
               <div class="carousel-item">
                 <a href="prodPage/log.php">
-                  <img src="../assets/logitechFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
+                  <img src="../assets/logitechFeatProd.jpg" style="width: 100%; height: 730px;">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="font-size: 30px; color: #C0C0C0;">Logitech G102</h5>
@@ -396,7 +326,7 @@
               </div>
               <div class="carousel-item">
                 <a href="prodPage/beyer.php">
-                  <img src="../assets/beyerdynamicFeatProd.jpg" style="width: 1230px; height: 630px; margin-left: 140px;">
+                  <img src="../assets/beyerdynamicFeatProd.jpg" style="width: 100%; height: 730px;">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="font-size: 30px; color: #C0C0C0;">Beyerdinamic DT 240 PRO</h5>
