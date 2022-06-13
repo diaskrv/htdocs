@@ -149,7 +149,7 @@
         ?>
         <div class="col-4">
           <form method="post" action="allprod.php?action=add&id=<?php echo $row["id"];?>">
-            <a href="prodPage/<?php echo $row["path"];?>"><img src="assets/<?php echo $row["image"];?>" style="width: 230px; height: 230px;">
+            <a href="prodPage/<?php echo $row["path"];?>"><img src="../assets/<?php echo $row["image"];?>" style="width: 230px; height: 230px;">
             <h5><?php echo $row["name"];?></h5></a>
             <input type="number" name="qty" value="1" style="background-color: #2a2f5e; border: none; color: #a6acde;">
             <p>$<?php echo $row["price"];?></p>
