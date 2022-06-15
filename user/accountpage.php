@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../css/HOME.css" media="screen">
     <link rel="stylesheet" href="../css/style.css" media="screen">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
-    
+
     <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -221,6 +221,7 @@
         }
        ?>
     </section>
+    <script src="https://v2.txt.me/livechat/js/wrapper/cf93366e68d54998a033909344bfd8de" async></script>
   </body>
 
 </html>
