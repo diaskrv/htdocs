@@ -68,4 +68,5 @@ $product = $stmt->fetch();
         <!-- End Show a product -->
         <br>
     </div><!-- /.container -->
+    <script src="https://v2.txt.me/livechat/js/wrapper/cf93366e68d54998a033909344bfd8de" async></script>
 <?php include("inc/footer.php") ?>

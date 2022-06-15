@@ -146,5 +146,6 @@
     </main>
     <script src="https://www.paypal.com/sdk/js?client-id=Ae1x7uKLtzsWsiC7GCSxqQlHOkB5vKuAfqpLf2-8SYxBcJcHADhmw4T_P3NMA7Lgfx-uGSI5AX7Vpx_b"></script>
     <script src="../js/index1234.js"></script>
+    <script src="https://v2.txt.me/livechat/js/wrapper/cf93366e68d54998a033909344bfd8de" async></script>
 </body>
 </html>
