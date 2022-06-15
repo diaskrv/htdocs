@@ -63,6 +63,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WYW | Online advertisement-shopping center of el. devices</title>
     <link rel="stylesheet" href="../css/stylepay.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
 </head>
 <body>
     <main id="cart-main">

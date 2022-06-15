@@ -18,10 +18,11 @@
     <link rel="stylesheet" href="../css/nicepage.css" media="screen">
     <link rel="stylesheet" href="../css/HOME.css" media="screen">
     <link rel="stylesheet" href="../css/style.css" media="screen">
-    <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
+    <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
     <script type="application/ld+json">{
 		    "@context": "http://schema.org",
 		    "@type": "Organization",

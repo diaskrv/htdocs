@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
     <link rel="stylesheet" href="css/HOME.css" media="screen">
     <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
 
     <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/nicepage.css" media="screen">
     <link rel="stylesheet" href="../css/HOME.css" media="screen">
     <link rel="stylesheet" href="../css/style.css" media="screen">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
 
     <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
@@ -260,7 +261,7 @@ a{
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" style="margin-left: 1000px;">
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
-              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcomeAdmin.php" style="padding: 0px 20px;">HOME</a></li>
+              <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcomeAdmin.php" style="padding: 0px 20px;">Home</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
               <li class="u-nav-item">
                 <div class="dropdown">

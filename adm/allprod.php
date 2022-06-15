@@ -76,6 +76,7 @@
        <link rel="stylesheet" type="text/css" href="../css/style.css">
 			 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
        <link rel="stylesheet" href="../assets/css/main.css">
+       <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
 
        <script src="../js/jquery.js"></script>
        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>

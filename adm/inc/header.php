@@ -6,6 +6,7 @@
     <meta name="description" content="Basic PHP and MySQL application using PHP Data Object and Bootstarp 4">
     <meta name="author" content="Sok Kimsoeurn">
     <link rel="icon" href="images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
 
     <title>WYW | Online advertisement-shopping center of el. devices</title>
 
