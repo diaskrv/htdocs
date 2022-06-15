@@ -16,9 +16,30 @@
        <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
     <link href="comments.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.png">
 </head>
 <body>
 <style type="text/css">
+html, body{
+  height: 100%;
+}
+ body{
+    margin: 0;
+    background: linear-gradient(45deg, #240459, #1d0c38, #321a3d, #2b1a33, #000, #634c6e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+ }
+ @keyframes gradient{
+   0%{
+     background-position: 0 50%;
+   }
+   50%{
+     background-position: 100% 50%;
+   }
+   100%{
+     background-position: 0 50%;
+   }
+ }
    ::placeholder{
      font-weight: 500px;
    }
@@ -112,29 +133,35 @@ nav div ul li a{
         <a href="https://www.technodom.kz/p/igrovoj-noutbuk-hp-victus-16-e0010ur-489h3ea-253388"><p>Technodom</p></a>
     </div>
     <div class="col-2">
-      <h1>
-        <button class="buttonn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-          Characteristics
+        <button type="button" class="button-57" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin: 0 0 200px 100px; padding: 50px 100px 50px 100px;">
+          <span>Characteristics</span><span>Click</span>
         </button>
-      </h1>
-      <div style="min-height: 120px;">
-        <div class="collapse collapse-horizontal" id="collapseWidthExample">
-          <div class="card card-body" style="width: 300px;">
-            <p>Processor: AMD Ryzen 5</p>
-            <p>Processor Model: 5600H</p>
-            <p>Processor frequency, GHz: 3.3</p>
-            <p>RAM: 16 GB</p>
-            <p>RAM configuration: 2 x 8 GB</p>
-            <p>Hard Disk: No HDD</p>
-            <p>Solid State Drive: 512 GB SSD</p>
-            <p>Processor Integrated Graphics: AMD Radeon Graphics</p>
-            <p>Discrete Graphics Card Model: GeForce RTX 3050</p>
-            <p>Screen diagonal, inch: 16.1</p>
-            <p>Screen Resolution: 1920 x 1080 Full HD</p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Product's details:</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p style="color: black;">Processor: AMD Ryzen 5</p>
+                <p style="color: black;">Processor Model: 5600H</p>
+                <p style="color: black;">Processor frequency, GHz: 3.3</p>
+                <p style="color: black;">RAM: 16 GB</p>
+                <p style="color: black;">RAM configuration: 2 x 8 GB</p>
+                <p style="color: black;">Hard Disk: No HDD</p>
+                <p style="color: black;">Solid State Drive: 512 GB SSD</p>
+                <p style="color: black;">Processor Integrated Graphics: AMD Radeon Graphics</p>
+                <p style="color: black;">Discrete Graphics Card Model: GeForce RTX 3050</p>
+                <p style="color: black;">Screen diagonal, inch: 16.1</p>
+                <p style="color: black;">Screen Resolution: 1920 x 1080 Full HD</p>
+            </div>
           </div>
         </div>
-      </div>
     </div>
+  </div>
   </div>
   <style type="text/css">
     .comments{

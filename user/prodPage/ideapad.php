@@ -15,10 +15,31 @@
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
        <link rel="stylesheet" type="text/css" href="../../css/style.css">
        <link href="comments.css" rel="stylesheet" type="text/css">
+       <link rel="icon" type="image/x-icon" href="../../assets/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 <body>
   <style type="text/css">
+  html, body{
+    height: 100%;
+  }
+   body{
+      margin: 0;
+      background: linear-gradient(45deg, #240459, #1d0c38, #321a3d, #2b1a33, #000, #634c6e);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+   }
+   @keyframes gradient{
+     0%{
+       background-position: 0 50%;
+     }
+     50%{
+       background-position: 100% 50%;
+     }
+     100%{
+       background-position: 0 50%;
+     }
+   }
    ::placeholder{
      font-weight: 500px;
    }
@@ -112,24 +133,30 @@ nav div ul li a{
         <a href="https://www.sulpak.kz/g/noutbuk_lenovo_ideapad_3_15alc6_82ku00hqkg#characteristicsTab"><p>Alser</p></a>
     </div>
     <div class="col-2">
-      <h1>
-        <button class="buttonn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-          Characteristics
+        <button type="button" class="button-57" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin: 0 0 200px 100px; padding: 50px 100px 50px 100px;">
+          <span>Characteristics</span><span>Click</span>
         </button>
-      </h1>
-      <div style="min-height: 120px;">
-        <div class="collapse collapse-horizontal" id="collapseWidthExample">
-          <div class="card card-body" style="width: 300px;">
-            <p>Display: 15.6 ", 1920x1081 (16:10)</p>
-            <p>Processor: AMD® Ryzen™ 7 5700U, 4.3 GHz</p>
-            <p>RAM: 8 GB</p>
-            <p>Storage: HDD, 1024 GB</p>
-            <p>OS: DOS</p>
-            <p>Battery capacity: 58W*h</p>
-            <p>Laptop weight: 2.8 kg</p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Product's details:</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p style="color: black;">Display: 15.6 ", 1920x1081 (16:10)</p>
+                <p style="color: black;">Processor: AMD® Ryzen™ 7 5700U, 4.3 GHz</p>
+                <p style="color: black;">RAM: 8 GB</p>
+                <p style="color: black;">Storage: HDD, 1024 GB</p>
+                <p style="color: black;">OS: DOS</p>
+                <p style="color: black;">Battery capacity: 58W*h</p>
+                <p style="color: black;">Laptop weight: 2.8 kg</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <style type="text/css">

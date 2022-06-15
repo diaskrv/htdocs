@@ -10,7 +10,6 @@
 
 </head>
 <body>
-
     <div class="login-box">
      <link rel="stylesheet" type="text/css" href="css/style14.css">
       <h2>Login</h2>
@@ -23,20 +22,16 @@
           <input type="password" name="password" required="">
           <label>Password</label>
         </div>
-        <a><button class="btn" type="submit">
+        <a><button class="btn" type="submit" style="color: #FFF;">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Submit
         </button></a>
-
-
       </form>
-
-       <a href="rega.php"><button class="btn">
-        Register
-      </button></a>
+      <br>
+          <a href="rega.php" style="color: #FFF; font-size: 17px; padding: 10px 90px 10px 20px; text-decoration: none;">You don't have an account?</a>
     </div>
 
 </body>

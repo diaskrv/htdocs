@@ -28,7 +28,7 @@
           <label>Password</label>
         </div>
 
-        <a><button class="btn" type="submit">
+        <a><button class="btn" type="submit" style="color: #FFF;">
           <span></span>
           <span></span>
           <span></span>
@@ -39,9 +39,8 @@
 
       </form>
 
-      <a href = "login.php"><button class="btn">
-          Login
-      </button></a>
+      <br>
+          <a href="login.php" style="color: #FFF; font-size: 17px; padding: 10px 90px 10px 20px; text-decoration: none;">You don't have an account?</a>
     </div>
 
 

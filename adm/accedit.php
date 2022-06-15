@@ -20,7 +20,6 @@
         margin: 0;
         background: linear-gradient(45deg, #240459, #1d0c38, #321a3d, #2b1a33, #000, #634c6e);
         background-size: 400% 400%;
-        /* background-image: radial-gradient(circle, #0b111c, #07152c, #00173b, #00184b, #001859); */
         animation: gradient 10s ease infinite;
      }
      @keyframes gradient{

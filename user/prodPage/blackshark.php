@@ -15,10 +15,31 @@
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
        <link rel="stylesheet" type="text/css" href="../../css/style.css">
        <link href="comments.css" rel="stylesheet" type="text/css">
+       <link rel="icon" type="image/x-icon" href="../../assets/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 <body>
 <style type="text/css">
+html, body{
+  height: 100%;
+}
+ body{
+    margin: 0;
+    background: linear-gradient(45deg, #240459, #1d0c38, #321a3d, #2b1a33, #000, #634c6e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+ }
+ @keyframes gradient{
+   0%{
+     background-position: 0 50%;
+   }
+   50%{
+     background-position: 100% 50%;
+   }
+   100%{
+     background-position: 0 50%;
+   }
+ }
    ::placeholder{
      font-weight: 500px;
    }
@@ -110,27 +131,33 @@ nav div ul li a{
         <a href="https://www.mechta.kz/product/igrovaya-garnitura-razer-blackshark-v2-x-rz04-03240100-r3m1/"><p>1Mechta</p></a>
     </div>
     <div class="col-2">
-      <h1>
-        <button class="buttonn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-          Characteristics
+        <button type="button" class="button-57" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin: 0 0 100px 100px; padding: 40px 100px 40px 100px;">
+          <span>Characteristics</span><span>Click</span>
         </button>
-      </h1>
-      <div style="min-height: 120px;">
-        <div class="collapse collapse-horizontal" id="collapseWidthExample">
-          <div class="card card-body" style="width: 300px;">
-            <p>Reproducible frequency range: 12-28000 Hz</p>
-            <p>Headphone sensitivity: 100(dB/V)</p>
-            <p>On-ear Headphone: yes</p>
-            <p>Connection type wired: available</p>
-            <p>Cable length: 1.3m</p>
-            <p>Plug 3.5 mm (mini-jack): available</p>
-            <p>Housing material: plastic</p>
-            <p>Microphone: available</p>
-            <p>Packed weight(gross): kg 0.5</p>
-            <p>Weight without packaging(net): kg 0.24</p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Product's details:</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p style="color: black;">Reproducible frequency range: 12-28000 Hz</p>
+                <p style="color: black;">Headphone sensitivity: 100(dB/V)</p>
+                <p style="color: black;">On-ear Headphone: yes</p>
+                <p style="color: black;">Connection type wired: available</p>
+                <p style="color: black;">Cable length: 1.3m</p>
+                <p style="color: black;">Plug 3.5 mm (mini-jack): available</p>
+                <p style="color: black;">Housing material: plastic</p>
+                <p style="color: black;">Microphone: available</p>
+                <p style="color: black;">Packed weight(gross): kg 0.5</p>
+                <p style="color: black;">Weight without packaging(net): kg 0.24</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <style type="text/css">

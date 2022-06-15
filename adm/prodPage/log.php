@@ -15,9 +15,30 @@
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
        <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <link href="comments.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.png">
 </head>
 <body>
 <style type="text/css">
+html, body{
+  height: 100%;
+}
+ body{
+    margin: 0;
+    background: linear-gradient(45deg, #240459, #1d0c38, #321a3d, #2b1a33, #000, #634c6e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+ }
+ @keyframes gradient{
+   0%{
+     background-position: 0 50%;
+   }
+   50%{
+     background-position: 100% 50%;
+   }
+   100%{
+     background-position: 0 50%;
+   }
+ }
    ::placeholder{
      font-weight: 500px;
    }
@@ -111,38 +132,41 @@ nav div ul li a{
         <a href="https://https://shop.kz/offer/mysh-logitech-g102-lightsync-black-usb/?gclid=Cj0KCQiA09eQBhCxARIsAAYRiylWDZSrU58upfWID07c8H8YZXI3GX_9hunPzGeCUtwmijAC9anWJlkaAoEFEALw_wcB"><p>Белый Ветер</p></a>
     </div>
     <div class="col-2">
-      <h1>
-        <button class="buttonn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-          Characteristics
+        <button type="button" class="button-57" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin: 0 0 300px 100px; padding: 50px 100px 50px 100px;">
+          <span>Characteristics</span><span>Click</span>
         </button>
-      </h1>
-      <div style="min-height: 120px;">
-        <div class="collapse collapse-horizontal" id="collapseWidthExample">
-          <div class="card card-body" style="width: 300px;">
-            <p>Length: 116.6mm</p>
-            <p>Width: 62.15mm</p>
-            <p>Thickness: 38.2mm</p>
-            <p>Weight: 85g (mouse only)</p>
-            <p>Cable length: 2.10 m</p>
-            <p></p>
-            <p>Sensitivity: 200-8000dpi</p>
-            <p>Zero anti-aliasing, filtering and acceleration</p>
-            <p>Max. acceleration: > 25 G2Tested on Logitech G240 Gaming Mouse Pad</p>
-            <p>Max. Speed: > 5.08 m/s (200 in/s)3Tested on Logitech G240 Gaming Mouse Pad</p>
-            <p></p>
-            <p>USB data format: 16 bits per axis</p>
-            <p>USB port polling rate: 1000Hz (1ms)</p>
-            <p>Microprocessor: 32-bit ARM processor</p>
-            <p></p>
-            <p>Built-in storage: 1 profile</p>
-            <p>LIGHTSYNC RGB: 1 zone</p>
-            <p>Cable without braid</p>
-            <p>Mechanical buttons with spring mechanism</p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Product's details:</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p style="color: black;">Length: 116.6mm</p>
+                <p style="color: black;">Width: 62.15mm</p>
+                <p style="color: black;">Thickness: 38.2mm</p>
+                <p style="color: black;">Weight: 85g (mouse only)</p>
+                <p style="color: black;">Cable length: 2.10 m</p>
+                <p style="color: black;">Sensitivity: 200-8000dpi</p>
+                <p style="color: black;">Zero anti-aliasing, filtering and acceleration</p>
+                <p style="color: black;">Max. acceleration: > 25 G2Tested on Logitech G240 Gaming Mouse Pad</p>
+                <p style="color: black;">Max. Speed: > 5.08 m/s (200 in/s)3Tested on Logitech G240 Gaming Mouse Pad</p>
+                <p style="color: black;">USB data format: 16 bits per axis</p>
+                <p style="color: black;">USB port polling rate: 1000Hz (1ms)</p>
+                <p style="color: black;">Microprocessor: 32-bit ARM processor</p>
+                <p style="color: black;">Built-in storage: 1 profile</p>
+                <p style="color: black;">LIGHTSYNC RGB: 1 zone</p>
+                <p style="color: black;">Cable without braid</p>
+                <p style="color: black;">Mechanical buttons with spring mechanism</p>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
+</div>
   <style type="text/css">
     .comments{
       width: 50%;

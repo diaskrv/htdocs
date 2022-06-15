@@ -15,12 +15,33 @@
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
        <link rel="stylesheet" type="text/css" href="../../css/style.css">
        <link href="comments.css" rel="stylesheet" type="text/css">
+       <link rel="icon" type="image/x-icon" href="../../assets/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 <body>
 
   <style type="text/css">
-       ::placeholder{
+  html, body{
+    height: 100%;
+  }
+   body{
+      margin: 0;
+      background: linear-gradient(45deg, #240459, #1d0c38, #321a3d, #2b1a33, #000, #634c6e);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+   }
+   @keyframes gradient{
+     0%{
+       background-position: 0 50%;
+     }
+     50%{
+       background-position: 100% 50%;
+     }
+     100%{
+       background-position: 0 50%;
+     }
+   }
+    ::placeholder{
      font-weight: 500px;
    }
 .container {
@@ -112,29 +133,35 @@ nav div ul li a{
         <a href="https://https://www.1music.kz/product/nakladnye-naushniki-beyerdynamic-dt-240-pro/"><p>1Music</p></a>
     </div>
     <div class="col-2">
-      <h1>
-        <button class="buttonn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-          Characteristics
+        <button type="button" class="button-57" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin: 0 0 200px 100px; padding: 50px 100px 50px 100px;">
+          <span>Characteristics</span><span>Click</span>
         </button>
-      </h1>
-      <div style="min-height: 120px;">
-        <div class="collapse collapse-horizontal" id="collapseWidthExample">
-          <div class="card card-body" style="width: 300px;">
-            <p>Type: dynamic, overhead</p>
-            <p>Category: wired</p>
-            <p>Frequency range: 5 Hz - 35 kHz</p>
-            <p>Emitter: dynamic 35 mm</p>
-            <p>Case material: plastic + metal</p>
-            <p>Resistance: 34 Ohm</p>
-            <p>Sensitivity: 99 dB</p>
-            <p>Fastening type: headband</p>
-            <p>Harmonic coefficient: less than 0.1%</p>
-            <p>Maximum input power: 100 mW</p>
-            <p>Cable: Detachable, 3.5 mm mini-jack connector, (adapter for 6.3 mm jacks included)</p>
-            <p>Weight: 196 g. </p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Product's details:</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p style="color: black;">Type: dynamic, overhead</p>
+                <p style="color: black;">Category: wired</p>
+                <p style="color: black;">Frequency range: 5 Hz - 35 kHz</p>
+                <p style="color: black;">Emitter: dynamic 35 mm</p>
+                <p style="color: black;">Case material: plastic + metal</p>
+                <p style="color: black;">Resistance: 34 Ohm</p>
+                <p style="color: black;">Sensitivity: 99 dB</p>
+                <p style="color: black;">Fastening type: headband</p>
+                <p style="color: black;">Harmonic coefficient: less than 0.1%</p>
+                <p style="color: black;">Maximum input power: 100 mW</p>
+                <p style="color: black;">Cable: Detachable, 3.5 mm mini-jack connector, (adapter for 6.3 mm jacks included)</p>
+                <p style="color: black;">Weight: 196 g. </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <style type="text/css">

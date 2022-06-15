@@ -18,6 +18,28 @@
   </head>
 
   <body>
+    <style>
+      html, body{
+        height: 100%;
+      }
+       body{
+          margin: 0;
+          background: linear-gradient(45deg, #240459, #1d0c38, #321a3d, #2b1a33, #000, #634c6e);
+          background-size: 400% 400%;
+          animation: gradient 10s ease infinite;
+       }
+       @keyframes gradient{
+         0%{
+           background-position: 0 50%;
+         }
+         50%{
+           background-position: 100% 50%;
+         }
+         100%{
+           background-position: 0 50%;
+         }
+       }
+    </style>
     <!-- Start Navabar-->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container">
