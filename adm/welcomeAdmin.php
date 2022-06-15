@@ -258,9 +258,9 @@ a{
           <br>
         </a>
 
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" style="margin-left: 1000px;">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
+            <ul class="u-nav u-spacing-0 u-unstyled u-nav-1" style="margin-left: 1000px;">
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="welcomeAdmin.php" style="padding: 0px 20px;">Home</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
               <li class="u-nav-item">
@@ -278,6 +278,84 @@ a{
               </li>
             </ul>
           </div>
+
+          <ul id="Menuitems">
+            <div class="container" style="padding-bottom: 0px; padding-left: 800px; margin-left: 40px;">
+              <div class="select-box">
+                <div class="options-container">
+                  <div class="option">
+                    <input type="radio" class="radio" id="applemacbookprom1" name="category"/>
+                    <a href="prodPage/applemac.php"><label for="apple">Apple MacBook Pro M1 13</label></a>
+                  </div>
+
+                  <div class="option">
+                    <input type="radio" class="radio" id="asusrogstrixg15" name="category" />
+                    <a href="prodPage/asus.php"><label for="asusrog">Asus Rog Strix G15 G513IH</label></a>
+                  </div>
+
+                  <div class="option">
+                    <input src="predator.html" type="radio" class="radio" id="AcerPredator" name="category" />
+                    <a href="prodPage/predator.php"><label for="Acer">Acer Predator Triton 300SE</label></a>
+                  </div>
+
+                  <div class="option">
+                    <input type="radio" class="radio" id="Lenovo" name="category" />
+                    <a href="prodPage/ideapad.php"><label for="LenovoIdeapad">Lenovo Ideapad 3 15ALC6</label></a>
+                  </div>
+
+                  <div class="option">
+                    <input type="radio" class="radio" id="Razer" name="category" />
+                    <a href="prodPage/blackshark.php"><label for="RazerBlackshark">Razer Blackshark V2 X</label></a>
+                  </div>
+
+                  <div class="option">
+                    <input type="radio" class="radio" id="LogitechG102" name="category" />
+                    <a href="prodPage/log.php"><label for="logitech">Logitech G102</label></a>
+                  </div>
+
+                  <div class="option">
+                    <input type="radio" class="radio" id="BeyerdynamicDT" name="category" />
+                    <a href="prodPage/beyer.php"><label for="Beyerdynamic">Beyerdymanic DT 240 PRO</label></a>
+                  </div>
+
+                  <div class="option">
+                    <input type="radio" class="radio" id="Victus" name="category" />
+                    <a href="prodPage/victus.php"><label for="HPVictus">HP Victus 16-e0010ur</label></a>
+                  </div>
+
+                  <div class="option">
+                    <input type="radio" class="radio" id="DefenderMasterCHAIR" name="category" />
+                    <a href="prodPage/defender.php"><label for="DefenderMaster">Defender Master</label></a>
+                  </div>
+
+                   <div class="option">
+                    <input type="radio" class="radio" id="SteelSeriesHeadset" name="category" />
+                    <a href="prodPage/steelseries.php"><label for="SteelSeries">Steelseries Arctis</label></a>
+                  </div>
+
+                   <div class="option">
+                    <input type="radio" class="radio" id="BloodyMouseA4Tech" name="category" />
+                    <a href="prodPage/bloody.php"><label for="BloodyA4tech">A4Tech Bloody</label></a>
+                  </div>
+
+                   <div class="option">
+                    <input type="radio" class="radio" id="RazerMousepadIlan" name="category" />
+                    <a href="prodPage/iLan.php"><label for="RazerIlan">Razer iLan</label></a>
+                  </div>
+
+                </div>
+
+                <div class="selected">
+                  Select the product
+                </div>
+
+                <div class="search-box">
+                  <input style="color: #000000;" type="text" placeholder="Type the name of the product..." />
+                </div>
+              </div>
+            </div>
+          </ul>
+
         </nav>
       </div>
     </header>

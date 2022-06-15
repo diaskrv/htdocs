@@ -24,6 +24,8 @@
 
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <meta property="og:title" content="HOME">
     <meta property="og:type" content="website">
@@ -193,6 +195,9 @@ function myFunction() {
 </script>
 
 <style type="text/css">
+a{
+  text-decoration: none;
+}
 /* Popup container */
 .popup {
   position: relative;
@@ -249,10 +254,6 @@ function myFunction() {
 
     <header class="u-black u-clearfix u-header u-header" id="sec-adc2">
       <div class="u-clearfix u-sheet u-sheet-1">
-
-
-
-    <form action="cabinet.php" method = "post">
         <a href="index.php" class="u-image u-logo u-image-1" data-image-width="690" data-image-height="388">
           <img src="assets/ezgif.com-gif-maker.gif" class="u-logo-image u-logo-image-1" style="width: 200%;">
         </a>
@@ -262,93 +263,22 @@ function myFunction() {
 
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
+            <ul class="u-nav u-spacing-0 u-unstyled u-nav-1" style="margin-left: 1000px;">
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="index.php" style="padding: 0px 20px;">HOME</a></li>
               <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="Contacts.html" style="padding: 0px 20px;">Contacts</a></li>
-              <li class="u-nav-item"><div class="popup" onclick="myFunction()">Sign Up/Sign In
-  <span class="popuptext" id="myPopup"><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="login.php" style="padding: 0px 20px;">Login</a><a class="u-border-2 u-border-active-grey-30 u-border-grey-30 u-border-hover-grey-30 u-border-no-bottom u-border-no-left u-border-no-top u-button-style u-nav-link u-text-active-custom-color-2 u-text-hover-palette-1-base u-text-white" href="rega.php" style="padding: 0px 20px;">Registration</a></li>
-</span>
-</div>
-</ul>
+              <li class="u-nav-item">
+                <div class="dropdown">
+                  <a class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                    Action
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="login.php">Login</a></li>
+                    <li><a class="dropdown-item" href="rega.php">Registration</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </div>
-
-          <ul id="Menuitems">
-    <div class="container" style="padding-bottom: 0px; padding-left: 800px;">
-      <div class="select-box">
-        <div class="options-container">
-          <div class="option">
-            <input type="radio" class="radio" id="applemacbookprom1" name="category"/>
-            <a href="prodPage/applemac.php"><label for="apple">Apple MacBook Pro M1 13</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="asusrogstrixg15" name="category" />
-            <a href="prodPage/asus.php"><label for="asusrog">Asus Rog Strix G15 G513IH</label></a>
-          </div>
-
-          <div class="option">
-            <input src="predator.html" type="radio" class="radio" id="AcerPredator" name="category" />
-            <a href="prodPage/predator.php"><label for="Acer">Acer Predator Triton 300SE</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Lenovo" name="category" />
-            <a href="prodPage/ideapad.php"><label for="LenovoIdeapad">Lenovo Ideapad 3 15ALC6</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Razer" name="category" />
-            <a href="prodPage/blackshark.php"><label for="RazerBlackshark">Razer Blackshark V2 X</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="LogitechG102" name="category" />
-            <a href="prodPage/log.php"><label for="logitech">Logitech G102</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="BeyerdynamicDT" name="category" />
-            <a href="prodPage/beyer.php"><label for="Beyerdynamic">Beyerdymanic DT 240 PRO</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Victus" name="category" />
-            <a href="prodPage/victus.php"><label for="HPVictus">HP Victus 16-e0010ur</label></a>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="DefenderMasterCHAIR" name="category" />
-            <a href="prodPage/defender.php"><label for="DefenderMaster">Defender Master</label></a>
-          </div>
-
-           <div class="option">
-            <input type="radio" class="radio" id="SteelSeriesHeadset" name="category" />
-            <a href="prodPage/steelseries.php"><label for="SteelSeries">Steelseries Arctis</label></a>
-          </div>
-
-           <div class="option">
-            <input type="radio" class="radio" id="BloodyMouseA4Tech" name="category" />
-            <a href="prodPage/bloody.php"><label for="BloodyA4tech">A4Tech Bloody</label></a>
-          </div>
-
-           <div class="option">
-            <input type="radio" class="radio" id="RazerMousepadIlan" name="category" />
-            <a href="prodPage/iLan.php"><label for="RazerIlan">Razer iLan</label></a>
-          </div>
-
-        </div>
-
-        <div class="selected">
-          Select the product
-        </div>
-
-        <div class="search-box">
-          <input style="color: #000000;" type="text" placeholder="Type the name of the product..." />
-        </div>
-      </div>
-    </div>
-          </a>
-          </ul>
         </nav>
       </div>
     </header>
@@ -356,163 +286,43 @@ function myFunction() {
     <section class="u-clearfix u-image u-section-1" id="sec-59ed" data-image-width="3840" data-image-height="2160">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="">TAKE WHAT YOU WANT!</h2>
-        <a href="allprod.php" class="u-border-6 u-border-hover-custom-color-8 u-border-white u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-custom-font u-font-titillium-web u-none u-radius-0 u-text-hover-custom-color-8 u-text-white u-top-left-radius-0 u-top-right-radius-0 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-direction="X">LET'S CHOOSE</a>
       </div>
     </section>
 
-
-    <section class="u-clearfix u-gradient u-section-2" id="sec-5ba8">
-      <div class="u-clearfix u-sheet u-sheet-1">
-
-        <div class="emptyBackground">
-	<div class="categories">
-		<div class="small-container">
-			<h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="  margin: 0 auto 80px; text-align: center;">Categories</h2>
-			<div class="row">
-				<div class="col-3">
-					<a href="gamelap.php"><img src="assets/categ1.jpg" style="width: 350px; height: 250px;" title="Gaming Laptops"></a>
-				</div>
-				<div class="col-3">
-					<a href="studylap.php"><img src="assets/categ2.jpg" style="width: 350px; height: 250px;" title="Studying Laptops"></a>
-				</div>
-				<div class="col-3">
-					<a href="periphery.php"><img src="assets/categ3.jpg" style="width: 350px; height: 250px;" title="Devices"></a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="categories1">
-		<div class="small-container">
-			<h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="  margin: 0 auto 80px; text-align: center;">Featured Products</h2>
-			<div class="row">
-				<div class="col-4">
-					<a href="prodPage/applemac.php">
-					<img src="assets/f_apple.png" style="width: 230px; height: 230px;">
-					<h5>Apple MacBook Pro M1 13</h5>
-					</a>
-				</div>
-				<div class="col-4">
-					<a href="prodPage/asus.php">
-					<img src="assets/f_asus.png" style="width: 230px; height: 230px;">
-					<h5>ASUS ROG STRIX G15</h5>
-				</a>
-				</div>
-				<div class="col-4">
-					<a href="prodPage/log.php">
-					<img src="assets/f_log.png" style="width: 230px; height: 230px;">
-					<h5>Logitech G102</h5>
-				</a>
-				</div>
-				<div class="col-4">
-          <a href="prodPage/beyer.php">
-					<img src="assets/f_beyer.png" style="width: 230px; height: 230px;">
-					<h5>Beyerdinamic DT 240 Pro</h5>
-          </a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-  <h2 class="u-custom-font u-font-titillium-web u-text u-text-white u-text-1" style="  margin: 0 auto 80px; text-align: center;">List of electronic devices store</h2>
-    <div class = "row">
-      <div id = "map"></div>
-    </div>
-
-    <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA-EE7EabIM9Hvh0mF5Z-DDWrWXmAdaPV4&callback=initMap" async defer></script>
-
-    <script>
-      function initMap(){
-      var loc = {lat: 51.175167, lng: 71.418098 } ;
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: loc,
-        zoom: 17
-      });
-      var marker = new google.maps.Marker( {
-        map: map,
-        position: loc,
-        title: 'Белый Ветер'
-      });
-              }
-    </script>
-
-    <script type="text/javascript">
-      const selected = document.querySelector(".selected");
-      const optionsContainer = document.querySelector(".options-container");
-      const searchBox = document.querySelector(".search-box input");
-      const optionsList = document.querySelectorAll(".option");
-      selected.addEventListener("click", () => {
-      optionsContainer.classList.toggle("active");
-      searchBox.value = "";
-      filterList("");
-      if (optionsContainer.classList.contains("active")) {
-        searchBox.focus();
-      }
-    });
-      optionsList.forEach(o => {
-        o.addEventListener("click", () => {
-          selected.innerHTML = o.querySelector("label").innerHTML;
-          optionsContainer.classList.remove("active");
-        });
-      });
-      searchBox.addEventListener("keyup", function(e) {
-        filterList(e.target.value);
-        });
-        const filterList = searchTerm => {
-          searchTerm = searchTerm.toLowerCase();
-          optionsList.forEach(option => {
-          let label = option.firstElementChild.nextElementSibling.innerText.toLowerCase();
-            if (label.indexOf(searchTerm) != -1) {
-              option.style.display = "block";
-              } else {
-                option.style.display = "none";
-              }
-          });
-        };
-      </script>
-
-      <script type = "module">
-        let hide = document
-      </script>
-    </div>
-  </section>
-
-  </form>
-
- <?php
-     if($_COOKIE['user'] == true):
-     ?>
-  <div class="wrapper">
+       <?php
+           if($_COOKIE['user'] == true):
+           ?>
+        <div class="wrapper">
 
 
- <div class="container">
-      <div class="image">
-       <img src="assets/cookies.png" alt="">
-      </div>
-      <div class="text">
-        <header style="color: white;">Cookies</header>
-      </div>
-    </div>
+       <div class="container">
+            <div class="image">
+             <img src="assets/cookies.png" alt="">
+            </div>
+            <div class="text">
+              <header style="color: white;">Cookies</header>
+            </div>
+          </div>
 
 
 
-    <div class="content">
+          <div class="content">
 
-     <p style="color: white; font-size: 20px;">
-         Welcome, <?php echo $_COOKIE['user'];
-         session_start();
+           <p style="color: white; font-size: 20px;">
+               Welcome, <?php echo $_COOKIE['user'];
+               session_start();
 
 
-         ?>
-         <?php
-         echo $counter;?>
-         !
-    </p>
-    <p>We use cookies to make your experience of our websites better. By using and further navigating this website you accept this. Detailed information about the use of cookies on this website is available by clicking on more information.</p>
-      <div class="buttons">
-        <button class="item">Accept and close</button>
-        <a href="https://en.wikipedia.org/wiki/HTTP_cookie" class="item">Learn more</a>
-      </div>
+               ?>
+               <?php
+               echo $counter;?>
+               !
+          </p>
+          <p>We use cookies to make your experience of our websites better. By using and further navigating this website you accept this. Detailed information about the use of cookies on this website is available by clicking on more information.</p>
+            <div class="buttons">
+              <button class="item">Accept and close</button>
+              <a href="https://en.wikipedia.org/wiki/HTTP_cookie" class="item">Learn more</a>
+            </div>
     </div>
   </div>
 
