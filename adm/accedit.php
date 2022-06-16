@@ -63,6 +63,10 @@
                        while($row = mysqli_fetch_array($result)) {
                       ?>
                         <form action="code.php" method="POST" style="font-color:white;">
+                          <div class="form-group mb-3">
+                              <label for="">Username</label>
+                              <input type="text" name="username" class="form-control" placeholder="Confirm username" required value="<?php echo $row['username']; ?>">
+                          </div>
                             <div class="form-group mb-3">
                                 <label for="">E-mail</label>
                                 <input type="text" name="mail" class="form-control" placeholder="New e-mail" required value="<?php echo $row['mail']; ?>">
