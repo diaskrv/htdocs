@@ -1,10 +1,3 @@
-<?php
- if($_COOKIE['user'] == ''):
-   header('Location: login.php')
- ?>
-
-<?php else: ?>
-
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -437,5 +430,3 @@ padding-right: 500px;
 
   </body>
 </html>
-
-<?php endif; ?>

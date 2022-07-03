@@ -73,7 +73,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Name</label>
-                                <input type="text" name="name" class="form-control" placeholder="New name" required value="<?php echo $row['name']; ?>">
+                                <input type="text" name="name" class="form-control" placeholder="PLease, use letters and numbersrvm" required value="<?php echo $row['name']; ?>">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Surname</label>
